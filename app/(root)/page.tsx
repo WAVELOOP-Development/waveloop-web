@@ -7,7 +7,7 @@ export default function Home() {
             WAVELOOP
           </p>
           <p
-            className="text-xl tracking-[20px] text-white"
+            className="text-xl tracking-[20px] pl-4 text-white text-center"
           >
             waves of innovation
           </p>
