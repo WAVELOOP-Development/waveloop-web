@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+
+echo "Running type check..."
+bun run type-check
+
+if [ $? -ne 0 ]; then
+  echo "❌ Type check failed. Please fix the TypeScript errors before pushing."
+  exit 1
+fi
+
+echo "✅ Type check passed!"
+
+echo "Running build..."
+bun run build
+
+if [ $? -ne 0 ]; then
+  echo "❌ Build failed. Please fix the build errors before pushing."
+  exit 1
+fi
+
+echo "✅ Build successful!"
