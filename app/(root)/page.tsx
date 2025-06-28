@@ -10,7 +10,7 @@ export default function Home() {
         </div>
         <Meteors number={30} />
         <span className="pointer-events-none tracking-[5px] whitespace-pre-wrap bg-gradient-to-b from-blue-500 to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-          WAVELOOP
+          WAVELOOP 123
         </span>
         <span className="text-lg tracking-[26px] mt-4 text-blue-950">
           Waves of Inovation
