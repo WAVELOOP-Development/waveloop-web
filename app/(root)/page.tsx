@@ -1,18 +1,21 @@
+import { Meteors } from "@/components/magicui/meteors";
+import { NavigationMenuDemo } from "../components/navbar";
+
 export default function Home() {
   return (
     <>
-      <main className="flex h-screen flex-col items-center justify-center p-24 ">
-        <span className="flex flex-col justify-center items-center">
-          <p className="text-[100px] font-extrabold uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-            WAVELOOP
-          </p>
-          <p
-            className="text-xl tracking-[20px] pl-4 text-white text-center"
-          >
-            waves of innovation
-          </p>
+      <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden rounded-lg border">
+        <div className="absolute z-10 flex justify-center w-full items-center top-8 left-0 right-0">
+          <NavigationMenuDemo />
+        </div>
+        <Meteors number={30} />
+        <span className="pointer-events-none tracking-[5px] whitespace-pre-wrap bg-gradient-to-b from-blue-500 to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+          WAVELOOP
         </span>
-      </main>
+        <span className="text-lg tracking-[26px] mt-4 text-blue-950">
+          Waves of Inovation
+        </span>
+      </div>
     </>
   );
 }
