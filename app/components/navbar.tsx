@@ -87,11 +87,12 @@ export function NavigationMenuDemo() {
                     </NavigationMenuLink>
                   </li>
                   <ListItem href="/about" title="Who We Are">
-                    Discover Waveloop’s mission, team, and our commitment to
+                    Discover Waveloops mission, team, and our commitment to
                     innovation.
                   </ListItem>
                   <ListItem href="/portfolio" title="Our Work">
-                    Explore some of the projects we've crafted for our clients.
+                    Explore some of the projects we have crafted for our
+                    clients.
                   </ListItem>
                   <ListItem href="/technologies" title="Technologies">
                     A stack that includes Flutter, React, Node, Firebase, and
