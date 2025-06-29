@@ -4,6 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react";
 
+import Image from 'next/image';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -58,10 +59,12 @@ export function NavigationMenuDemo() {
     <div className="bg-white rounded-lg shadow-md px-6 py-1">
       <div className="flex items-center gap-4">
         <div className="flex items-center">
-          <img
+          <Image
             src="/logo-secondary-T.png"
             alt="Logo"
-            className="h-5 w-30 mr-2"
+            width={120}
+            height={30}
+            className="mr-2"
           />
         </div>
 

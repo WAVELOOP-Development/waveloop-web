@@ -1,50 +1,62 @@
-import { NavigationMenuDemo } from "../components/navbar";
-import { VideoText } from "@/components/magicui/video-text";
+import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
+import Image from "next/image";
+import { TextAnimate } from "@/components/magicui/text-animate";
+import { AuroraText } from "@/components/magicui/aurora-text";
 
 export default function Home() {
   return (
-    <>
-      <div
-        className="px-20 relative flex h-screen w-full flex-row items-center justify-between overflow-hidden"
-        style={{ backgroundColor: "#000511" }}
-      >
-        <div className="absolute z-10 flex justify-center w-full items-center top-8 left-0 right-0">
-          <NavigationMenuDemo />
-        </div>
-        <div className="flex flex-row items-center justify-between w-full h-full px-30">
-          <div className="flex flex-col text-left w-1/3">
-            <span
-              className="text-5xl font-bold leading-tight"
-              style={{ color: "#BFC1C1" }}
-            >
+    <div className="container m-auto pt-30 flex min-h-screen w-full flex-col items-center justify-center overflow-hidden">
+      <div className="flex flex-row items-start justify-between w-full h-full">
+        <div className="flex flex-col gap-4 text-left">
+          <span className="cursor-default text-4xl font-bold leading-normal tracking-wide text-[#BFC1C1]">
+            <TextAnimate animation="slideLeft" by="character" once>
               Empowering
-              <br />
+            </TextAnimate>
+            <TextAnimate animation="slideLeft" by="character" once>
               Innovation
-              <br />
+            </TextAnimate>
+            <TextAnimate animation="slideLeft" by="character" once>
               Through
-              <br />
+            </TextAnimate>
+            <TextAnimate animation="slideLeft" by="character" once>
               Intelligent
-              <br />
+            </TextAnimate>
+            <TextAnimate animation="slideLeft" by="character" once>
               Solutions
-            </span>
-
-            <button
-              className="mt-8 px-6 py-3 bg-transparent border-2 text-white font-semibold rounded-lg hover:bg-white hover:text-black transition-colors duration-300 w-fit"
-              style={{ borderColor: "#BFC1C1", color: "#BFC1C1" }}
-            >
+            </TextAnimate>
+          </span>
+          <div className="cursor-default">
+            <InteractiveHoverButton className="pointer">
               Wanna Know Us?
-            </button>
+            </InteractiveHoverButton>
+            ;
           </div>
-
-          <div className="flex items-center justify-center w-2/3">
-            <div className="relative h-[1000px] w-[1000px] overflow-hidden ">
-              <VideoText src="https://cdn.magicui.design/ocean-small.webm">
-                WAVE
-              </VideoText>
-            </div>
-          </div>
+        </div>
+        <div>
+          <p className="relative top-[-30] text-[300px] font-normal leading-none tracking-[90px] text-[#BFC1C1]">
+            WAVE
+          </p>
         </div>
       </div>
-    </>
+      <div className="flex flex-row items-start justify-between w-full h-full">
+        <h1 className="text-[400px] font-normal leading-none tracking-normal w-full text-[#BFC1C1]">
+          <AuroraText>LOOP</AuroraText>
+        </h1>
+        <div className="relative top-[-60] flex flex-col text-center items-center gap-4 justify-center w-full h-full">
+          <span className="text-xl font-bold text-center leading-tight text-[#BFC1C1]">
+            Keep
+            <br />
+            Scrolling
+            <br />
+            Through
+            <br />
+            To
+            <br />
+            Discover
+          </span>
+          <Image src="./arrow.svg" alt="Description" width={9} height={500} />
+        </div>
+      </div>
+    </div>
   );
 }
