@@ -20,13 +20,13 @@ const components: { title: string; href: string; description: string }[] = [
     title: "Mobile App Development",
     href: "/services/mobile-app-development",
     description:
-      "Build high-performance cross-platform apps for iOS and Android using Flutter and native tools.",
+      "Build high-performance cross-platform apps for iOS and Android.",
   },
   {
     title: "Web Development",
     href: "/services/web-development",
     description:
-      "Responsive, modern web apps built with React.js, Node.js, and scalable backend architecture.",
+      "Responsive, modern web apps with scalable backend architecture.",
   },
   {
     title: "AI & ML Solutions",
@@ -44,7 +44,7 @@ const components: { title: string; href: string; description: string }[] = [
     title: "Cloud Integration",
     href: "/services/cloud",
     description:
-      "Deploy, manage, and scale your infrastructure using Google Cloud Platform, Firebase, and more.",
+      "Deploy, manage, and scale your infrastructure.",
   },
   {
     title: "Custom Software",
@@ -56,7 +56,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function NavigationMenuDemo() {
   return (
-    <div className="bg-white rounded-lg shadow-md px-6 py-1">
+    <div className="bg-white rounded-lg shadow-md  px-6 py-1">
       <div className="flex items-center gap-4">
         <div className="flex items-center">
           <Image
