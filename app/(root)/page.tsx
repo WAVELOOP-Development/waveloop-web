@@ -3,6 +3,7 @@ import { FeaturedWorkSection } from "../components/sections/featured-work-sectio
 import Footer from "../components/sections/footer";
 import { HeroSection } from "../components/sections/hero-section";
 import { ServicesSection } from "../components/sections/services";
+import { TrustedVisionariesSection } from "../components/sections/trusted-visionaries";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <AboutSection />
       <FeaturedWorkSection />
       <ServicesSection />
+      <TrustedVisionariesSection />
       <Footer />
     </>
   );
