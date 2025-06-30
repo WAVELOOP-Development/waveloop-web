@@ -170,7 +170,7 @@ export function NavigationMenuDemo() {
                   <li>
                     <NavigationMenuLink asChild>
                       <Link
-                        href="/contact"
+                        href="/contactus"
                         className="flex-row items-center gap-2"
                       >
                         <CircleHelpIcon />
