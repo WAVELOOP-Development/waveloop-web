@@ -81,13 +81,13 @@ const VisionaryCard = ({
 
 export function TrustedVisionariesSection() {
   return (
-    <section className="py-16 bg-white h-fit">
+    <section className="lg:py-16 p-8 bg-white h-fit">
       <div className="max-w-6xl mx-auto">
-        <div className="text-start mb-16">
+        <div className="text-start mb-8">
           <h2 className="text-4xl font-bold text-gray-800">
             Trusted by Visionaries
           </h2>
-          <p className="mt-6 text-xl text-gray-600 dark:text-gray-300 max-w-3xl">
+          <p className="mt-2 text-sm lg:text-lg w-full text-gray-600 dark:text-gray-300">
             We partner with industry-leading visionaries and innovators who
             trust us to deliver exceptional digital solutions.
           </p>

@@ -11,34 +11,33 @@ const stats = [
 
 const ImpactNumbersPage = () => {
   return (
-    <section className="bg-white py-16 px-6 text-center md:px-20">
-      <div className="mb-8">
-        <p style={{ color: '#021443' }}>Our,</p>
-        <h2 className="text-4xl font-bold tracking-widest" style={{ color: '#021443' }}>
+    <section className="bg-white flex flex-col gap-8 justify-start items-center lg:py-16 py-8 px-6 text-center md:px-20">
+      <div className="text-[#021443] max-w-6xl">
+        <p className='text-sm lg:text-lg w-full'>Our,</p>
+        <h2 className="text-4xl font-bold tracking-widest">
           Impact In Numbers
         </h2>
-        <div className="mt-4 text-sm" style={{ color: '#021443' }}>
+        <div className="mt-4 text-sm lg:text-lg">
           Behind every number is a story of innovation,<br />
           growth, and meaningful digital transformation.
         </div>
       </div>
 
-      <div className="my-10">
+      <div className="text-[#021443] max-w-6xl">
         <div className="flex items-center justify-center">
           <NumberTicker
-            value={95}
-            startValue={80}
+            value={100}
+            startValue={50}
             className="text-8xl font-bold"
-            style={{ color: '#021443' }}
           />
-          <span className="text-8xl font-bold" style={{ color: '#021443' }}>%</span>
+          <span className="text-8xl font-bold">%</span>
         </div>
-        <p className="mt-2 text-lg font-semibold" style={{ color: '#021443' }}>
+        <p className="mt-2 text-lg font-semibold">
           Client Satisfaction Rate
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-8 md:grid-cols-5 mt-12">
+      <div className="grid grid-cols-2  justify-center max-w-6xl gap-4 md:grid-cols-5">
         {stats.map((stat, index) => (
           <div key={index} className="flex flex-col items-center">
             <div className="flex items-center">
@@ -46,11 +45,10 @@ const ImpactNumbersPage = () => {
                 value={stat.number}
                 startValue={0}
                 className="text-4xl font-bold"
-                style={{ color: '#021443' }}
               />
-              <span className="text-4xl font-bold" style={{ color: '#021443' }}>{stat.suffix}</span>
+              <span className="text-4xl font-bold">{stat.suffix}</span>
             </div>
-            <p className="mt-2 text-sm whitespace-pre-line" style={{ color: '#021443' }}>{stat.label}</p>
+            <p className="mt-2 text-sm lg:text-lg whitespace-pre-line">{stat.label}</p>
           </div>
         ))}
       </div>

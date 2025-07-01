@@ -22,7 +22,7 @@ const images = [
 function BlurFadeDemo() {
   return (
     <section id="photos">
-      <div className="columns-2 gap-4 sm:columns-3">
+      <div className="columns-2 gap-2 lg:gap-4 sm:columns-3">
         {images.map((image, idx) => (
           <BlurFade key={idx} delay={0.25 + idx * 0.05} inView>
             <div className="mb-4">
@@ -42,13 +42,13 @@ function BlurFadeDemo() {
 
 export function FeaturedWorkSection() {
   return (
-    <div className=" bg-white py-16 h-fit">
-      <div className="max-w-6xl mx-auto">
+    <div className=" bg-white py-8 lg:py-16 h-fit">
+      <div className="max-w-6xl px-8 lg:px-0 mx-auto">
         <div className="text-start mb-8">
           <h2 className="text-4xl font-bold text-black mb-2 text-start">
             Our Featured Work
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-sm lg:text-lg text-gray-600">
             Showcasing our commitment to innovation and excellence.
           </p>
         </div>

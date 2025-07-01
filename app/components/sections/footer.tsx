@@ -14,9 +14,9 @@ export default function Footer() {
                 alt="WaveLoop Logo"
                 width={0}
                 height={80}
-                className="h-20 w-auto mb-8"
+                className="h-20 m-auto w-auto mb-8"
               />
-              <p className="text-gray-400 text-sm sm:text-base max-w-md mb-4 mx-auto lg:mx-0">
+              <p className="text-gray-400 text-sm sm:text-base text-center max-w-md mb-4 mx-auto lg:mx-0">
                 Empowering businesses with innovative solutions and cutting-edge
                 technology.
               </p>

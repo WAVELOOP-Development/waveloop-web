@@ -133,7 +133,7 @@ const Navbar1 = ({
   ],
 }: Navbar1Props) => {
   return (
-    <section className="absolute w-full lg:w-fit h-fit z-10 top-8 left-0 right-0 flex py-2 bg-white rounded-md m-auto">
+    <section className="absolute w-fit h-fit z-10 top-8 left-0 right-0 flex py-2 bg-white rounded-md m-auto">
       <div className="container px-4">
         {/* Desktop Menu */}
         <nav className="hidden justify-between lg:flex">
@@ -159,7 +159,7 @@ const Navbar1 = ({
 
         {/* Mobile Menu */}
         <div className="w-full lg:hidden">
-          <div className="flex w-full items-center justify-between">
+          <div className="flex w-full items-center gap-16 justify-between">
             {/* Logo */}
             <a href={logo.url} className="flex items-center">
               <Image

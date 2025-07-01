@@ -1,28 +1,27 @@
 "use client";
 
 import { BorderBeam } from "@/components/magicui/border-beam";
-import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 import Image from "next/image";
 
 export function AboutSection() {
   return (
-    <div className="bg-[#000511] pt-16 pb-8 h-fit">
-      <div className="relative text-white flex w-full m-auto flex-col items-center justify-center overflow-hidden">
-        <VelocityScroll>Waves Of Innovation</VelocityScroll>
-      </div>
-      <div className="pt-30 pb-16 h-fit flex items-center bg-[#000511]">
-        <div className="max-w-6xl mx-auto p-8 relative animate-fade-in bg-[#272727]">
-          <div className="flex flex-row items-center mb-16 gap-16">
-            <div className="text-center mb-4 absolute -top-16 left-8 w-96 animate-slide-in-left animation-delay-300">
+    <div className="bg-[#000511] lg:pt-16 lg:pb-8 h-fit overflow-hidden">
+      {/* <div className="relative text-white flex w-6xl m-auto flex-col items-center justify-center overflow-hidden">
+        <VelocityScroll>Turning ideas into impactful digital experiences.</VelocityScroll>
+      </div> */}
+      <div className="lg:pt-30 lg:pb-16 h-fit flex items-center bg-[#000511]">
+        <div className="max-w-6xl mx-auto p-8  h-full relative animate-fade-in bg-[#272727]">
+          <div className="flex lg:flex-row flex-col items-center gap-16">
+            <div className="text-center lg:relative absolute lg:-top-36 -top-0 w-[500px] animate-slide-in-left animation-delay-300">
               <Image
                 src="/boat2.png"
                 alt="WAVELOOP Team"
                 height={0}
                 width={0}
-                className="w-full h-full object-cover shadow-lg transform hover:scale-105 transition-transform duration-300"
+                className="w-full h-full object-cover shadow-lg opacity-20 lg:opacity-100 transform hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="text-center mb-16 ml-[450px] animate-slide-in-right animation-delay-500">
+            <div className="text-center mb-16 animate-slide-in-right animation-delay-500">
               <p className="text-xl text-gray-300 max-w-3xl text-start mb-4 animate-fade-in-up animation-delay-700">
                 Who We Are
               </p>
@@ -30,7 +29,7 @@ export function AboutSection() {
                 Creators of intelligent <br />
                 technology.
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl text-start animate-fade-in-up animation-delay-1100">
+              <p className="text-md text-gray-300 max-w-3xl text-start animate-fade-in-up animation-delay-1100">
                 We are WAVELOOP,
                 <br /> A future-focused tech company building smart, secure,
                 user-first solutions. Our mission is to bridge creativity and
