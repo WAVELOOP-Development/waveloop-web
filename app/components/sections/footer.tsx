@@ -4,53 +4,53 @@ import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="text-white bg-[#000511]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           <div className="space-y-6">
-            <div>
+            <div className="text-center lg:text-left">
               <img
                 src="/logo-primary-T-white.png"
                 alt="WaveLoop Logo"
-                className="h-20 mb-8"
+                className="h-16 sm:h-20 mb-6 sm:mb-8 mx-auto lg:mx-0"
               />
-              <p className="text-gray-400 max-w-md mb-4">
+              <p className="text-gray-400 text-sm sm:text-base max-w-md mb-4 mx-auto lg:mx-0">
                 Empowering businesses with innovative solutions and cutting-edge
                 technology.
               </p>
             </div>
 
-            <div>
-              <h3 className="text-lg font-semibold mb-4">
+            <div className="text-center lg:text-left">
+              <h3 className="text-base sm:text-lg font-semibold mb-4">
                 Wanna Stay Connected?
               </h3>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 justify-center lg:justify-start">
                 <Link
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors p-1"
                 >
                   <Instagram size={20} />
                 </Link>
                 <Link
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors p-1"
                 >
                   <Linkedin size={20} />
                 </Link>
                 <Link
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors p-1"
                 >
                   <Github size={20} />
                 </Link>
                 <Link
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors p-1"
                 >
                   <Facebook size={20} />
                 </Link>
                 <Link
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors p-1"
                 >
                   <Twitter size={20} />
                 </Link>
@@ -58,14 +58,16 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+            <div className="text-center sm:text-left">
+              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+                Quick Links
+              </h3>
               <ul className="space-y-2">
                 <li>
                   <Link
                     href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base block py-1"
                   >
                     Home
                   </Link>
@@ -73,7 +75,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base block py-1"
                   >
                     About Us
                   </Link>
@@ -81,7 +83,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base block py-1"
                   >
                     Contact
                   </Link>
@@ -89,7 +91,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base block py-1"
                   >
                     Blog
                   </Link>
@@ -97,7 +99,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base block py-1"
                   >
                     Privacy Policy
                   </Link>
@@ -106,13 +108,15 @@ export default function Footer() {
             </div>
 
             {/* Services */}
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <div className="text-center sm:text-left">
+              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+                Services
+              </h3>
               <ul className="space-y-2">
                 <li>
                   <Link
                     href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base block py-1"
                   >
                     Innovative Software Solutions
                   </Link>
@@ -120,7 +124,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base block py-1"
                   >
                     Mobile Application Development
                   </Link>
@@ -128,7 +132,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base block py-1"
                   >
                     Cybersecurity & Data Protection
                   </Link>
@@ -136,7 +140,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base block py-1"
                   >
                     Cloud-Based Solutions
                   </Link>
@@ -144,7 +148,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base block py-1"
                   >
                     AI and Machine Learning Solutions
                   </Link>
@@ -155,18 +159,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom section */}
-        <div className="border-t border-gray-800 mt-12 pt-6 flex flex-col md:flex-row items-center md:items-start justify-between">
-          <p className="text-gray-400 text-xs md:text-sm text-left w-full md:w-auto">
+        <div className="border-t border-gray-800 mt-8 sm:mt-12 pt-4 sm:pt-6 flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0">
+          <p className="text-gray-400 text-xs sm:text-sm text-center sm:text-left">
             © {new Date().getFullYear()} WaveLoop. All rights reserved.
           </p>
-          <div className="mt-2 md:mt-0 w-full md:w-auto flex justify-end">
-            <Link
-              href="#"
-              className="text-gray-400 text-xs md:text-sm hover:text-white transition-colors"
-            >
-              Terms & Privacy Policy
-            </Link>
-          </div>
+          <Link
+            href="#"
+            className="text-gray-400 text-xs sm:text-sm hover:text-white transition-colors text-center sm:text-right"
+          >
+            Terms & Privacy Policy
+          </Link>
         </div>
       </div>
     </footer>
