@@ -106,16 +106,18 @@ const services = [
 ];
 
 export function ServicesSection() {
-  return (
-    <section className="px-20 py-20 bg-white min-h-screen">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-start mb-16">
-          <h2 className="text-4xl font-bold text-gray-800">Our Services</h2>
-          <p className="mt-6 text-xl text-gray-600 dark:text-gray-300 max-w-3xl">
-            We offer comprehensive digital solutions to help your business
-            thrive in the modern world.
-          </p>
-        </div>
+	return (
+		<section className="px-4 sm:px-8 md:px-12 lg:px-20 py-12 sm:py-16 md:py-20 bg-white min-h-screen">
+			<div className="max-w-6xl mx-auto">
+				<div className="text-start mb-8 sm:mb-12 md:mb-16">
+					<h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
+						Our Services
+					</h2>
+					<p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl">
+						We offer comprehensive digital solutions to help your business
+						thrive in the modern world.
+					</p>
+				</div>
 
         <BentoGrid>
           {services.map((service) => (
