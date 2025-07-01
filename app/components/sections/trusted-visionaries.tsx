@@ -80,7 +80,7 @@ const VisionaryCard = ({
 
 export function TrustedVisionariesSection() {
   return (
-    <section className="px-20 py-20 bg-white min-h-screen">
+    <section className="px-20 py-20 bg-white ">
       <div className="max-w-6xl mx-auto">
         <div className="text-start mb-16">
           <h2 className="text-4xl font-bold text-gray-800">

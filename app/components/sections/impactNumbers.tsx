@@ -2,16 +2,17 @@ import React from 'react'
 import { NumberTicker } from '@/components/magicui/number-ticker'
 
 const stats = [
-  { number: 20, suffix: '+', label: 'Custom Software\nProjects Delivered' },
-  { number: 10, suffix: '+', label: 'Mobile Apps\nLaunched' },
-  { number: 3, suffix: '+', label: 'Cloud Migrations\nCompleted' },
-  { number: 2, suffix: '+', label: 'Cybersecurity\nIntegrations Completed' },
-  { number: 5, suffix: '+', label: 'AI-Powered\nSystems Developed' },
+  { number: '20+', label: 'Custom Software\nProjects Delivered' },
+  { number: '10+', label: 'Mobile Apps\nLaunched' },
+  { number: '3+', label: 'Cloud Migrations\nCompleted' },
+  { number: '2+', label: 'Cybersecurity\nIntegrations Completed' },
+  { number: '5+', label: 'AI-Powered\nSystems Developed' },
 ]
 
 const ImpactNumbersPage = () => {
   return (
-    <section className="bg-white py-16 px-6 text-center md:px-20">
+    <section className="px-20 py-22 bg-white text-center ">
+        <div className='max-w-6xl mx-auto'>
       <div className="mb-8">
         <p style={{ color: '#021443' }}>Our,</p>
         <h2 className="text-4xl font-bold tracking-widest" style={{ color: '#021443' }}>
@@ -40,19 +41,12 @@ const ImpactNumbersPage = () => {
 
       <div className="grid grid-cols-2 gap-8 md:grid-cols-5 mt-12">
         {stats.map((stat, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <div className="flex items-center">
-              <NumberTicker
-                value={stat.number}
-                startValue={0}
-                className="text-4xl font-bold"
-                style={{ color: '#021443' }}
-              />
-              <span className="text-4xl font-bold" style={{ color: '#021443' }}>{stat.suffix}</span>
-            </div>
+          <div key={index}>
+            <p className="text-4xl font-bold" style={{ color: '#021443' }}>{stat.number}</p>
             <p className="mt-2 text-sm whitespace-pre-line" style={{ color: '#021443' }}>{stat.label}</p>
           </div>
         ))}
+      </div>
       </div>
     </section>
   )
