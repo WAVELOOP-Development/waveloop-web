@@ -12,10 +12,10 @@ const services = [
     className: "col-span-3 lg:col-span-2",
     background: (
       <Image
-        src="/web.jpg"
+        src="/boat.png"
         alt="Web Development"
         fill
-        className="object-cover opacity-100"
+        className="object-cover opacity-50"
       />
     ),
     Icon: Globe,
@@ -75,7 +75,7 @@ const services = [
     description: "Speed up your applications and improve user satisfaction.",
     href: "/services/performance",
     cta: "Optimize now",
-    className: "col-span-3 lg:col-span-1",
+    className: "col-span-3 lg:col-span-2",
     background: (
       <Image
         src="/boat.png"
@@ -92,14 +92,14 @@ const services = [
       "Strategic technology consulting to guide your digital transformation.",
     href: "/services/consulting",
     cta: "Get advice",
-    className: "col-span-3 lg:col-span-2",
+    className: "col-span-3 lg:col-span-1 ",
     background: (
-      <Image
-        src="/boat.png"
-        alt="Cloud Services"
-        fill
-        className="object-cover opacity-50"
-      />
+        <Image
+          src="/boat.png"
+          alt="Cloud Services"
+          fill
+          className="object-cover opacity-50"
+        />
     ),
     Icon: Cloud,
   },
@@ -117,7 +117,7 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <BentoGrid className="auto-rows-[28rem] md:auto-rows-[32rem] lg:auto-rows-[36rem] md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <BentoGrid>
           {services.map((service) => (
             <BentoCard key={service.name} {...service} />
           ))}

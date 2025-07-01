@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
+import Image from "next/image";
 
 const visionaries = [
   {
@@ -65,7 +66,7 @@ const VisionaryCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <Image className="rounded-full" width={32} height={32} alt="" src={img} />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
@@ -80,7 +81,7 @@ const VisionaryCard = ({
 
 export function TrustedVisionariesSection() {
   return (
-    <section className="px-20 py-20 bg-white min-h-screen">
+    <section className="py-16 bg-white h-fit">
       <div className="max-w-6xl mx-auto">
         <div className="text-start mb-16">
           <h2 className="text-4xl font-bold text-gray-800">

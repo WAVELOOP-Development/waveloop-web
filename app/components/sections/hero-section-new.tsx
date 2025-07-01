@@ -18,20 +18,26 @@ const HeroSectionNew = () => {
       </video>
       <div className="absolute flex justify-start items-end inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black to-transparent">
         <div className="container mx-auto py-16">
-          <div className="flex justify-between items-end gap-4 text-left">
-            <span className="cursor-default text-7xl font-bold leading-normal tracking-wide text-white">
-              <TextAnimate animation="slideLeft" by="character" once>
-                Empowering Innovation Through
-              </TextAnimate>
-              <TextAnimate animation="slideLeft" by="character" once>
-                Intelligent Solutions
-              </TextAnimate>
-            </span>
+          <div className="flex flex-col justify-between items-center text-left gap-12">
+            <div className="flex flex-col gap-6">
+              <span className="cursor-default lg:text-7xl text-4xl lg:leading-22 leading-10 px-4 lg:px-0 font-semibold text-center tracking-wide text-white">
+                <TextAnimate animation="slideLeft" by="word" once>
+                  Empowering Innovation Through
+                </TextAnimate>
+                <TextAnimate animation="slideLeft" by="word" once>
+                  Intelligent Solutions
+                </TextAnimate>
+              </span>
+              <span className="cursor-default lg:text-xl text-md px-4 lg:px-0 font-medium text-center tracking-wide text-gray-300">
+                <TextAnimate animation="slideLeft" by="word" once>
+                  Beautifully designed, animated components and templates built with Tailwind CSS, React, and Framer Motion.
+                </TextAnimate>
+              </span>
+            </div>
             <div className="cursor-default">
               <InteractiveHoverButton className="pointer">
                 Wanna Know Us?
               </InteractiveHoverButton>
-              
             </div>
           </div>
         </div>

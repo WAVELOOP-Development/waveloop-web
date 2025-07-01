@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -8,10 +9,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="space-y-6">
             <div>
-              <img
+              <Image
                 src="/logo-primary-T-white.png"
                 alt="WaveLoop Logo"
-                className="h-20 mb-8"
+                width={0}
+                height={80}
+                className="h-20 w-auto mb-8"
               />
               <p className="text-gray-400 max-w-md mb-4">
                 Empowering businesses with innovative solutions and cutting-edge
