@@ -2,7 +2,7 @@ import { BlurFade } from "@/components/magicui/blur-fade";
 import Image from "next/image";
 
 // Import local images
-import image1 from "@/public/featured-work/mobile1.jpg";
+import image1 from "@/public/rescuemed.png";
 import image2 from "@/public/featured-work/mobile2.jpg";
 import image3 from "@/public/featured-work/mobile3.jpg";
 import image4 from "@/public/featured-work/web1.jpg";
@@ -11,7 +11,7 @@ import image6 from "@/public/featured-work/web3.jpg";
 
 // Array of local image objects
 const images = [
-  { src: image1, alt: "Featured work image 1" },
+  { src: image1, alt: "Rescue Med" },
   { src: image2, alt: "Featured work image 2" },
   { src: image3, alt: "Featured work image 3" },
   { src: image4, alt: "Featured work image 4" },
