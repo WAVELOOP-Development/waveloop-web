@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import CardSwap, { Card } from "@/components/react-bits/CardSwap/CardSwap";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 
