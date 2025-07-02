@@ -55,26 +55,30 @@ const BentoCard = ({
     )}
     {...props}
   >
-    <div>{background}</div>
-    <div className="p-4">
+    {/* Background container - works for both images and videos */}
+    <div className="absolute inset-0">{background}</div>
+
+    {/* Optional overlay for better text readability */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+    {/* Content positioned at bottom */}
+    <div className="relative z-10 flex flex-col justify-end h-full p-4">
       <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 transition-all duration-300 lg:group-hover:-translate-y-10">
-        <Icon className="h-12 w-12 origin-left transform-gpu text-gray-800 transition-all duration-300 ease-in-out group-hover:scale-75" />
-        <h3 className="text-xl font-semibold text-gray-800 dark:text-neutral-300">
-          {name}
-        </h3>
-        <p className="max-w-lg text-white">{description}</p>
+        <Icon className="h-12 w-12 origin-left transform-gpu text-white transition-all duration-300 ease-in-out group-hover:scale-75" />
+        <h3 className="text-xl font-semibold text-white">{name}</h3>
+        <p className="max-w-lg text-white/90 text-sm">{description}</p>
       </div>
 
       <div
         className={cn(
-          "lg:hidden pointer-events-none flex w-full translate-y-0 transform-gpu flex-row items-center transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+          "lg:hidden pointer-events-none flex w-full translate-y-0 transform-gpu flex-row items-center transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 mt-2"
         )}
       >
         <Button
           variant="link"
           asChild
           size="sm"
-          className="pointer-events-auto p-0"
+          className="pointer-events-auto p-0 text-white hover:text-white/80"
         >
           <a href={href}>
             {cta}
@@ -93,7 +97,7 @@ const BentoCard = ({
         variant="link"
         asChild
         size="sm"
-        className="pointer-events-auto p-0"
+        className="pointer-events-auto p-0 text-white hover:text-white/80"
       >
         <a href={href}>
           {cta}
