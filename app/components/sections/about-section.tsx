@@ -5,11 +5,11 @@ import Image from "next/image";
 
 export function AboutSection() {
   return (
-    <div className="bg-[#000511] lg:pt-16 lg:pb-8 h-fit overflow-hidden">
+    <div className="bg-black lg:pt-16 lg:pb-8 h-fit overflow-hidden">
       {/* <div className="relative text-white flex w-6xl m-auto flex-col items-center justify-center overflow-hidden">
         <VelocityScroll>Turning ideas into impactful digital experiences.</VelocityScroll>
       </div> */}
-      <div className="lg:pt-30 lg:pb-16 h-fit flex items-center bg-[#000511]">
+      <div className="lg:pt-30 lg:pb-16 h-fit flex items-center bg-black">
         <div className="max-w-6xl mx-auto p-8  h-full relative animate-fade-in bg-[#272727]">
           <div className="flex lg:flex-row flex-col items-center gap-16">
             <div className="text-center lg:relative absolute lg:-top-36 -top-0 w-[500px] animate-slide-in-left animation-delay-300">
