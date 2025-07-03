@@ -29,15 +29,12 @@ export function AboutSection() {
                 Creators of intelligent <br />
                 technology.
               </h2>
-              <p className="text-md text-gray-300 max-w-3xl text-start animate-fade-in-up animation-delay-1100">
-                We are WAVELOOP,
-                <br /> A future-focused tech company building smart, secure,
-                user-first solutions. Our mission is to bridge creativity and
-                functionality through innovation. From AI-powered platforms to
-                seamless mobile experiences, we bring bold ideas to life with
-                purpose and precision. At our core, we are thinkers, builders
-                and problem-solvers, passionate about shaping a smarter digital
-                world.
+              <p className="text-md text-gray-300 max-w-3xl  animate-fade-in-up animation-delay-1100 text-justify">
+                We are <strong>WAVELOOP</strong>,<br />A future driven tech
+                company crafting secure, user first solutions. We merge
+                creativity with innovation to build bold AI platforms and
+                seamless digital experiences. At our core, we are thinkers,
+                builders, and problem solvers shaping a smarter digital world.
               </p>
             </div>
           </div>
