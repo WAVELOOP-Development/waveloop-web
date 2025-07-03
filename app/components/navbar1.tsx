@@ -11,6 +11,8 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 
+import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
+
 import {
   Accordion,
   AccordionContent,
@@ -35,6 +37,7 @@ import {
 } from "@/components/ui/sheet";
 
 import logoImage from "@/public/logo-secondary-T.png";
+import Link from "next/link";
 
 interface MenuItem {
   title: string;
@@ -65,7 +68,7 @@ interface Navbar1Props {
 
 const Navbar1 = ({
   logo = {
-    url: "/",
+    url: "./",
     alt: "logo",
     title: "WAVELOOP",
   },
@@ -138,7 +141,7 @@ const Navbar1 = ({
       ],
     },
     {
-      title: "Pricing",
+      title: "Blog",
       url: "#",
     },
   ],
@@ -151,12 +154,7 @@ const Navbar1 = ({
           <div className="flex items-center gap-8">
             {/* Logo */}
             <a href={logo.url} className="flex items-center gap-2">
-              <Image
-                src={logoImage}
-                alt="Logo"
-                width={120}
-                height={30}
-              />
+              <Image src={logoImage} alt="Logo" width={120} height={30} />
             </a>
             <div className="flex items-center">
               <NavigationMenu>
@@ -181,12 +179,7 @@ const Navbar1 = ({
           <div className="flex w-full items-center gap-16 justify-between">
             {/* Logo */}
             <a href={logo.url} className="flex items-center">
-              <Image
-                src={logoImage}
-                alt="Logo"
-                width={120}
-                height={30}
-              />
+              <Image src={logoImage} alt="Logo" width={120} height={30} />
             </a>
             <Sheet>
               <SheetTrigger asChild>
@@ -194,28 +187,69 @@ const Navbar1 = ({
                   <Menu className="size-4" />
                 </Button>
               </SheetTrigger>
-              <SheetContent className="overflow-y-auto">
-                <SheetHeader>
-                  <SheetTitle>
-                    <a href={logo.url} className="flex items-center gap-2">
-                      <Image
-                        src={logoImage}
-                        alt="Logo"
-                        width={120}
-                        height={30}
-                        className="mt-4"
-                      />
-                    </a>
-                  </SheetTitle>
-                </SheetHeader>
-                <div className="flex flex-col gap-6 p-4">
-                  <Accordion
-                    type="single"
-                    collapsible
-                    className="flex w-full flex-col gap-4"
-                  >
-                    {menu.map((item) => renderMobileMenuItem(item))}
-                  </Accordion>
+              <SheetContent className="overflow-y-auto flex flex-col justify-between">
+                <div>
+                  <SheetHeader>
+                    <SheetTitle>
+                      <a href={logo.url} className="flex items-center gap-2">
+                        <Image
+                          src={logoImage}
+                          alt="Logo"
+                          width={120}
+                          height={30}
+                          className="mt-4"
+                        />
+                      </a>
+                    </SheetTitle>
+                  </SheetHeader>
+                  <div className="flex flex-col gap-6 p-4">
+                    <Accordion
+                      type="single"
+                      collapsible
+                      className="flex w-full flex-col gap-4"
+                    >
+                      {menu.map((item) => renderMobileMenuItem(item))}
+                    </Accordion>
+                  </div>
+                  <div className="flex items-center px-4 py-8">
+                    <Button
+                      asChild
+                      className="bg-blue-600 hover:bg-blue-700 text-white font-semibold w-full"
+                    >
+                      <a href="#contact">Contact Us</a>
+                    </Button>
+                  </div>
+                </div>
+                <div className="text-center py-8 lg:text-left">
+                  <h3 className="text-base sm:text-lg font-semibold mb-4">
+                    Stay Connected with Us
+                  </h3>
+                  <div className="flex space-x-4 justify-center lg:justify-start">
+                    <Link
+                      href="#"
+                      className="text-gray-400 hover:text-white transition-colors p-1"
+                    >
+                      <Instagram size={20} />
+                    </Link>
+                    <Link
+                      href="#"
+                      className="text-gray-400 hover:text-white transition-colors p-1"
+                    >
+                      <Linkedin size={20} />
+                    </Link>
+                    <Link
+                      href="#"
+                      className="text-gray-400 hover:text-white transition-colors p-1"
+                    >
+                      <Github size={20} />
+                    </Link>
+                    <Link
+                      href="#"
+                      className="text-gray-400 hover:text-white transition-colors p-1"
+                    >
+                      <Facebook size={20} />
+                    </Link>
+                  </div>
                 </div>
               </SheetContent>
             </Sheet>

@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
 import Image from "next/image";
 
+import logoImage from "@/public/logo-primary-T-white.png";
+
 export default function Footer() {
   return (
     <footer className="text-white bg-[#000511]">
@@ -10,7 +12,7 @@ export default function Footer() {
           <div className="space-y-6">
             <div>
               <Image
-                src="/logo-primary-T-white.png"
+                src={logoImage}
                 alt="WaveLoop Logo"
                 width={0}
                 height={80}
