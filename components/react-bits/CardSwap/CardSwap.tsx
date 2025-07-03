@@ -76,8 +76,8 @@ const placeNow = (el: HTMLElement, slot: Slot, skew: number) =>
   });
 
 const CardSwap: React.FC<CardSwapProps> = ({
-  width = 500,
-  height = 400,
+  width = 600,
+  height = 480,
   cardDistance = 60,
   verticalDistance = 70,
   delay = 5000,
@@ -249,7 +249,16 @@ const CardSwap: React.FC<CardSwapProps> = ({
         tlRef.current = null;
       }
     };
-  }, [cardDistance, verticalDistance, delay, pauseOnHover, skewAmount, easing, refs.length, config]);
+  }, [
+    cardDistance,
+    verticalDistance,
+    delay,
+    pauseOnHover,
+    skewAmount,
+    easing,
+    refs.length,
+    config,
+  ]);
 
   const rendered = childArr.map((child, i) =>
     isValidElement<CardProps>(child)
@@ -268,7 +277,7 @@ const CardSwap: React.FC<CardSwapProps> = ({
   return (
     <div
       ref={container}
-      className="absolute bottom-0 right-0 transform translate-x-[5%] translate-y-[20%] origin-bottom-right perspective-[900px] overflow-visible max-[768px]:translate-x-[30%] max-[768px]:translate-y-[30%] max-[768px]:scale-[0.5] max-[480px]:translate-x-[35%] max-[480px]:translate-y-[35%] max-[480px]:scale-[0.35] max-[320px]:translate-x-[40%] max-[320px]:translate-y-[40%] max-[320px]:scale-[0.25]"
+      className="absolute bottom-0 right-0 transform translate-x-[5%] translate-y-[20%] origin-bottom-right perspective-[900px] overflow-visible max-[768px]:translate-x-[30%] max-[768px]:translate-y-[30%] max-[768px]:scale-[0.6] max-[480px]:translate-x-[35%] max-[480px]:translate-y-[35%] max-[480px]:scale-[0.45] max-[320px]:translate-x-[40%] max-[320px]:translate-y-[40%] max-[320px]:scale-[0.35]"
       style={{ width, height }}
     >
       {rendered}

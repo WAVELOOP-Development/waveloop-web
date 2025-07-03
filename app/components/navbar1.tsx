@@ -126,10 +126,6 @@ const Navbar1 = ({
       title: "Pricing",
       url: "#",
     },
-    {
-      title: "Blog",
-      url: "#",
-    },
   ],
 }: Navbar1Props) => {
   return (
@@ -137,7 +133,7 @@ const Navbar1 = ({
       <div className="container px-4">
         {/* Desktop Menu */}
         <nav className="hidden justify-between lg:flex">
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-8">
             {/* Logo */}
             <a href={logo.url} className="flex items-center gap-2">
               <Image
@@ -155,6 +151,14 @@ const Navbar1 = ({
               </NavigationMenu>
             </div>
           </div>
+          <div className="flex items-center ml-8">
+            <Button
+              asChild
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold"
+            >
+              <a href="#contact">Contact Us</a>
+            </Button>
+          </div>
         </nav>
 
         {/* Mobile Menu */}
@@ -170,7 +174,7 @@ const Navbar1 = ({
               />
             </a>
             <Sheet>
-              <SheetTrigger asChild >
+              <SheetTrigger asChild>
                 <Button variant="outline" size="icon">
                   <Menu className="size-4" />
                 </Button>
