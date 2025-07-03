@@ -3,6 +3,12 @@
 import { BorderBeam } from "@/components/magicui/border-beam";
 import Image from "next/image";
 
+import bannerImage from "@/public/boat2.png";
+import cardImage1 from "@/public/Innovat.png";
+import cardImage2 from "@/public/secure.png";
+import cardImage3 from "@/public/intel.png";
+import cardImage4 from "@/public/user-first.png";
+
 export function AboutSection() {
   return (
     <div className="bg-black lg:pt-16 lg:pb-8 h-fit overflow-hidden">
@@ -14,7 +20,7 @@ export function AboutSection() {
           <div className="flex lg:flex-row flex-col items-center gap-16">
             <div className="text-center lg:relative absolute lg:-top-36 -top-0 w-[500px] animate-slide-in-left animation-delay-300">
               <Image
-                src="/boat2.png"
+                src={bannerImage}
                 alt="WAVELOOP Team"
                 height={0}
                 width={0}
@@ -47,7 +53,7 @@ export function AboutSection() {
                 className="from-transparent via-white to-transparent"
               />
               <Image
-                src="/Innovat.png"
+                src={cardImage1}
                 width={0}
                 height={0}
                 alt="Innovative"
@@ -69,7 +75,7 @@ export function AboutSection() {
                 className="from-transparent via-white to-transparent"
               />
               <Image
-                src="/secure.png"
+                src={cardImage2}
                 alt="Secure"
                 height={0}
                 width={0}
@@ -90,7 +96,7 @@ export function AboutSection() {
                 className="from-transparent via-white to-transparent"
               />
               <Image
-                src="/intel.png"
+                src={cardImage3}
                 alt="Intelligent"
                 height={0}
                 width={0}
@@ -111,7 +117,7 @@ export function AboutSection() {
                 className="from-transparent via-white to-transparent"
               />
               <Image
-                src="/user-first.png"
+                src={cardImage4}
                 alt="User-First"
                 height={0}
                 width={0}
