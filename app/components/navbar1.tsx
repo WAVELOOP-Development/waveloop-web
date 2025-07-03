@@ -60,71 +60,70 @@ const Navbar1 = ({
     title: "Shadcnblocks.com",
   },
   menu = [
-    { title: "Home", url: "#" },
+    { title: "Home", url: "/" },
     {
-      title: "Products",
+      title: "Services",
       url: "#",
       items: [
         {
-          title: "Blog",
-          description: "The latest industry news, updates, and info",
+          title: "Software Development",
+          description: "Custom software solutions tailored to your needs",
           icon: <Book className="size-5 shrink-0" />,
-          url: "#",
+          url: "/services/software-development",
         },
         {
-          title: "Company",
-          description: "Our mission is to innovate and empower the world",
+          title: "Mobile Apps",
+          description: "Cross-platform mobile application development",
           icon: <Trees className="size-5 shrink-0" />,
-          url: "#",
+          url: "/services/mobile-apps",
+        },
+        {
+          title: "AI Solutions",
+          description: "Artificial intelligence and machine learning solutions",
+          icon: <Sunset className="size-5 shrink-0" />,
+          url: "/services/ai-solutions",
+        },
+        {
+          title: "Cloud Services",
+          description: "Scalable cloud infrastructure and deployment",
+          icon: <Zap className="size-5 shrink-0" />,
+          url: "/services/cloud-services",
+        },
+      ],
+    },
+    {
+      title: "Company",
+      url: "#",
+      items: [
+        {
+          title: "About Us",
+          description: "Learn more about our mission and team",
+          icon: <Trees className="size-5 shrink-0" />,
+          url: "/about",
+        },
+        {
+          title: "Portfolio",
+          description: "Explore our latest projects and case studies",
+          icon: <Sunset className="size-5 shrink-0" />,
+          url: "/portfolio",
+        },
+        {
+          title: "Blog",
+          description: "Industry insights and technical articles",
+          icon: <Book className="size-5 shrink-0" />,
+          url: "/blog",
         },
         {
           title: "Careers",
-          description: "Browse job listing and discover our workspace",
-          icon: <Sunset className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Support",
-          description:
-            "Get in touch with our support team or visit our community forums",
+          description: "Join our team of innovative developers",
           icon: <Zap className="size-5 shrink-0" />,
-          url: "#",
+          url: "/careers",
         },
       ],
     },
     {
-      title: "Resources",
-      url: "#",
-      items: [
-        {
-          title: "Help Center",
-          description: "Get all the answers you need right here",
-          icon: <Zap className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Contact Us",
-          description: "We are here to help you with any questions you have",
-          icon: <Sunset className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Status",
-          description: "Check the current status of our services and APIs",
-          icon: <Trees className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Terms of Service",
-          description: "Our terms and conditions for using our services",
-          icon: <Book className="size-5 shrink-0" />,
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Pricing",
-      url: "#",
+      title: "Contact",
+      url: "/contact",
     },
   ],
 }: Navbar1Props) => {
@@ -156,7 +155,7 @@ const Navbar1 = ({
               asChild
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold"
             >
-              <a href="#contact">Contact Us</a>
+              <a href="/contact">Contact Us</a>
             </Button>
           </div>
         </nav>
