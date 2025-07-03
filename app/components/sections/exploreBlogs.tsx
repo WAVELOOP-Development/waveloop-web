@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import CardSwap, { Card } from "@/components/react-bits/CardSwap/CardSwap";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 
@@ -31,11 +32,11 @@ const ExploreBlogs = () => {
                   Straight from the minds at WAVELOOP.
                 </span>
               </p>
-              <div className="cursor-default text-black">
+              <Link href="/blogs" className="cursor-pointer text-black">
                 <InteractiveHoverButton className="pointer">
                   Explore
                 </InteractiveHoverButton>
-              </div>
+              </Link>
             </div>
           </div>
           <div className="order-2 lg:order-2 relative flex items-center justify-center h-full">
