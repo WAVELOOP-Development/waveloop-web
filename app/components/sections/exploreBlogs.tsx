@@ -60,36 +60,79 @@ const ExploreBlogs = () => {
                 pauseOnHover={false}
               >
                 <Card>
-                  <h3 className="relative text-lg font-semibold text-white px-5 py-3  rounded-t-lg">
+                  <h3 className="relative text-lg font-semibold text-white px-5 py-3 rounded-t-lg">
                     <div className="absolute left-3 top-1/2 transform -translate-y-1/2 flex space-x-2">
-                      <div className="w-3 h-3 rounded-full bg-red-500 transition-colors"></div>
-                      <div className="w-3 h-3 rounded-full bg-yellow-500 transition-colors"></div>
-                      <div className="w-3 h-3 rounded-full bg-green-500  transition-colors"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-red-500 transition-colors"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-yellow-500 transition-colors"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-green-500 transition-colors"></div>
                     </div>
-                    <span className="ml-15">Blog 1</span>
+                    <span className="ml-12">Blog 1</span>
                   </h3>
+                  <div className="relative w-full h-120 rounded-b-lg overflow-hidden">
+                    <img
+                      src="/kota.jpg"
+                      alt="Modern workspace with laptop and coffee"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 flex flex-col justify-start bg-gradient-to-b from-black/80 to-transparent p-5">
+                      <h4 className="text-3xl font-semibold text-white mb-1">
+                        10 Tips for Giving Zero Fucks!
+                      </h4>
+                      <p className="text-gray-200 text-start">
+                        March 15, 2024 • 5 min read
+                      </p>
+                    </div>
+                  </div>
                 </Card>
                 <Card>
-                  <h3 className="relative text-lg font-semibold text-white px-5 py-3  rounded-t-lg">
+                  <h3 className="relative text-lg font-semibold text-white px-5 py-3 rounded-t-lg">
                     <div className="absolute left-3 top-1/2 transform -translate-y-1/2 flex space-x-2">
-                      <div className="w-3 h-3 rounded-full bg-red-500 transition-colors"></div>
-                      <div className="w-3 h-3 rounded-full bg-yellow-500 transition-colors"></div>
-                      <div className="w-3 h-3 rounded-full bg-green-500  transition-colors"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-red-500 transition-colors"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-yellow-500 transition-colors"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-green-500 transition-colors"></div>
                     </div>
-                    <span className="ml-15">Blog 2</span>
+                    <span className="ml-12">Blog 2</span>
                   </h3>
-                  <p>Your content here</p>
+                  <div className="relative w-full h-120 rounded-b-lg overflow-hidden">
+                    <img
+                      src="/kota2.jpg"
+                      alt="Modern workspace with laptop and coffee"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 flex flex-col justify-start bg-gradient-to-b from-black/80 to-transparent p-5">
+                      <h4 className="text-3xl font-semibold text-white mb-1">
+                        5 Tips Measure Your Penis
+                      </h4>
+                      <p className="text-gray-200 text-start">
+                        March 15, 2024 • 5 min read
+                      </p>
+                    </div>
+                  </div>
                 </Card>
                 <Card>
-                  <h3 className="relative text-lg font-semibold text-white px-5 py-3  rounded-t-lg">
+                  <h3 className="relative text-lg font-semibold text-white px-5 py-3 rounded-t-lg">
                     <div className="absolute left-3 top-1/2 transform -translate-y-1/2 flex space-x-2">
-                      <div className="w-3 h-3 rounded-full bg-red-500 transition-colors"></div>
-                      <div className="w-3 h-3 rounded-full bg-yellow-500 transition-colors"></div>
-                      <div className="w-3 h-3 rounded-full bg-green-500  transition-colors"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-red-500 transition-colors"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-yellow-500 transition-colors"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-green-500 transition-colors"></div>
                     </div>
-                    <span className="ml-15">Blog 3</span>
+                    <span className="ml-12">Blog 3</span>
                   </h3>
-                  <p>Your content here</p>
+                  <div className="relative w-full h-120 rounded-b-lg overflow-hidden">
+                    <img
+                      src="/navindu.jpg"
+                      alt="Modern workspace with laptop and coffee"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 flex flex-col justify-start bg-gradient-to-b from-black/80 to-transparent p-5">
+                      <h4 className="text-3xl font-semibold text-white mb-1">
+                        20 Tips for Better Life Without a Girlfriend
+                      </h4>
+                      <p className="text-gray-200 text-start">
+                        March 15, 2024 • 5 min read
+                      </p>
+                    </div>
+                  </div>
                 </Card>
               </CardSwap>
             </div>
