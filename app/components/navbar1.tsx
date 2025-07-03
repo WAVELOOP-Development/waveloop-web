@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 
-import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Github } from "lucide-react";
 
 import {
   Accordion,
