@@ -99,15 +99,15 @@ export default function ContactPage() {
       <main className="bg-white">
         <div className="min-h-screen bg-white pt-16">
           {/* Hero Section */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
             <div className="text-center mb-16"></div>
 
             {/* Contact Us heading with form-width underline */}
-            <div className="grid lg:grid-cols-5 gap-12 lg:gap-20 mb-10">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-20 mb-10">
               <div className="lg:col-span-2"></div>{" "}
               {/* Empty left columns to align with form */}
               <div className="lg:col-span-3 flex flex-col">
-                <h1 className="text-[#021443] font-semibold text-3xl mb-2 text-right">
+                <h1 className="text-[#021443] font-semibold text-2xl md:text-3xl mb-2 text-center lg:text-right">
                   Contact Us
                 </h1>
                 <div className="w-full h-0.5 bg-[#021443]"></div>
@@ -115,63 +115,63 @@ export default function ContactPage() {
             </div>
 
             {/* Main Content */}
-            <div className="grid lg:grid-cols-5 gap-8 lg:gap-20">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-20">
               {/* Left Side - Project Images with Text */}
-              <div className="lg:col-span-2 flex flex-col mt-20 gap-2.5">
-                <div className="relative overflow-hidden mr-10  shadow-xl">
+              <div className="lg:col-span-2 flex flex-col mt-8 lg:mt-20 gap-2.5 order-2 lg:order-1">
+                <div className="relative overflow-hidden mr-4 sm:mr-6 lg:mr-10 shadow-xl">
                   <img
                     src="/contact.jpg"
                     alt="Project"
-                    className="w-full h-30 object-cover object-top"
+                    className="w-full h-24 sm:h-28 lg:h-30 object-cover object-top"
                   />
                   <div className="absolute inset-0 flex items-center">
-                    <div className="text-white mt-12 text-4xl md:text-6xl font-extrabold ml-4">
+                    <div className="text-white mt-4 sm:mt-8 lg:mt-12 text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold ml-2 sm:ml-3 lg:ml-4">
                       Have a
                     </div>
                   </div>
                 </div>
 
-                <div className="relative overflow-hidden ml-14 shadow-xl">
+                <div className="relative overflow-hidden ml-6 sm:ml-10 lg:ml-14 shadow-xl">
                   <img
                     src="/contact.jpg"
                     alt="Project"
-                    className="w-full h-20 object-cover"
+                    className="w-full h-16 sm:h-18 lg:h-20 object-cover"
                     style={{ objectPosition: "0 -120px" }}
                   />
                   <div className="absolute inset-0 flex items-center">
-                    <div className="text-white text-3xl md:text-5xl font-extrabold ml-4">
+                    <div className="text-white text-xl sm:text-2xl md:text-3xl lg:text-5xl font-extrabold ml-2 sm:ml-3 lg:ml-4">
                       Project?
                     </div>
                   </div>
                 </div>
-                <div className="relative overflow-hidden mr-24 ml-8 shadow-xl">
+                <div className="relative overflow-hidden mr-8 sm:mr-16 lg:mr-24 ml-4 sm:ml-6 lg:ml-8 shadow-xl">
                   <img
                     src="/contact.jpg"
                     alt="Project"
-                    className="w-full h-46 object-cover"
+                    className="w-full h-32 sm:h-38 lg:h-46 object-cover"
                     style={{ objectPosition: "0 -200px" }}
                   />
                 </div>
-                <div className="relative overflow-hidden ml-14 shadow-xl">
+                <div className="relative overflow-hidden ml-6 sm:ml-10 lg:ml-14 shadow-xl">
                   <img
                     src="/contact.jpg"
                     alt="Project"
-                    className="w-full h-14 object-cover"
+                    className="w-full h-10 sm:h-12 lg:h-14 object-cover"
                     style={{ objectPosition: "0 -380px" }}
                   />
                 </div>
-                <div className="relative overflow-hidden mr-14 shadow-xl">
+                <div className="relative overflow-hidden mr-6 sm:mr-10 lg:mr-14 shadow-xl">
                   <img
                     src="/contact.jpg"
                     alt="Project"
-                    className="w-full h-20 object-cover"
+                    className="w-full h-16 sm:h-18 lg:h-20 object-cover"
                     style={{ objectPosition: "0 -420px" }}
                   />
                 </div>
               </div>
 
               {/* Right Side - Contact Form */}
-              <div className="lg:col-span-3 bg-white rounded-2xl p-8 shadow-2xl relative">
+              <div className="lg:col-span-3 bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-2xl relative order-1 lg:order-2">
                 <BorderBeam
                   size={350}
                   duration={8}
@@ -180,12 +180,12 @@ export default function ContactPage() {
                   colorTo="#60a5fa"
                   borderWidth={2}
                 />
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-4 lg:mb-6">
                   Start Your Project
                 </h2>
 
                 {/* Project Tags */}
-                <div className="mb-6">
+                <div className="mb-4 lg:mb-6">
                   <p className="text-sm text-gray-600 mb-3 font-medium">
                     What&apos;s your project about?
                   </p>
@@ -194,7 +194,7 @@ export default function ContactPage() {
                       <button
                         key={tag}
                         onClick={() => handleTagClick(tag)}
-                        className={`px-4 py-2 rounded-full border text-sm font-medium transition-all duration-200 ${
+                        className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border text-xs sm:text-sm font-medium transition-all duration-200 ${
                           selectedTags.includes(tag)
                             ? "bg-gray-800 text-white border-blue-600 shadow-lg"
                             : "border-gray-300 text-gray-700 hover:border-blue-400 hover:text-gray-800"
@@ -207,11 +207,14 @@ export default function ContactPage() {
                 </div>
 
                 {/* Contact Form */}
-                <form onSubmit={handleSubmit} className="space-y-2">
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-3 sm:space-y-4"
+                >
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm mt-4 font-medium text-gray-700 "
+                      className="block text-sm mt-3 sm:mt-4 font-medium text-gray-700"
                     >
                       Full Name *
                     </label>
@@ -222,14 +225,14 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-2 py-1 border-b-2 border-gray-300 bg-transparent focus:border-[#021443] focus:outline-none transition-colors text-gray-900"
+                      className="w-full px-2 py-1 sm:py-1.5 border-b-2 border-gray-300 bg-transparent focus:border-[#021443] focus:outline-none transition-colors text-gray-900 text-sm sm:text-base"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm mt-4 font-medium text-gray-700 "
+                      className="block text-sm mt-3 sm:mt-4 font-medium text-gray-700"
                     >
                       Email Address *
                     </label>
@@ -240,14 +243,14 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-2 py-1 border-b-2 border-gray-300 bg-transparent focus:border-[#021443] focus:outline-none transition-colors text-gray-900"
+                      className="w-full px-2 py-1 sm:py-1.5 border-b-2 border-gray-300 bg-transparent focus:border-[#021443] focus:outline-none transition-colors text-gray-900 text-sm sm:text-base"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-sm font-medium text-gray-700 mt-4"
+                      className="block text-sm font-medium text-gray-700 mt-3 sm:mt-4"
                     >
                       Phone Number
                     </label>
@@ -257,14 +260,14 @@ export default function ContactPage() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-2 py-1 border-b-2 border-gray-300 bg-transparent focus:border-[#021443] focus:outline-none transition-colors text-gray-900"
+                      className="w-full px-2 py-1 sm:py-1.5 border-b-2 border-gray-300 bg-transparent focus:border-[#021443] focus:outline-none transition-colors text-gray-900 text-sm sm:text-base"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium text-gray-700 mt-4"
+                      className="block text-sm font-medium text-gray-700 mt-3 sm:mt-4"
                     >
                       Tell us about your project *
                     </label>
@@ -275,16 +278,16 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-2 py-1 border-b-2 border-gray-300 bg-transparent focus:border-[#021443] focus:outline-none transition-colors resize-none text-gray-900"
+                      className="w-full px-2 py-1 sm:py-1.5 border-b-2 border-gray-300 bg-transparent focus:border-[#021443] focus:outline-none transition-colors resize-none text-gray-900 text-sm sm:text-base"
                     />
                   </div>
 
                   {/* File Upload Section */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2 mt-4">
+                    <label className="block text-sm font-medium text-gray-700 mb-2 mt-3 sm:mt-4">
                       Attachments (Optional)
                     </label>
-                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-blue-400 transition-colors">
+                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-4 sm:p-6 text-center hover:border-blue-400 transition-colors">
                       <input
                         type="file"
                         id="file-upload"
@@ -297,8 +300,8 @@ export default function ContactPage() {
                         htmlFor="file-upload"
                         className="cursor-pointer flex flex-col items-center justify-center"
                       >
-                        <Upload className="w-8 h-8 text-gray-400 mb-2" />
-                        <span className="text-sm text-gray-600">
+                        <Upload className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400 mb-2" />
+                        <span className="text-xs sm:text-sm text-gray-600">
                           Click to upload or drag and drop
                         </span>
                         <span className="text-xs text-gray-500 mt-1">
@@ -315,19 +318,19 @@ export default function ContactPage() {
                             key={index}
                             className="flex items-center justify-between p-2 bg-gray-50 rounded-md"
                           >
-                            <div className="flex items-center space-x-2">
-                              <Paperclip className="w-4 h-4 text-gray-500" />
-                              <span className="text-sm text-gray-700 truncate">
+                            <div className="flex items-center space-x-2 flex-1 min-w-0">
+                              <Paperclip className="w-4 h-4 text-gray-500 flex-shrink-0" />
+                              <span className="text-xs sm:text-sm text-gray-700 truncate">
                                 {file.name}
                               </span>
-                              <span className="text-xs text-gray-500">
+                              <span className="text-xs text-gray-500 flex-shrink-0">
                                 ({(file.size / 1024 / 1024).toFixed(1)} MB)
                               </span>
                             </div>
                             <button
                               type="button"
                               onClick={() => removeFile(index)}
-                              className="text-red-500 hover:text-red-700 p-1"
+                              className="text-red-500 hover:text-red-700 p-1 flex-shrink-0"
                             >
                               <X className="w-4 h-4" />
                             </button>
@@ -339,13 +342,13 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full bg-[#021443] text-white mt-3 py-3 px-6 rounded-lg font-semibold hover:bg-[#021443]/90 focus:ring-2 focus:ring-[#021443] focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl"
+                    className="w-full bg-[#021443] text-white mt-4 sm:mt-6 py-2.5 sm:py-3 px-6 rounded-lg font-semibold hover:bg-[#021443]/90 focus:ring-2 focus:ring-[#021443] focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl text-sm sm:text-base"
                   >
                     Send Message
                   </button>
                 </form>
 
-                <p className="text-xs text-gray-500 mt-4 text-center">
+                <p className="text-xs text-gray-500 mt-3 sm:mt-4 text-center">
                   We&apos;ll get back to you within 24 hours. For urgent
                   matters, please call us directly.
                 </p>
