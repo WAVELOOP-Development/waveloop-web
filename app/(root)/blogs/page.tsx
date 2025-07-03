@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CalendarDays, Clock, Eye, Heart, User } from 'lucide-react';
 import Image from 'next/image';
-import Footer from '@/app/components/sections/footer';
 import { blogData, categories, type Blog } from '@/app/components/blogdata';
 
 export default function BlogsPage() {
@@ -225,7 +224,6 @@ export default function BlogsPage() {
         </div>
       </motion.section>
 
-      <Footer />
     </div>
   );
 }
