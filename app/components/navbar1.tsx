@@ -1,13 +1,9 @@
 import {
   Menu,
   Zap,
-  Code,
-  Smartphone,
-  Cloud,
-  Brain,
-  HelpCircle,
-  Activity,
-  FileText,
+  Book,
+  Trees,
+  Sunset,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -70,76 +66,70 @@ const Navbar1 = ({
     title: "Shadcnblocks.com",
   },
   menu = [
-    { title: "Home", url: "#" },
+    { title: "Home", url: "/" },
     {
       title: "Services",
       url: "#",
       items: [
         {
-          title: "Web Development",
-          description: "Custom web applications and responsive websites",
-          icon: <Code className="size-5 shrink-0" />,
-          url: "#",
+          title: "Software Development",
+          description: "Custom software solutions tailored to your needs",
+          icon: <Book className="size-5 shrink-0" />,
+          url: "/services/software-development",
         },
         {
-          title: "Mobile Development",
-          description: "iOS and Android mobile applications",
-          icon: <Smartphone className="size-5 shrink-0" />,
-          url: "#",
+          title: "Mobile Apps",
+          description: "Cross-platform mobile application development",
+          icon: <Trees className="size-5 shrink-0" />,
+          url: "/services/mobile-apps",
         },
         {
-          title: "AI & Machine Learning",
-          description: "Intelligent solutions and data analytics",
-          icon: <Brain className="size-5 shrink-0" />,
-          url: "#",
+          title: "AI Solutions",
+          description: "Artificial intelligence and machine learning solutions",
+          icon: <Sunset className="size-5 shrink-0" />,
+          url: "/services/ai-solutions",
         },
         {
-          title: "Cloud Solutions",
+          title: "Cloud Services",
           description: "Scalable cloud infrastructure and deployment",
-          icon: <Cloud className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "DevOps & Automation",
-          description: "Streamline your development and deployment processes",
-          icon: <Activity className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Cybersecurity",
-          description: "Protect your digital assets and infrastructure",
           icon: <Zap className="size-5 shrink-0" />,
-          url: "#",
+          url: "/services/cloud-services",
         },
       ],
     },
     {
-      title: "Resources",
+      title: "Company",
       url: "#",
       items: [
         {
-          title: "Help Center",
-          description: "Get all the answers you need right here",
-          icon: <HelpCircle className="size-5 shrink-0" />,
-          url: "#",
+          title: "About Us",
+          description: "Learn more about our mission and team",
+          icon: <Trees className="size-5 shrink-0" />,
+          url: "/about",
         },
-        // {
-        //   title: "Status",
-        //   description: "Check the current status of our services and APIs",
-        //   icon: <Activity className="size-5 shrink-0" />,
-        //   url: "#",
-        // },
         {
-          title: "Terms of Service",
-          description: "Our terms and conditions for using our services",
-          icon: <FileText className="size-5 shrink-0" />,
-          url: "#",
+          title: "Portfolio",
+          description: "Explore our latest projects and case studies",
+          icon: <Sunset className="size-5 shrink-0" />,
+          url: "/portfolio",
+        },
+        {
+          title: "Blog",
+          description: "Industry insights and technical articles",
+          icon: <Book className="size-5 shrink-0" />,
+          url: "/blog",
+        },
+        {
+          title: "Careers",
+          description: "Join our team of innovative developers",
+          icon: <Zap className="size-5 shrink-0" />,
+          url: "/careers",
         },
       ],
     },
     {
-      title: "Pricing",
-      url: "#",
+      title: "Contact",
+      url: "/contact",
     },
   ],
 }: Navbar1Props) => {
@@ -171,7 +161,7 @@ const Navbar1 = ({
               asChild
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold"
             >
-              <a href="#contact">Contact Us</a>
+              <a href="/contact">Contact Us</a>
             </Button>
           </div>
         </nav>
