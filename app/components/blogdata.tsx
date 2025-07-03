@@ -1,3 +1,12 @@
+import { StaticImageData } from "next/image";
+
+import blogImage1 from "@/public/blog1.jpeg"
+import blogImage2 from "@/public/blog2.jpeg"
+import blogImage3 from "@/public/blog3.jpeg"
+import blogImage4 from "@/public/blog4.jpeg"
+import blogImage5 from "@/public/blog5.jpeg"
+import blogImage6 from "@/public/blog6.jpeg"
+
 
 export interface Blog {
   id: number;
@@ -8,7 +17,7 @@ export interface Blog {
   date: string;
   readTime: string;
   category: string;
-  image: string;
+  image: StaticImageData;
   tags: string[];
   views: number;
   likes: number;
@@ -25,7 +34,7 @@ export const blogData: Blog[] = [
     date: "2024-01-15",
     readTime: "8 min read",
     category: "Technology",
-    image: "blog1.jpeg",
+    image: blogImage1,
     tags: ["React", "NextJS", "TypeScript", "AI"],
     views: 1200,
     likes: 89,
@@ -40,7 +49,7 @@ export const blogData: Blog[] = [
     date: "2024-01-12",
     readTime: "6 min read",
     category: "Design",
-    image: "blog2.jpeg",
+    image: blogImage2,
     tags: ["UI/UX", "Design", "Mobile", "User Research"],
     views: 950,
     likes: 67,
@@ -55,7 +64,7 @@ export const blogData: Blog[] = [
     date: "2024-01-10",
     readTime: "12 min read",
     category: "Backend",
-    image: "blog3.jpeg",
+    image: blogImage3,
     tags: ["Node.js", "MongoDB", "AWS", "Architecture"],
     views: 780,
     likes: 45,
@@ -70,7 +79,7 @@ export const blogData: Blog[] = [
     date: "2024-01-08",
     readTime: "10 min read",
     category: "AI/ML",
-    image: "blog4.jpeg",
+    image: blogImage4,
     tags: ["Machine Learning", "Python", "TensorFlow", "API"],
     views: 1100,
     likes: 92,
@@ -85,7 +94,7 @@ export const blogData: Blog[] = [
     date: "2024-01-05",
     readTime: "7 min read",
     category: "Cloud",
-    image: "blog5.jpeg",
+    image: blogImage5,
     tags: ["AWS", "Azure", "DevOps", "Security"],
     views: 650,
     likes: 34,
@@ -100,7 +109,7 @@ export const blogData: Blog[] = [
     date: "2024-01-03",
     readTime: "9 min read",
     category: "Mobile",
-    image: "blog6.jpeg",
+    image: blogImage6,
     tags: ["React Native", "Flutter", "iOS", "Android"],
     views: 890,
     likes: 56,

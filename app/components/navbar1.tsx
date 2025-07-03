@@ -34,6 +34,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
+import logoImage from "@/public/logo-secondary-T.png";
+
 interface MenuItem {
   title: string;
   url: string;
@@ -45,7 +47,6 @@ interface MenuItem {
 interface Navbar1Props {
   logo?: {
     url: string;
-    src: string;
     alt: string;
     title: string;
   };
@@ -64,10 +65,9 @@ interface Navbar1Props {
 
 const Navbar1 = ({
   logo = {
-    url: "https://www.shadcnblocks.com",
-    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg",
+    url: "/",
     alt: "logo",
-    title: "Shadcnblocks.com",
+    title: "WAVELOOP",
   },
   menu = [
     { title: "Home", url: "#" },
@@ -152,7 +152,7 @@ const Navbar1 = ({
             {/* Logo */}
             <a href={logo.url} className="flex items-center gap-2">
               <Image
-                src="/logo-secondary-T.png"
+                src={logoImage}
                 alt="Logo"
                 width={120}
                 height={30}
@@ -182,7 +182,7 @@ const Navbar1 = ({
             {/* Logo */}
             <a href={logo.url} className="flex items-center">
               <Image
-                src="/logo-secondary-T.png"
+                src={logoImage}
                 alt="Logo"
                 width={120}
                 height={30}
@@ -199,7 +199,7 @@ const Navbar1 = ({
                   <SheetTitle>
                     <a href={logo.url} className="flex items-center gap-2">
                       <Image
-                        src="/logo-secondary-T.png"
+                        src={logoImage}
                         alt="Logo"
                         width={120}
                         height={30}
