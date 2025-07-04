@@ -18,7 +18,7 @@ const images = [
 function BlurFadeDemo() {
   return (
     <section id="photos">
-      <div className="columns-2 gap-2 lg:gap-4 sm:columns-3">
+      <div className="columns-2 gap-2 lg:gap-4 sm:columns-2">
         {images.map((image, idx) => (
           <BlurFade key={idx} delay={0.25 + idx * 0.05} inView>
             <div className="mb-4">
