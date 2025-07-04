@@ -169,7 +169,7 @@ const Navbar1 = ({
               asChild
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold"
             >
-              <a href="#contact">Contact Us</a>
+              <a href="/contact-us">Contact Us</a>
             </Button>
           </div>
         </nav>
@@ -216,7 +216,7 @@ const Navbar1 = ({
                       asChild
                       className="bg-blue-600 hover:bg-blue-700 text-white font-semibold w-full"
                     >
-                      <a href="#contact">Contact Us</a>
+                      <a href="/contact-us">Contact Us</a>
                     </Button>
                   </div>
                 </div>

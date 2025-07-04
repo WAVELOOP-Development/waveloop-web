@@ -30,7 +30,7 @@ const visionaries = [
   {
     name: "AI Ventures",
     username: "@aiventures",
-    body: "WaveLoop's cybersecurity expertise protected our critical data assets. Highly recommended for enterprise security.",
+    body: "WaveLoop&apos;s cybersecurity expertise protected our critical data assets. Highly recommended for enterprise security.",
     img: "https://avatar.vercel.sh/ai",
   },
   {
@@ -66,7 +66,13 @@ const VisionaryCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <Image className="rounded-full" width={32} height={32} alt="" src={img} />
+        <Image
+          className="rounded-full"
+          width={32}
+          height={32}
+          alt=""
+          src={img}
+        />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}

@@ -4,7 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react";
 
-import Image from 'next/image';
+import Image from "next/image";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -43,8 +43,7 @@ const components: { title: string; href: string; description: string }[] = [
   {
     title: "Cloud Integration",
     href: "/services/cloud",
-    description:
-      "Deploy, manage, and scale your infrastructure.",
+    description: "Deploy, manage, and scale your infrastructure.",
   },
   {
     title: "Custom Software",
@@ -170,7 +169,7 @@ export function NavigationMenuDemo() {
                   <li>
                     <NavigationMenuLink asChild>
                       <Link
-                        href="/contactus"
+                        href="/contact"
                         className="flex-row items-center gap-2"
                       >
                         <CircleHelpIcon />
