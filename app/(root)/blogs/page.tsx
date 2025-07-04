@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { CalendarDays, Clock, Eye, Heart, User } from 'lucide-react';
-import Image from 'next/image';
-import { blogData, categories, type Blog } from '@/app/components/blogdata';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { CalendarDays, Clock, Eye, Heart, User } from "lucide-react";
+import Image from "next/image";
+import { blogData, categories, type Blog } from "@/app/components/blogdata";
 
 export default function BlogsPage() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [filteredBlogs, setFilteredBlogs] = useState<Blog[]>(blogData);
   const [hoveredBlog, setHoveredBlog] = useState<number | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -17,10 +17,12 @@ export default function BlogsPage() {
   }, []);
 
   useEffect(() => {
-    if (selectedCategory === 'All') {
+    if (selectedCategory === "All") {
       setFilteredBlogs(blogData);
     } else {
-      setFilteredBlogs(blogData.filter(blog => blog.category === selectedCategory));
+      setFilteredBlogs(
+        blogData.filter((blog) => blog.category === selectedCategory)
+      );
     }
   }, [selectedCategory]);
 
@@ -51,7 +53,7 @@ export default function BlogsPage() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-6xl md:text-7xl font-bold text-[#00081C] mb-6"
           >
-            Our Blog
+            Blog
           </motion.h1>
           <motion.p
             initial={{ y: 20, opacity: 0 }}
@@ -59,7 +61,7 @@ export default function BlogsPage() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto"
           >
-            Discover insights, tutorials, and the latest trends in technology and development
+            Ideas that spark innovation, Powered by WAVELOOP.
           </motion.p>
         </div>
       </motion.section>
@@ -79,8 +81,8 @@ export default function BlogsPage() {
               onClick={() => setSelectedCategory(category)}
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 selectedCategory === category
-                  ? 'bg-[#00081C] text-white shadow-lg shadow-[#00081C]/25'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-[#00081C] border border-gray-200'
+                  ? "bg-[#00081C] text-white shadow-lg shadow-[#00081C]/25"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-[#00081C] border border-gray-200"
               }`}
             >
               {category}
@@ -107,7 +109,7 @@ export default function BlogsPage() {
                 onMouseEnter={() => setHoveredBlog(blog.id)}
                 onMouseLeave={() => setHoveredBlog(null)}
                 className={`group relative bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-[#00081C]/30 hover:shadow-xl hover:shadow-[#00081C]/10 transition-all duration-500 cursor-pointer ${
-                  blog.featured ? 'md:col-span-2 lg:col-span-1' : ''
+                  blog.featured ? "md:col-span-2 lg:col-span-1" : ""
                 }`}
               >
                 {blog.featured && (
@@ -155,7 +157,10 @@ export default function BlogsPage() {
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {blog.tags.map((tag) => (
-                      <span key={tag} className="bg-gray-100 text-[#00081C] px-2 py-1 rounded-md text-xs border border-gray-200">
+                      <span
+                        key={tag}
+                        className="bg-gray-100 text-[#00081C] px-2 py-1 rounded-md text-xs border border-gray-200"
+                      >
                         {tag}
                       </span>
                     ))}
@@ -184,8 +189,12 @@ export default function BlogsPage() {
                       className="absolute inset-0 bg-gradient-to-t from-[#00081C]/95 via-[#00081C]/85 to-[#00081C]/60 flex flex-col justify-center p-6"
                     >
                       <div className="text-white">
-                        <h4 className="text-2xl font-bold mb-4">{blog.title}</h4>
-                        <p className="text-sm text-gray-200 leading-relaxed">{blog.excerpt}</p>
+                        <h4 className="text-2xl font-bold mb-4">
+                          {blog.title}
+                        </h4>
+                        <p className="text-sm text-gray-200 leading-relaxed">
+                          {blog.excerpt}
+                        </p>
                       </div>
                     </motion.div>
                   )}
@@ -203,7 +212,9 @@ export default function BlogsPage() {
         className="py-20 px-4 bg-white border-t border-gray-200"
       >
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-[#00081C] mb-6">Stay Updated</h2>
+          <h2 className="text-4xl font-bold text-[#00081C] mb-6">
+            Stay Updated
+          </h2>
           <p className="text-gray-600 mb-8">
             Get the latest articles and insights delivered to your inbox
           </p>
@@ -223,7 +234,6 @@ export default function BlogsPage() {
           </div>
         </div>
       </motion.section>
-
     </div>
   );
 }

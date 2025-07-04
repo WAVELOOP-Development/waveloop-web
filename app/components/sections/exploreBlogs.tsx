@@ -58,7 +58,7 @@ const ExploreBlogs = () => {
                 <div className="absolute inset-0 bg-gradient-to-l from-transparent to-gray-50/20 rounded-2xl" />
               </div>
             </div>
-            <div className="absolute right-0 bottom-50">
+            <div className="absolute right-0 bottom-15">
               <div className="hidden lg:flex lg:items-start lg:justify-start w-full h-full">
                 <CardSwap
                   cardDistance={60}
