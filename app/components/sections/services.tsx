@@ -1,6 +1,10 @@
-import { Palette, Smartphone, Globe, Bot, Shield, Cloud } from "lucide-react";
+import { Palette,  Globe, Bot, Shield, Cloud } from "lucide-react";
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 import Image from "next/image";
+
+import uiUxBanner from "@/public/uiux.jpg";
+import cyberBanner from "@/public/security.jpg";
+import cloudServicesBanner from "@/public/cloud-com-2.jpg";
 
 const services = [
   {
@@ -19,7 +23,7 @@ const services = [
         muted
         className="w-full h-96 object-cover"
       >
-        <source src="./web-dev.mp4" type="video/mp4" />
+        <source src="./web-dev-2.m4v" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     ),
@@ -34,7 +38,7 @@ const services = [
     cta: "View designs",
     className: "col-span-3 lg:col-span-1",
     background: (
-      <Image src="/ui.jpg" alt="UI/UX Design" fill className="object-cover" />
+      <Image src={uiUxBanner} alt="UI/UX Design" fill className="object-cover" />
     ),
     Icon: Palette,
   },
@@ -46,7 +50,7 @@ const services = [
     className: "col-span-3 lg:col-span-1",
     background: (
       <Image
-        src="/cyber.jpg"
+        src={cyberBanner}
         alt="Cyber Security"
         fill
         className="object-cover"
@@ -55,21 +59,26 @@ const services = [
     Icon: Shield,
   },
   {
-    name: "Mobile Apps",
+    name: "Mobile Development",
     description:
       "Native and cross-platform mobile applications for iOS and Android.",
-    href: "/services/mobile-apps",
+    href: "/mobile-development",
     cta: "Explore",
     className: "col-span-3 lg:col-span-2",
     background: (
-      <Image
-        src="/boat.png"
-        alt="Mobile Apps"
-        fill
-        className="object-cover opacity-50"
-      />
+      <video
+        preload="none"
+        loop
+        autoPlay
+        controlsList="false"
+        muted
+        className="w-full h-96 object-cover"
+      >
+        <source src="./mobile-dev.m4v" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     ),
-    Icon: Smartphone,
+    Icon: Globe,
   },
   {
     name: "AI Powered Solutions",
@@ -86,7 +95,7 @@ const services = [
         muted
         className="w-full h-96 object-cover bg-gradient-to-b from-black to-transparent"
       >
-        <source src="./ai.mp4" type="video/mp4" />
+        <source src="./ai-2.m4v" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     ),
@@ -101,7 +110,7 @@ const services = [
     className: "col-span-3 lg:col-span-1 ",
     background: (
       <Image
-        src="/cloud.jpg"
+        src={cloudServicesBanner}
         alt="Cloud Services"
         fill
         className="object-cover"

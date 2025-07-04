@@ -3,18 +3,24 @@
 import { BorderBeam } from "@/components/magicui/border-beam";
 import Image from "next/image";
 
+import bannerImage from "@/public/boat2.png";
+import cardImage1 from "@/public/Innovat.png";
+import cardImage2 from "@/public/secure.png";
+import cardImage3 from "@/public/intel.png";
+import cardImage4 from "@/public/user-first.png";
+
 export function AboutSection() {
   return (
-    <div className="bg-[#000511] lg:pt-16 lg:pb-8 h-fit overflow-hidden">
+    <div className="bg-black lg:pt-16 lg:pb-8 h-fit overflow-hidden">
       {/* <div className="relative text-white flex w-6xl m-auto flex-col items-center justify-center overflow-hidden">
         <VelocityScroll>Turning ideas into impactful digital experiences.</VelocityScroll>
       </div> */}
-      <div className="lg:pt-30 lg:pb-16 h-fit flex items-center bg-[#000511]">
+      <div className="lg:pt-30 lg:pb-16 h-fit flex items-center bg-black">
         <div className="max-w-6xl mx-auto p-8  h-full relative animate-fade-in bg-[#272727]">
           <div className="flex lg:flex-row flex-col items-center gap-16">
             <div className="text-center lg:relative absolute lg:-top-36 -top-0 w-[500px] animate-slide-in-left animation-delay-300">
               <Image
-                src="/boat2.png"
+                src={bannerImage}
                 alt="WAVELOOP Team"
                 height={0}
                 width={0}
@@ -29,15 +35,12 @@ export function AboutSection() {
                 Creators of intelligent <br />
                 technology.
               </h2>
-              <p className="text-md text-gray-300 max-w-3xl text-start animate-fade-in-up animation-delay-1100">
-                We are WAVELOOP,
-                <br /> A future-focused tech company building smart, secure,
-                user-first solutions. Our mission is to bridge creativity and
-                functionality through innovation. From AI-powered platforms to
-                seamless mobile experiences, we bring bold ideas to life with
-                purpose and precision. At our core, we are thinkers, builders
-                and problem-solvers, passionate about shaping a smarter digital
-                world.
+              <p className="text-md text-gray-300 max-w-3xl  animate-fade-in-up animation-delay-1100 text-justify">
+                We are <strong>WAVELOOP</strong>,<br />A future driven tech
+                company crafting secure, user first solutions. We merge
+                creativity with innovation to build bold AI platforms and
+                seamless digital experiences. At our core, we are thinkers,
+                builders, and problem solvers shaping a smarter digital world.
               </p>
             </div>
           </div>
@@ -50,7 +53,7 @@ export function AboutSection() {
                 className="from-transparent via-white to-transparent"
               />
               <Image
-                src="/Innovat.png"
+                src={cardImage1}
                 width={0}
                 height={0}
                 alt="Innovative"
@@ -72,7 +75,7 @@ export function AboutSection() {
                 className="from-transparent via-white to-transparent"
               />
               <Image
-                src="/secure.png"
+                src={cardImage2}
                 alt="Secure"
                 height={0}
                 width={0}
@@ -93,7 +96,7 @@ export function AboutSection() {
                 className="from-transparent via-white to-transparent"
               />
               <Image
-                src="/intel.png"
+                src={cardImage3}
                 alt="Intelligent"
                 height={0}
                 width={0}
@@ -114,7 +117,7 @@ export function AboutSection() {
                 className="from-transparent via-white to-transparent"
               />
               <Image
-                src="/user-first.png"
+                src={cardImage4}
                 alt="User-First"
                 height={0}
                 width={0}

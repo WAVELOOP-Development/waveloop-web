@@ -1,4 +1,5 @@
 import { Navbar1 } from "../components/navbar1";
+import Footer from "../components/sections/footer";
 
 export default function Layout({
   children,
@@ -9,6 +10,7 @@ export default function Layout({
     <main className="bg-[#000511]">
       <Navbar1 />
       {children}
+      <Footer />
     </main>
   );
 }

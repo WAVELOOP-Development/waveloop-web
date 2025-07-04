@@ -28,11 +28,11 @@ const HeroSectionNew = () => {
                   Intelligent Solutions
                 </TextAnimate>
               </span>
-              <span className="cursor-default lg:text-xl text-sm px-4 lg:px-0 font-medium text-center tracking-wide text-gray-300">
+              {/* <span className="cursor-default lg:text-xl text-sm px-4 lg:px-0 font-medium text-center tracking-wide text-gray-300">
                 <TextAnimate animation="slideLeft" by="word" once>
                   Beautifully designed, animated components and templates built with Tailwind CSS, React, and Framer Motion.
                 </TextAnimate>
-              </span>
+              </span> */}
             </div>
             <div className="cursor-default">
               <InteractiveHoverButton className="pointer">
