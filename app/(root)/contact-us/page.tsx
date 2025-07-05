@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Paperclip, Upload, X } from "lucide-react";
 import { BorderBeam } from "@/components/magicui/border-beam";
+import { motion } from "framer-motion";
 
 const projectTags = [
   "Software Development",
@@ -94,21 +95,28 @@ export default function ContactPage() {
   return (
     <>
       <main className="bg-white">
-        <div className="min-h-screen bg-white pt-16">
+        <div className="min-h-screen bg-white">
           {/* Hero Section */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-            <div className="text-center mb-16"></div>
-
-            {/* Contact Us heading with form-width underline */}
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-20 mb-10">
-              <div className="lg:col-span-2"></div>{" "}
-              {/* Empty left columns to align with form */}
-              <div className="lg:col-span-3 flex flex-col">
-                <h1 className="text-[#021443] font-semibold text-2xl md:text-3xl mb-2 text-center lg:text-right">
-                  Contact Us
-                </h1>
-                <div className="w-full h-0.5 bg-[#021443]"></div>
-              </div>
+            {/* Contact Us heading centered */}
+            <div className="text-center mb-16">
+              <motion.h1
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="text-5xl md:text-7xl font-semibold text-[#00081C] mb-6 mt-30"
+              >
+                Contact Us
+              </motion.h1>
+              <motion.p
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto"
+              >
+                We&apos;re here to help you bring your ideas to life. Let&apos;s
+                discuss your project and how we can assist you.
+              </motion.p>
             </div>
 
             {/* Main Content */}
