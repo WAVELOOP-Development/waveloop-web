@@ -1,3 +1,4 @@
+import createMDX from '@next/mdx'
 import type { NextConfig } from "next";
 
 const isProduction = process.env.NODE_ENV === "production";
@@ -11,6 +12,14 @@ const nextConfig: NextConfig = {
   },
   assetPrefix: basePath,
   basePath: basePath,
-};
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  experimental: {
+    mdxRs: true,
+  },
+}
 
-export default nextConfig;
+const withMDX = createMDX({
+  // Add markdown plugins here, as desired
+})
+
+export default withMDX(nextConfig)
