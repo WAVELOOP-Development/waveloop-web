@@ -31,9 +31,9 @@ export async function generateStaticParams() {
 }
 
 interface BlogDetailPageProps {
-  params: {
+  params: Promise<{
     blogId: string;
-  };
+  }>;
 }
 
 export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
