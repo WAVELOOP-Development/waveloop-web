@@ -3,6 +3,7 @@ import React from "react";
 import { ChevronUp } from "lucide-react";
 import { type Blog } from "@/app/components/blogdata";
 import Link from "next/link";
+import Image from "next/image";
 
 async function getBlogPost(blogId: string): Promise<Blog | null> {
   try {
@@ -48,12 +49,12 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
     <div className="bg-white min-h-screen">
       {/* Breadcrumb */}
       <div className="max-w-6xl mx-auto px-4 py-4 mt-30">
-        <div className="flex items-center space-x-2 text-gray-600">
+        <div className="flex items-center space-x-2 text-gray-400">
           <Link href="/blogs" className="hover:text-black">
             Blog
           </Link>
-          <span className="text-gray-400">›</span>
-          <span>{blog.title}</span>
+          <span className="text-black">›</span>
+          <span className="text-black">{blog.title}</span>
         </div>
       </div>
 
@@ -68,18 +69,22 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
           {/* Author Info */}
           <div className="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-4 mb-8 mt-12">
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-medium text-lg">
-                  {blog.author.charAt(0)}
-                </span>
+              <div className="w-12 h-12 rounded-full overflow-hidden">
+                <Image
+                  src={blog.authorImage || "/default-img.png"}
+                  alt={blog.author}
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <div className="font-medium text-black">{blog.author}</div>
-                <div className="text-gray-600">Associate Tech Lead</div>
+                <div className="text-gray-400">{blog.authorDesignation}</div>
               </div>
             </div>
             <div className="flex flex-col md:flex-row md:items-center md:space-x-6 md:ml-auto">
-              <div className="text-gray-600 mb-4 md:mb-0">
+              <div className="text-gray-500 mb-4 md:mb-0">
                 Published on:{" "}
                 {new Date(blog.date).toLocaleDateString("en-US", {
                   year: "numeric",
@@ -101,56 +106,39 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
 
         {/* Hero Image */}
         <div className="mb-12">
-          <div className="w-full h-64 md:h-80 lg:h-96 bg-gradient-to-r from-blue-900 via-blue-800 to-teal-600 relative overflow-hidden">
-            <div className="absolute inset-0 bg-black opacity-20"></div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-full h-full bg-gradient-to-r from-blue-900 via-blue-800 to-teal-600 opacity-90"></div>
-            </div>
-            {/* Tech pattern overlay */}
-            <div className="absolute inset-0 opacity-30">
-              <svg className="w-full h-full" viewBox="0 0 800 400">
-                <defs>
-                  <pattern
-                    id="tech-pattern"
-                    x="0"
-                    y="0"
-                    width="80"
-                    height="80"
-                    patternUnits="userSpaceOnUse"
-                  >
-                    <circle cx="40" cy="40" r="2" fill="white" opacity="0.3" />
-                    <line
-                      x1="40"
-                      y1="40"
-                      x2="80"
-                      y2="20"
-                      stroke="white"
-                      strokeWidth="1"
-                      opacity="0.2"
-                    />
-                    <line
-                      x1="40"
-                      y1="40"
-                      x2="20"
-                      y2="80"
-                      stroke="white"
-                      strokeWidth="1"
-                      opacity="0.2"
-                    />
-                  </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#tech-pattern)" />
-              </svg>
-            </div>
-          </div>
+          <Image
+            src={blog.image || "/default-img.png"}
+            alt={blog.title}
+            width={800}
+            height={300}
+            className="w-full  shadow-lg"
+          />
         </div>
 
         {/* Main Content */}
         <div className="flex-1">
           <div className="prose prose-lg max-w-none">
-            <div className="text-gray-700 leading-relaxed whitespace-pre-wrap">
-              {blog.content}
-            </div>
+            <div
+              className="text-gray-700 leading-relaxed"
+              dangerouslySetInnerHTML={{
+                __html: blog.content
+                  .replace(
+                    /## (.*)/g,
+                    '<h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4 pb-2">$1</h2>'
+                  )
+                  .replace(
+                    /!\[(.*?)\]\((.*?)\)/g,
+                    '<div class="my-4"><img src="$2" alt="$1" class="w-3/4 mx-auto h-auto shadow-lg" /></div>'
+                  )
+                  .replace(
+                    /\*\*(.*?)\*\*/g,
+                    '<strong class="font-semibold text-gray-900">$1</strong>'
+                  )
+                  .replace(/\n\n/g, '</p><p class="mb-4">')
+                  .replace(/^\s*/, '<p class="mb-4">')
+                  .replace(/\s*$/, "</p>"),
+              }}
+            />
           </div>
         </div>
 
