@@ -68,12 +68,12 @@ interface Navbar1Props {
 
 const Navbar1 = ({
   logo = {
-    url: "./",
+    url: "/",
     alt: "logo",
     title: "WAVELOOP",
   },
   menu = [
-    { title: "Home", url: "#" },
+    { title: "Home", url: "/" },
     {
       title: "Services",
       url: "#",
@@ -142,7 +142,7 @@ const Navbar1 = ({
     },
     {
       title: "Blog",
-      url: "#",
+      url: "/blogs",
     },
   ],
 }: Navbar1Props) => {

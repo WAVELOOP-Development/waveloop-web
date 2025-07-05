@@ -49,7 +49,7 @@ export default function BlogsPage() {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-6xl md:text-7xl font-bold text-[#00081C] mb-6 mt-20"
+            className="text-5xl md:text-7xl font-semibold text-[#00081C] mb-6 mt-20"
           >
             Blog
           </motion.h1>
