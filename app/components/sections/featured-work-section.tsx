@@ -6,6 +6,8 @@ import image2 from "@/public/resumed-web.png";
 import image3 from "@/public/focusfitness.png";
 import image4 from "@/public/grocify.png";
 import image5 from "@/public/petplus.png";
+import image6 from "@/public/ceylon-events.png";
+import image7 from "@/public/cey-web.png";
 
 const images = [
   { src: image1, alt: "Rescue Med" },
@@ -13,6 +15,8 @@ const images = [
   { src: image3, alt: "Focus Fitness" },
   { src: image4, alt: "Grocify" },
   { src: image5, alt: "PetPlus" },
+  { src: image6, alt: "CeylonEvents" },
+  { src: image7, alt: "CeylonEvents Web" },
 ];
 
 function BlurFadeDemo() {
