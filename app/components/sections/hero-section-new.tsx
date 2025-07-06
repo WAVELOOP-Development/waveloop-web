@@ -25,7 +25,7 @@ const HeroSectionNew = () => {
         muted
         className="w-full h-screen object-cover"
       >
-        <source src="/intro_3.m4v" type="video/mp4" />
+        <source src="./intro_3.m4v" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="absolute flex justify-start items-end inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black to-transparent">
