@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Menu,
   Zap,
@@ -38,6 +40,7 @@ import {
 
 import logoImage from "@/public/logo-secondary-T.png";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 interface MenuItem {
   title: string;
@@ -146,9 +149,54 @@ const Navbar1 = ({
     },
   ],
 }: Navbar1Props) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+
+      // Determine if we should show the navbar
+      setIsScrolled(scrollTop > 100);
+
+      // Determine visibility based on scroll direction
+      if (scrollTop > 100) {
+        if (scrollTop > lastScrollY) {
+          // Scrolling down
+          setIsVisible(false);
+        } else {
+          // Scrolling up
+          setIsVisible(true);
+        }
+      } else {
+        // At the top of the page
+        setIsVisible(true);
+      }
+
+      setLastScrollY(scrollTop);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <section className="absolute w-fit h-fit z-10 top-8 left-0 right-0 flex py-2 bg-white rounded-md m-auto shadow-lg">
-      <div className="container px-4">
+    <section
+      className={`
+      ${isScrolled ? "fixed" : "absolute"} 
+      lg:w-fit w-full h-fit z-50 
+      ${isScrolled ? "lg:top-4 top-0" : "lg:top-8"} 
+      left-1/2 flex py-2
+      ${isScrolled ? "bg-white backdrop-blur-md" : "bg-white"} 
+      lg:rounded-md 
+      shadow-lg
+      transition-all duration-300 ease-in-out
+      ${isScrolled && !isVisible ? "transform -translate-x-1/2 -translate-y-[calc(100%+1rem)]" : "transform -translate-x-1/2 translate-y-0"}
+      ${isScrolled ? "border-b border-gray-200" : ""}
+    `}
+    >
+      <div className="px-4 w-full">
         {/* Desktop Menu */}
         <nav className="hidden justify-between lg:flex">
           <div className="flex items-center gap-8">
@@ -176,7 +224,7 @@ const Navbar1 = ({
 
         {/* Mobile Menu */}
         <div className="w-full lg:hidden">
-          <div className="flex w-full items-center gap-16 justify-between">
+          <div className="flex w-full items-center justify-between">
             {/* Logo */}
             <Link href={logo.url} className="flex items-center">
               <Image src={logoImage} alt="Logo" width={120} height={30} />

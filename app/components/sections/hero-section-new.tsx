@@ -1,8 +1,20 @@
+"use client";
+
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import React from "react";
 
 const HeroSectionNew = () => {
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about-section');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <div className="relative">
       <video
@@ -35,7 +47,10 @@ const HeroSectionNew = () => {
               </span> */}
             </div>
             <div className="cursor-default">
-              <InteractiveHoverButton className="pointer">
+              <InteractiveHoverButton 
+                className="pointer" 
+                onClick={scrollToAbout}
+              >
                 Wanna Know Us?
               </InteractiveHoverButton>
             </div>

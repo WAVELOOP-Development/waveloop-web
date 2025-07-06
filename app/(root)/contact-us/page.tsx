@@ -97,7 +97,7 @@ export default function ContactPage() {
         <div className="min-h-screen bg-white">
           {/* Hero Section */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
-            <div className="z-10 max-w-4xl mx-auto mb-12 mt-16 py-4">
+            <div className="z-10 max-w-4xl mx-auto lg:mb-12 mb-4 mt-16 py-4">
               <TextAnimate
                 animation="slideLeft"
                 by="word"
@@ -183,7 +183,7 @@ export default function ContactPage() {
               </div>
 
               {/* Right Side - Contact Form */}
-              <div className="lg:col-span-3 bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg relative order-1 lg:order-2">
+              <div className="lg:col-span-3 bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg mb-8 relative order-1 lg:order-2">
                 <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-4 lg:mb-6">
                   Start Your Project
                 </h2>

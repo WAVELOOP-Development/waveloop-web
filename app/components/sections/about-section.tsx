@@ -11,12 +11,9 @@ import cardImage4 from "@/public/user-first.png";
 
 export function AboutSection() {
   return (
-    <div className="bg-black lg:pt-16 lg:pb-8 h-fit overflow-hidden">
-      {/* <div className="relative text-white flex w-6xl m-auto flex-col items-center justify-center overflow-hidden">
-        <VelocityScroll>Turning ideas into impactful digital experiences.</VelocityScroll>
-      </div> */}
+    <div id="about-section" className="bg-black lg:pt-16 lg:pb-8 h-fit overflow-hidden">
       <div className="lg:pt-30 lg:pb-16 h-fit flex items-center bg-black">
-        <div className="max-w-6xl mx-auto p-8  h-full relative animate-fade-in bg-[#272727]">
+        <div className="max-w-6xl mx-auto p-8 h-fit relative animate-fade-in bg-[#272727]">
           <div className="flex lg:flex-row flex-col items-center gap-16">
             <div className="text-center lg:relative absolute lg:-top-36 -top-0 w-[500px] animate-slide-in-left animation-delay-300">
               <Image
@@ -45,8 +42,8 @@ export function AboutSection() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="border-1 border-gray-600 p-8 rounded-lg flex flex-col items-center text-center h-full animate-fade-in-up animation-delay-1300 hover:transform hover:scale-105 hover:shadow-2xl transition-all duration-300 ">
+          <div className="relative grid grid-cols-1 md:grid-cols-4 lg:top-[-40] gap-8 px-8">
+            <div className="border-1 border-gray-600 p-8 rounded-lg flex flex-col items-center text-center h-fit animate-fade-in-up animation-delay-1300 hover:transform hover:scale-105 hover:shadow-2xl transition-all duration-300 ">
               <BorderBeam
                 duration={5}
                 size={300}
@@ -62,12 +59,12 @@ export function AboutSection() {
               <h3 className="text-2xl font-semibold text-white mb-4 transition-colors duration-300">
                 Innovative
               </h3>
-              <p className="text-gray-300 text-sm">
+              {/* <p className="text-gray-300 text-sm">
                 We turn bold ideas into real-world digital solutions that spark
                 progress.
-              </p>
+              </p> */}
             </div>
-            <div className="border-1 border-gray-600 p-8 rounded-lg flex flex-col items-center text-center h-full animate-fade-in-up animation-delay-1500 hover:transform hover:scale-105 hover:shadow-2xl transition-all duration-300 ">
+            <div className="border-1 border-gray-600 p-8 rounded-lg flex flex-col items-center text-center h-fit animate-fade-in-up animation-delay-1500 hover:transform hover:scale-105 hover:shadow-2xl transition-all duration-300 ">
               <BorderBeam
                 duration={5}
                 size={300}
@@ -84,12 +81,12 @@ export function AboutSection() {
               <h3 className="text-2xl font-semibold text-white mb-4 transition-colors duration-300 ">
                 Secure
               </h3>
-              <p className="text-gray-300 text-sm">
+              {/* <p className="text-gray-300 text-sm">
                 Built-in protection through future-ready cybersecurity at every
                 layer.
-              </p>
+              </p> */}
             </div>
-            <div className="border-1 border-gray-600 p-8 rounded-lg flex flex-col items-center text-center h-full animate-fade-in-up animation-delay-1700 hover:transform hover:scale-105 hover:shadow-2xl transition-all duration-300 ">
+            <div className="border-1 border-gray-600 p-8 rounded-lg flex flex-col items-center text-center h-fit animate-fade-in-up animation-delay-1700 hover:transform hover:scale-105 hover:shadow-2xl transition-all duration-300 ">
               <BorderBeam
                 duration={5}
                 size={300}
@@ -105,11 +102,11 @@ export function AboutSection() {
               <h3 className="text-2xl font-semibold text-white mb-4 transition-colors duration-300 ">
                 Intelligent
               </h3>
-              <p className="text-gray-300 text-sm">
+              {/* <p className="text-gray-300 text-sm">
                 Systems that adapt, automate and elevate user experiences.
-              </p>
+              </p> */}
             </div>
-            <div className="border border-gray-600 p-8 rounded-lg flex flex-col items-center text-center h-full animate-fade-in-up animation-delay-1900 hover:transform hover:scale-105 hover:shadow-2xl transition-all duration-300 ">
+            <div className="border border-gray-600 p-8 rounded-lg flex flex-col items-center text-center h-fit animate-fade-in-up animation-delay-1900 hover:transform hover:scale-105 hover:shadow-2xl transition-all duration-300 ">
               <BorderBeam
                 duration={5}
                 size={300}
@@ -124,12 +121,12 @@ export function AboutSection() {
                 className="w-auto h-20 object-cover mb-6 animate-bounce-subtle animation-delay-600"
               />
               <h3 className="text-2xl font-semibold text-white mb-4 transition-colors duration-300 ">
-                User-First
+                User First
               </h3>
-              <p className="text-gray-300 text-sm">
+              {/* <p className="text-gray-300 text-sm">
                 Designed with people in mind. Intuitive, accessible, and
                 impactful
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
