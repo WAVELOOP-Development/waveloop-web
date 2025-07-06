@@ -68,7 +68,7 @@ interface Navbar1Props {
 
 const Navbar1 = ({
   logo = {
-    url: "./",
+    url: "/",
     alt: "logo",
     title: "WAVELOOP",
   },
@@ -153,9 +153,9 @@ const Navbar1 = ({
         <nav className="hidden justify-between lg:flex">
           <div className="flex items-center gap-8">
             {/* Logo */}
-            <a href={logo.url} className="flex items-center gap-2">
+            <Link href={logo.url} className="flex items-center gap-2">
               <Image src={logoImage} alt="Logo" width={120} height={30} />
-            </a>
+            </Link>
             <div className="flex items-center">
               <NavigationMenu>
                 <NavigationMenuList className="gap-4">
@@ -169,7 +169,7 @@ const Navbar1 = ({
               asChild
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold"
             >
-              <a href="/contact-us">Contact Us</a>
+              <Link href="/contact-us">Contact Us</Link>
             </Button>
           </div>
         </nav>
@@ -178,9 +178,9 @@ const Navbar1 = ({
         <div className="w-full lg:hidden">
           <div className="flex w-full items-center gap-16 justify-between">
             {/* Logo */}
-            <a href={logo.url} className="flex items-center">
+            <Link href={logo.url} className="flex items-center">
               <Image src={logoImage} alt="Logo" width={120} height={30} />
-            </a>
+            </Link>
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="outline" size="icon">
@@ -191,7 +191,7 @@ const Navbar1 = ({
                 <div>
                   <SheetHeader>
                     <SheetTitle>
-                      <a href={logo.url} className="flex items-center gap-2">
+                      <Link href={logo.url} className="flex items-center gap-2">
                         <Image
                           src={logoImage}
                           alt="Logo"
@@ -199,7 +199,7 @@ const Navbar1 = ({
                           height={30}
                           className="mt-4"
                         />
-                      </a>
+                      </Link>
                     </SheetTitle>
                   </SheetHeader>
                   <div className="flex flex-col gap-6 p-4">
@@ -216,7 +216,7 @@ const Navbar1 = ({
                       asChild
                       className="bg-blue-600 hover:bg-blue-700 text-white font-semibold w-full"
                     >
-                      <a href="/contact-us">Contact Us</a>
+                      <Link href="/contact-us">Contact Us</Link>
                     </Button>
                   </div>
                 </div>

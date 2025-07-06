@@ -11,7 +11,7 @@ import blog3 from "@/public/navindu.jpg";
 
 const ExploreBlogs = () => {
   return (
-    <section className="relative overflow-hidden bg-white py-8 lg:pb-32">
+    <section id="blogs" className="relative overflow-hidden bg-white py-8 lg:pb-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[70vh] lg:min-h-[80vh]">
           <div className="order-1 lg:order-1 space-y-6 md:space-y-8 flex flex-col justify-center h-full">
