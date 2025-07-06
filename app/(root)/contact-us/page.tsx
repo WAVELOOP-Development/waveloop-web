@@ -94,10 +94,10 @@ export default function ContactPage() {
   return (
     <>
       <main className="bg-white">
-        <div className="min-h-screen bg-white pt-16">
+        <div className="min-h-screen bg-white">
           {/* Hero Section */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
-            <div className="z-10 max-w-4xl mx-auto mb-12 py-4">
+            <div className="z-10 max-w-4xl mx-auto mb-12 mt-16 py-4">
               <TextAnimate
                 animation="slideLeft"
                 by="word"
