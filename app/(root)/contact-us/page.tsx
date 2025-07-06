@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import { Paperclip, Upload, X } from "lucide-react";
-import { BorderBeam } from "@/components/magicui/border-beam";
-import { motion } from "framer-motion";
+import { TextAnimate } from "@/components/magicui/text-animate";
+import Image from "next/image";
 
 const projectTags = [
   "Software Development",
@@ -46,7 +46,6 @@ export default function ContactPage() {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || []);
     const validFiles = files.filter((file) => {
-      // Allow common file types (images, documents, archives)
       const allowedTypes = [
         "image/jpeg",
         "image/png",
@@ -97,37 +96,37 @@ export default function ContactPage() {
       <main className="bg-white">
         <div className="min-h-screen bg-white">
           {/* Hero Section */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-            {/* Contact Us heading centered */}
-            <div className="text-center mb-16">
-              <motion.h1
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-5xl md:text-7xl font-semibold text-[#00081C] mb-6 mt-30"
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
+            <div className="z-10 max-w-4xl mx-auto mb-12 mt-16 py-4">
+              <TextAnimate
+                animation="slideLeft"
+                by="word"
+                className="lg:text-6xl text-4xl font-bold py-4 text-center"
+                once
               >
-                Contact Us
-              </motion.h1>
-              <motion.p
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
-                className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto"
+                Stay connected with us
+              </TextAnimate>
+              <TextAnimate
+                animation="slideLeft"
+                by="word"
+                className="lg:text-xl text-sm text-gray-600 max-w-2xl mx-auto text-center"
+                once
               >
-                We&apos;re here to help you bring your ideas to life. Let&apos;s
-                discuss your project and how we can assist you.
-              </motion.p>
+                Ideas that spark innovation, Powered by WAVELOOP.
+              </TextAnimate>
             </div>
 
             {/* Main Content */}
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-20">
               {/* Left Side - Project Images with Text */}
-              <div className="lg:col-span-2 flex flex-col mt-8 lg:mt-20 gap-2.5 order-2 lg:order-1">
+              <div className="lg:col-span-2 hidden lg:flex flex-col mt-2 gap-2.5 order-2 lg:order-1">
                 <div className="relative overflow-hidden mr-4 sm:mr-6 lg:mr-10 shadow-xl">
-                  <img
+                  <Image
                     src="/contact.jpg"
                     alt="Project"
                     className="w-full h-24 sm:h-28 lg:h-30 object-cover object-top"
+                    width={0}
+                    height={0}
                   />
                   <div className="absolute inset-0 flex items-center">
                     <div className="text-white mt-4 sm:mt-8 lg:mt-12 text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold ml-2 sm:ml-3 lg:ml-4">
@@ -137,11 +136,13 @@ export default function ContactPage() {
                 </div>
 
                 <div className="relative overflow-hidden ml-6 sm:ml-10 lg:ml-14 shadow-xl">
-                  <img
+                  <Image
                     src="/contact.jpg"
                     alt="Project"
                     className="w-full h-16 sm:h-18 lg:h-20 object-cover"
                     style={{ objectPosition: "0 -120px" }}
+                    width={0}
+                    height={0}
                   />
                   <div className="absolute inset-0 flex items-center">
                     <div className="text-white text-xl sm:text-2xl md:text-3xl lg:text-5xl font-extrabold ml-2 sm:ml-3 lg:ml-4">
@@ -150,41 +151,39 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div className="relative overflow-hidden mr-8 sm:mr-16 lg:mr-24 ml-4 sm:ml-6 lg:ml-8 shadow-xl">
-                  <img
+                  <Image
                     src="/contact.jpg"
                     alt="Project"
                     className="w-full h-32 sm:h-38 lg:h-46 object-cover"
                     style={{ objectPosition: "0 -200px" }}
+                    width={0}
+                    height={0}
                   />
                 </div>
                 <div className="relative overflow-hidden ml-6 sm:ml-10 lg:ml-14 shadow-xl">
-                  <img
+                  <Image
                     src="/contact.jpg"
                     alt="Project"
                     className="w-full h-10 sm:h-12 lg:h-14 object-cover"
                     style={{ objectPosition: "0 -380px" }}
+                    width={0}
+                    height={0}
                   />
                 </div>
                 <div className="relative overflow-hidden mr-6 sm:mr-10 lg:mr-14 shadow-xl">
-                  <img
+                  <Image
                     src="/contact.jpg"
                     alt="Project"
                     className="w-full h-16 sm:h-18 lg:h-20 object-cover"
                     style={{ objectPosition: "0 -420px" }}
+                    width={0}
+                    height={0}
                   />
                 </div>
               </div>
 
               {/* Right Side - Contact Form */}
-              <div className="lg:col-span-3 bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-2xl relative order-1 lg:order-2">
-                <BorderBeam
-                  size={350}
-                  duration={8}
-                  delay={0}
-                  colorFrom="#021443"
-                  colorTo="#60a5fa"
-                  borderWidth={2}
-                />
+              <div className="lg:col-span-3 bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg relative order-1 lg:order-2">
                 <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-4 lg:mb-6">
                   Start Your Project
                 </h2>
@@ -347,7 +346,7 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full bg-[#021443] text-white mt-4 sm:mt-6 py-2.5 sm:py-3 px-6 rounded-lg font-semibold hover:bg-[#021443]/90 focus:ring-2 focus:ring-[#021443] focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl text-sm sm:text-base"
+                    className="w-full bg-[#021443] text-white mt-4 sm:mt-6 py-2.5 sm:py-3 px-6 rounded-lg font-semibold hover:bg-[#021443]/90 focus:ring-2 focus:ring-[#021443] focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl text-sm sm:text-base cursor-pointer"
                   >
                     Send Message
                   </button>

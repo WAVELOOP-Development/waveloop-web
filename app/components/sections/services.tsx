@@ -23,7 +23,7 @@ const services = [
         muted
         className="w-full h-96 object-cover"
       >
-        <source src="./web-dev-2.m4v" type="video/mp4" />
+        <source src="/web-dev-2.m4v" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     ),
@@ -74,7 +74,7 @@ const services = [
         muted
         className="w-full h-96 object-cover"
       >
-        <source src="./mobile-dev.m4v" type="video/mp4" />
+        <source src="/mobile-dev.m4v" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     ),
@@ -95,7 +95,7 @@ const services = [
         muted
         className="w-full h-96 object-cover bg-gradient-to-b from-black to-transparent"
       >
-        <source src="./ai-2.m4v" type="video/mp4" />
+        <source src="/ai-2.m4v" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     ),
