@@ -9,29 +9,119 @@ import image5 from "@/public/petplus.png";
 import image6 from "@/public/ceylon-events.png";
 import image7 from "@/public/cey-web.png";
 
-const images = [
-  { src: image1, alt: "Rescue Med" },
-  { src: image2, alt: "Resumed Web" },
-  { src: image3, alt: "Focus Fitness" },
-  { src: image4, alt: "Grocify" },
-  { src: image5, alt: "PetPlus" },
-  { src: image6, alt: "CeylonEvents" },
-  { src: image7, alt: "CeylonEvents Web" },
+const projects = [
+  { 
+    src: image1, 
+    alt: "Rescue Med",
+    title: "RescueMed",
+    description: "Emergency medical assistance platform connecting patients with healthcare providers",
+    technologies: ["React", "Node.js", "MongoDB"],
+    category: "Healthcare"
+  },
+  { 
+    src: image2, 
+    alt: "Resumed Web",
+    title: "ResumedWeb",
+    description: "Professional resume builder with modern templates and AI-powered suggestions",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    category: "Productivity"
+  },
+  { 
+    src: image3, 
+    alt: "Focus Fitness",
+    title: "FocusFitness",
+    description: "Comprehensive fitness tracking app with personalized workout plans",
+    technologies: ["React Native", "Firebase", "Redux"],
+    category: "Health & Fitness"
+  },
+  { 
+    src: image4, 
+    alt: "Grocify",
+    title: "Grocify",
+    description: "Smart grocery shopping app with AI-powered meal planning and budget tracking",
+    technologies: ["Flutter", "Python", "PostgreSQL"],
+    category: "E-commerce"
+  },
+  { 
+    src: image5, 
+    alt: "PetPlus",
+    title: "PetPlus",
+    description: "Complete pet care management system with vet appointments and health tracking",
+    technologies: ["Vue.js", "Express.js", "MySQL"],
+    category: "Pet Care"
+  },
+  { 
+    src: image6, 
+    alt: "CeylonEvents",
+    title: "Ceylon Events",
+    description: "Event management platform for organizing and discovering local events",
+    technologies: ["React", "GraphQL", "AWS"],
+    category: "Events"
+  },
+  { 
+    src: image7, 
+    alt: "CeylonEvents Web",
+    title: "Ceylon Events Web",
+    description: "Web portal for Ceylon Events with advanced event discovery features",
+    technologies: ["Next.js", "Prisma", "Vercel"],
+    category: "Events"
+  },
 ];
 
 function BlurFadeDemo() {
   return (
     <section id="photos">
       <div className="columns-2 gap-2 lg:gap-4 sm:columns-2">
-        {images.map((image, idx) => (
+        {projects.map((project, idx) => (
           <BlurFade key={idx} delay={0.25 + idx * 0.05} inView>
-            <div className="mb-4">
-              <Image
-                className="rounded-lg object-contain"
-                src={image.src}
-                alt={image.alt}
-                placeholder="blur"
-              />
+            <div className="mb-4 relative shadow-xl group overflow-hidden rounded-lg cursor-pointer">
+              {/* Project Image */}
+              <div className="relative transform transition-transform duration-500 ease-in-out group-hover:-translate-x-full">
+                <Image
+                  className="rounded-lg object-contain w-full"
+                  src={project.src}
+                  alt={project.alt}
+                  placeholder="blur"
+                />
+              </div>
+              
+              {/* Project Details Overlay */}
+              <div className="absolute inset-0 text-white p-4 lg:p-6 flex flex-col justify-center transform translate-x-full transition-transform duration-500 ease-in-out group-hover:translate-x-0 rounded-lg overflow-hidden">
+                {/* Background Image with Reduced Opacity */}
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    className="w-full h-full object-cover opacity-40"
+                    src={project.src}
+                    alt={project.alt}
+                    placeholder="blur"
+                  />
+                  {/* Gradient Overlay for Better Text Readability */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-800 to-white/80 "></div>
+                </div>
+                
+                {/* Content */}
+                <div className="relative z-10 space-y-2 lg:space-y-3">
+                  <div className="inline-block px-2 py-1 bg-white/20 rounded-full text-xs font-medium">
+                    {project.category}
+                  </div>
+                  <h3 className="text-lg lg:text-xl font-bold leading-tight">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm lg:text-base text-white/90 leading-relaxed">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-1 lg:gap-2 mt-2">
+                    {project.technologies.map((tech, techIdx) => (
+                      <span 
+                        key={techIdx}
+                        className="px-2 py-1 bg-white/20 rounded text-xs font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </BlurFade>
         ))}
