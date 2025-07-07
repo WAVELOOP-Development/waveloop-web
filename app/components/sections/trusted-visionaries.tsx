@@ -42,7 +42,6 @@ const visionaries = [
 ];
 
 const firstRow = visionaries.slice(0, visionaries.length / 2);
-const secondRow = visionaries.slice(visionaries.length / 2);
 
 const VisionaryCard = ({
   img,
@@ -105,11 +104,11 @@ export function TrustedVisionariesSection() {
               <VisionaryCard key={visionary.username} {...visionary} />
             ))}
           </Marquee>
-          <Marquee reverse pauseOnHover className="[--duration:20s]">
+          {/* <Marquee reverse pauseOnHover className="[--duration:20s]">
             {secondRow.map((visionary) => (
               <VisionaryCard key={visionary.username} {...visionary} />
             ))}
-          </Marquee>
+          </Marquee> */}
           <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
           <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
         </div>
