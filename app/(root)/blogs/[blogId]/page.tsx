@@ -48,7 +48,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   return (
     <div className="bg-white min-h-screen">
       {/* Breadcrumb */}
-      <div className="max-w-6xl mx-auto px-4 py-4 mt-30">
+      <div className="max-w-6xl mx-auto px-4 py-4 lg:pt-30">
         <div className="flex items-center space-x-2 text-gray-400">
           <Link href="/blogs" className="hover:text-black">
             Blog
