@@ -8,8 +8,9 @@ import {
   Cloud,
   Brain,
   HelpCircle,
-  Activity,
+  LayoutDashboard,
   FileText,
+  ShieldCheck,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -106,40 +107,40 @@ const Navbar1 = ({
           url: "#",
         },
         {
-          title: "DevOps & Automation",
-          description: "Streamline your development and deployment processes",
-          icon: <Activity className="size-5 shrink-0" />,
+          title: "UI/UX Design",
+          description: "User-centered design and prototyping",
+          icon: <LayoutDashboard className="size-5 shrink-0" />,
           url: "#",
         },
         {
           title: "Cybersecurity",
           description: "Protect your digital assets and infrastructure",
-          icon: <Zap className="size-5 shrink-0" />,
+          icon: <ShieldCheck className="size-5 shrink-0" />,
           url: "#",
         },
       ],
     },
     {
-      title: "Resources",
+      title: "Company",
       url: "#",
       items: [
         {
-          title: "Help Center",
-          description: "Get all the answers you need right here",
+          title: "About Us",
+          description: "Learn more about our mission and values",
           icon: <HelpCircle className="size-5 shrink-0" />,
-          url: "#",
+          url: "/about-us",
         },
-        // {
-        //   title: "Status",
-        //   description: "Check the current status of our services and APIs",
-        //   icon: <Activity className="size-5 shrink-0" />,
-        //   url: "#",
-        // },
         {
-          title: "Terms of Service",
-          description: "Our terms and conditions for using our services",
+          title: "Expertise",
+          description: "Discover our technical capabilities and experience",
+          icon: <Zap className="size-5 shrink-0" />,
+          url: "/expertise",
+        },
+        {
+          title: "Careers",
+          description: "Join our team and grow your career with us",
           icon: <FileText className="size-5 shrink-0" />,
-          url: "#",
+          url: "/careers",
         },
       ],
     },

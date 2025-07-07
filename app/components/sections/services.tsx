@@ -1,4 +1,11 @@
-import { Palette,  Globe, Bot, Shield, Cloud } from "lucide-react";
+import {
+  Code,
+  Smartphone,
+  Cloud,
+  Brain,
+  LayoutDashboard,
+  ShieldCheck,
+} from "lucide-react";
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 import Image from "next/image";
 
@@ -27,7 +34,7 @@ const services = [
         Your browser does not support the video tag.
       </video>
     ),
-    Icon: Globe,
+    Icon: Code,
   },
 
   {
@@ -38,9 +45,14 @@ const services = [
     cta: "View designs",
     className: "col-span-3 lg:col-span-1",
     background: (
-      <Image src={uiUxBanner} alt="UI/UX Design" fill className="object-cover" />
+      <Image
+        src={uiUxBanner}
+        alt="UI/UX Design"
+        fill
+        className="object-cover"
+      />
     ),
-    Icon: Palette,
+    Icon: LayoutDashboard,
   },
   {
     name: "Cyber Security",
@@ -56,7 +68,7 @@ const services = [
         className="object-cover"
       />
     ),
-    Icon: Shield,
+    Icon: ShieldCheck,
   },
   {
     name: "Mobile Development",
@@ -78,7 +90,7 @@ const services = [
         Your browser does not support the video tag.
       </video>
     ),
-    Icon: Globe,
+    Icon: Smartphone,
   },
   {
     name: "AI Powered Solutions",
@@ -99,7 +111,7 @@ const services = [
         Your browser does not support the video tag.
       </video>
     ),
-    Icon: Bot,
+    Icon: Brain,
   },
   {
     name: "Cloud Based Services",
