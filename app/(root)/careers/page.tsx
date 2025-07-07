@@ -29,7 +29,7 @@ export default function CareersPage() {
               className="lg:text-xl text-sm text-gray-600 max-w-2xl mx-auto text-center"
               once
             >
-              Be part of something extraordinary. We're building the future of
+              Be part of something extraordinary. We are building the future of
               technology, and we want talented individuals to join us on this
               journey.
             </TextAnimate>
@@ -56,7 +56,7 @@ export default function CareersPage() {
             </h2>
 
             <p className="text-lg leading-8 text-gray-600 mb-8">
-              We're currently preparing exciting career opportunities for
+              We are currently preparing exciting career opportunities for
               passionate individuals who want to make a difference. Our careers
               portal will be launching soon with various positions across
               engineering, design, marketing, and more.
@@ -145,7 +145,7 @@ export default function CareersPage() {
               </h3>
               <p className="text-gray-600">
                 Join a diverse team of talented professionals who support each
-                other's growth and success.
+                others growth and success.
               </p>
             </div>
 
