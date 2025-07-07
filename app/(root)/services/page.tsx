@@ -3,7 +3,7 @@ import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 import { services } from "@/app/data/servicesData";
 import { useRouter } from "next/navigation";
 
-export function ServicesSection() {
+export default function ServicesSection() {
   const router = useRouter();
 
   const handleServiceClick = (href: string) => {
