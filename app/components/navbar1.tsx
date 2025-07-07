@@ -276,25 +276,25 @@ const Navbar1 = ({
                   <div className="flex space-x-4 justify-center lg:justify-start">
                     <Link
                       href="#"
-                      className="text-gray-400 hover:text-white transition-colors p-1"
+                      className="text-gray-400 hover:text-black transition-colors p-1"
                     >
                       <Instagram size={20} />
                     </Link>
                     <Link
                       href="#"
-                      className="text-gray-400 hover:text-white transition-colors p-1"
+                      className="text-gray-400 hover:text-black transition-colors p-1"
                     >
                       <Linkedin size={20} />
                     </Link>
                     <Link
                       href="#"
-                      className="text-gray-400 hover:text-white transition-colors p-1"
+                      className="text-gray-400 hover:text-black transition-colors p-1"
                     >
                       <Github size={20} />
                     </Link>
                     <Link
                       href="#"
-                      className="text-gray-400 hover:text-white transition-colors p-1"
+                      className="text-gray-400 hover:text-black transition-colors p-1"
                     >
                       <Facebook size={20} />
                     </Link>

@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import React from "react";
-import { ChevronUp } from "lucide-react";
 import { type Blog } from "@/app/components/blogdata";
 import Link from "next/link";
 import Image from "next/image";
@@ -48,8 +47,8 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   return (
     <div className="bg-white min-h-screen">
       {/* Breadcrumb */}
-      <div className="max-w-6xl mx-auto px-4 py-4 lg:pt-30">
-        <div className="flex items-center space-x-2 text-gray-400">
+      <div className="max-w-6xl mx-auto px-4 py-4 lg:pt-30 pt-20">
+        <div className="flex items-start space-x-2 text-gray-400">
           <Link href="/blogs" className="hover:text-black">
             Blog
           </Link>
@@ -142,12 +141,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
           </div>
         </div>
 
-        {/* Scroll to Top Button */}
-        <div className="fixed bottom-8 right-8">
-          <button className="bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors">
-            <ChevronUp className="w-6 h-6" />
-          </button>
-        </div>
+        
       </div>
     </div>
   );

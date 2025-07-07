@@ -76,7 +76,7 @@ function BlurFadeDemo() {
           <BlurFade key={idx} delay={0.25 + idx * 0.05} inView>
             <div className="mb-4 relative shadow-xl group overflow-hidden rounded-lg cursor-pointer">
               {/* Project Image */}
-              <div className="relative transform transition-transform duration-500 ease-in-out group-hover:-translate-x-full">
+              <div className="relative transform transition-transform duration-500 ease-in-out lg:group-hover:-translate-x-full">
                 <Image
                   className="rounded-lg object-contain w-full"
                   src={project.src}
@@ -86,7 +86,7 @@ function BlurFadeDemo() {
               </div>
               
               {/* Project Details Overlay */}
-              <div className="absolute inset-0 text-white p-4 lg:p-6 flex flex-col justify-center transform translate-x-full transition-transform duration-500 ease-in-out group-hover:translate-x-0 rounded-lg overflow-hidden">
+              <div className="absolute inset-0 text-white p-4 lg:p-6 flex flex-col justify-center transform translate-x-full transition-transform duration-500 ease-in-out lg:group-hover:translate-x-0 rounded-lg overflow-hidden">
                 {/* Background Image with Reduced Opacity */}
                 <div className="absolute inset-0 z-0">
                   <Image
