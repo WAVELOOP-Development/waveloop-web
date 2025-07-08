@@ -103,7 +103,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/privacy"
                     className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base block py-1"
                   >
                     Privacy Policy
@@ -169,7 +169,7 @@ export default function Footer() {
             © {new Date().getFullYear()} WaveLoop. All rights reserved.
           </p>
           <Link
-            href="#"
+            href="/privacy"
             className="text-gray-400 text-xs sm:text-sm hover:text-white transition-colors text-center sm:text-right"
           >
             Terms & Privacy Policy
