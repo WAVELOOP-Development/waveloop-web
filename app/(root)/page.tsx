@@ -14,7 +14,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <FeaturedWorkSection />
-      <TrustedVisionariesSection />
+      <TrustedVisionariesSection id="testimonials" />
       <ImpactNumbersPage />
       <ExploreBlogs />
       <TextButton />

@@ -2,15 +2,14 @@
 
 import {
   Menu,
-  Zap,
   Code,
   Smartphone,
   Cloud,
   Brain,
-  HelpCircle,
   LayoutDashboard,
   FileText,
   ShieldCheck,
+  Quote,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -125,16 +124,11 @@ const Navbar1 = ({
       url: "#",
       items: [
         {
-          title: "About Us",
-          description: "Learn more about our mission and values",
-          icon: <HelpCircle className="size-5 shrink-0" />,
-          url: "/about-us",
-        },
-        {
-          title: "Expertise",
-          description: "Discover our technical capabilities and experience",
-          icon: <Zap className="size-5 shrink-0" />,
-          url: "/expertise",
+          title: "Testimonials",
+          description:
+            "Discover what industry professionals and clients think of us",
+          icon: <Quote className="size-5 shrink-0" />,
+          url: "#testimonials",
         },
         {
           title: "Careers",
@@ -373,10 +367,29 @@ const renderMobileMenuItem = (item: MenuItem) => {
 };
 
 const SubMenuLink = ({ item }: { item: MenuItem }) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // Check if it's a hash link (starts with #)
+    if (item.url.startsWith("#")) {
+      e.preventDefault();
+
+      // Add a 300ms delay before scrolling
+      setTimeout(() => {
+        const element = document.querySelector(item.url);
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }, 400);
+    }
+  };
+
   return (
     <a
       className="flex flex-row gap-3 rounded-md p-2 leading-none no-underline transition-colors outline-none select-none hover:bg-muted hover:text-accent-foreground"
       href={item.url}
+      onClick={handleClick}
     >
       <div className="text-foreground">{item.icon}</div>
       <div>
