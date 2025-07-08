@@ -285,3 +285,15 @@
 .animate-shine {
   animation: shine var(--duration) infinite linear;
 }
+/* Add this to your global CSS or component styles */
+.aspect-square video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.aspect-square img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
