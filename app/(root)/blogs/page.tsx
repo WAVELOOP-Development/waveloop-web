@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { blogData, categories, type Blog } from "@/app/components/blogdata";
+import { blogData, categories, type Blog } from "@/app/data/blogdata";
 import BlogCard from "@/app/components/BlogCard";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import { ComboboxDemo } from "@/app/components/Combobox";

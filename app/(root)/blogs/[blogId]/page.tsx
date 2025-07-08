@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation";
 import React from "react";
-import { type Blog } from "@/app/components/blogdata";
+import { type Blog } from "@/app/data/blogdata";
 import Link from "next/link";
 import Image from "next/image";
 
 async function getBlogPost(blogId: string): Promise<Blog | null> {
   try {
-    const { blogData } = await import("@/app/components/blogdata");
+    const { blogData } = await import("@/app/data/blogdata");
 
     const blog = blogData.find((blog) => blog.id.toString() === blogId);
 
@@ -19,7 +19,7 @@ async function getBlogPost(blogId: string): Promise<Blog | null> {
 
 export async function generateStaticParams() {
   try {
-    const { blogData } = await import("@/app/components/blogdata");
+    const { blogData } = await import("@/app/data/blogdata");
 
     return blogData.map((blog) => ({
       blogId: blog.id.toString(),
