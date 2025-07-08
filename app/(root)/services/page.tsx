@@ -11,7 +11,7 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="px-8 lg:px-20 py-8 lg:py-16 bg-white">
+    <section id="services" className="px-8 lg:px-20 py-8 lg:py-16 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-start mb-8">
           <h2 className="text-4xl sm:text-3xl md:text-4xl font-bold text-gray-800">

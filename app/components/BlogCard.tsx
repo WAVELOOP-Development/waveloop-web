@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { type Blog } from "@/app/components/blogdata";
+import { type Blog } from "@/app/data/blogdata";
 
 interface BlogCardProps {
   blog: Blog;

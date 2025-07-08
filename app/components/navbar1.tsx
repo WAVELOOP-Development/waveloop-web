@@ -43,12 +43,24 @@ import logoImage from "@/public/logo-secondary-T.png";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
+// Smooth scroll function
+const smoothScrollTo = (elementId: string) => {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
+};
+
 interface MenuItem {
   title: string;
   url: string;
   description?: string;
   icon?: React.ReactNode;
   items?: MenuItem[];
+  isSmooth?: boolean;
 }
 
 interface Navbar1Props {
@@ -86,37 +98,43 @@ const Navbar1 = ({
           title: "Web Development",
           description: "Custom web applications and responsive websites",
           icon: <Code className="size-5 shrink-0" />,
-          url: "#",
+          url: "#services",
+          isSmooth: true,
         },
         {
           title: "Mobile Development",
           description: "iOS and Android mobile applications",
           icon: <Smartphone className="size-5 shrink-0" />,
-          url: "#",
+          url: "#services",
+          isSmooth: true,
         },
         {
           title: "AI & Machine Learning",
           description: "Intelligent solutions and data analytics",
           icon: <Brain className="size-5 shrink-0" />,
-          url: "#",
+          url: "#services",
+          isSmooth: true,
         },
         {
           title: "Cloud Solutions",
           description: "Scalable cloud infrastructure and deployment",
           icon: <Cloud className="size-5 shrink-0" />,
-          url: "#",
+          url: "#services",
+          isSmooth: true,
         },
         {
           title: "UI/UX Design",
           description: "User-centered design and prototyping",
           icon: <LayoutDashboard className="size-5 shrink-0" />,
-          url: "#",
+          url: "#services",
+          isSmooth: true,
         },
         {
           title: "Cybersecurity",
           description: "Protect your digital assets and infrastructure",
           icon: <ShieldCheck className="size-5 shrink-0" />,
-          url: "#",
+          url: "#services",
+          isSmooth: true,
         },
       ],
     },
@@ -350,6 +368,14 @@ const renderMenuItem = (item: MenuItem) => {
 };
 
 const renderMobileMenuItem = (item: MenuItem) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (item.isSmooth && item.url.startsWith('#')) {
+      e.preventDefault();
+      const elementId = item.url.substring(1); // Remove the '#' prefix
+      smoothScrollTo(elementId);
+    }
+  };
+
   if (item.items) {
     return (
       <AccordionItem key={item.title} value={item.title} className="border-b-0">
@@ -366,17 +392,31 @@ const renderMobileMenuItem = (item: MenuItem) => {
   }
 
   return (
-    <a key={item.title} href={item.url} className="text-md font-semibold">
+    <a 
+      key={item.title} 
+      href={item.url} 
+      className="text-md font-semibold"
+      onClick={handleClick}
+    >
       {item.title}
     </a>
   );
 };
 
 const SubMenuLink = ({ item }: { item: MenuItem }) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (item.isSmooth && item.url.startsWith('#')) {
+      e.preventDefault();
+      const elementId = item.url.substring(1); // Remove the '#' prefix
+      smoothScrollTo(elementId);
+    }
+  };
+
   return (
     <a
       className="flex flex-row gap-3 rounded-md p-2 leading-none no-underline transition-colors outline-none select-none hover:bg-muted hover:text-accent-foreground"
       href={item.url}
+      onClick={handleClick}
     >
       <div className="text-foreground">{item.icon}</div>
       <div>
