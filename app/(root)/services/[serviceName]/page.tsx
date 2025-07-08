@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
 import { services } from "@/app/data/servicesData";
+import Link from "next/link";
+import { Target } from "lucide-react";
 
 export async function generateStaticParams() {
   return services.map((service) => ({
@@ -26,55 +28,107 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative h-96 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="absolute inset-0 bg-black bg-opacity-50" />
-        <div className="relative z-10 container mx-auto px-4 h-full flex items-center">
-          <div className="text-white">
-            <h1 className="text-5xl font-bold mb-4">{service.name}</h1>
-            <p className="text-xl max-w-2xl">{service.description}</p>
-          </div>
+      <div className="max-w-6xl mx-auto px-4 py-4 lg:pt-30 pt-20">
+        <div className="flex items-start space-x-2 text-gray-400">
+          Services
+          <span className="text-black ml-2">›</span>
+          <span className="text-black">{service.name}</span>
         </div>
-      </section>
+      </div>
+      <div className="max-w-6xl mx-auto px-4 pb-4">
+        <div className="pb-8 border-b border-gray-300 mt-10">
+          <h1 className="text-4xl md:text-6xl font-semibold text-black mb-8 max-w-4xl">
+            {service.name}
+          </h1>
+          <p className="text-lg text-gray-600 max-w-6xl text-justify">
+            {service.detailedDescription}
+          </p>
+        </div>
+      </div>
 
-      {/* Content Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Service Background/Media */}
-            <div className="relative h-96 rounded-lg overflow-hidden">
-              {service.background}
+      {/* Content Grid Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Service Media Square */}
+            <div className="aspect-square relative overflow-hidden shadow-xl rounded-lg">
+              <div className="absolute inset-0">{service.background}</div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
 
-            {/* Service Details */}
-            <div>
-              <h2 className="text-3xl font-bold mb-6 text-gray-800">
-                About This Service
-              </h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                {service.description}
-              </p>
-
+            {/* Why Choose Us Square */}
+            <div className="aspect-square bg-white rounded-2xl px-8 flex flex-col">
               <div className="mb-8">
-                <h3 className="text-2xl font-semibold mb-4 text-gray-800">
-                  Service Overview
-                </h3>
-                <p className="text-gray-600">
-                  Our {service.name.toLowerCase()} service provides
-                  comprehensive solutions tailored to your specific needs. We
-                  use modern technologies and industry best practices to deliver
-                  exceptional results that drive your business forward.
+                <p className="text-lg text-blue-600 font-semibold mb-4">
+                  Why Choose WAVELOOP?
+                </p>
+                <h2 className="text-2xl lg:text-3xl font-semibold text-black mb-4">
+                  Our Commitment
+                </h2>
+                <p className="text-gray-600 mb-2">
+                  We bring together expertise, innovation, and dedication to
+                  deliver outstanding results for your business
                 </p>
               </div>
 
-              <div className="flex items-center space-x-4">
-                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                  {service.cta}
-                </button>
-                <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
-                  Get Quote
-                </button>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {service.whyChooseUs.map((reason, index) => (
+                  <div
+                    key={index}
+                    className={`border border-gray-400 rounded-lg p-4 bg-white ${
+                      reason.length > 30 ? "sm:col-span-2" : ""
+                    }`}
+                  >
+                    <p className="text-base font-semibold text-black text-center">
+                      {reason}
+                    </p>
+                  </div>
+                ))}
               </div>
+            </div>
+
+            {/* Benefits Square */}
+            <div className="aspect-square bg-white rounded-lg flex flex-col mt-4 px-8">
+              <div className="mb-6">
+                <p className="text-lg text-blue-600 font-semibold mb-4">
+                  Business Impact
+                </p>
+                <h2 className="text-2xl lg:text-3xl font-semibold text-black mb-4">
+                  Measurable Results
+                </h2>
+                <p className="text-gray-600 mb-2">
+                  Our {service.name.toLowerCase()} solutions deliver measurable
+                  results that drive growth and efficiency.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                {service.benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-lg text-black font-medium">{benefit}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA Square */}
+            <div className="aspect-square bg-blue-600 rounded-lg p-8 flex flex-col justify-center items-center text-center text-white mt-4">
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Target className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-4">
+                Ready to Get Started?
+              </h3>
+              <p className="text-white/90 mb-8">
+                Let&apos;s discuss how our {service.name.toLowerCase()}{" "}
+                solutions can help your business achieve its goals.
+              </p>
+              <Link href="/contact-us">
+                <button className="bg-white text-[#021443] font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg">
+                  Get Free Consultation
+                </button>
+              </Link>
             </div>
           </div>
         </div>

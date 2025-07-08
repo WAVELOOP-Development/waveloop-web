@@ -2,15 +2,14 @@
 
 import {
   Menu,
-  Zap,
   Code,
   Smartphone,
   Cloud,
   Brain,
-  HelpCircle,
   LayoutDashboard,
   FileText,
   ShieldCheck,
+  Quote,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -143,16 +142,11 @@ const Navbar1 = ({
       url: "#",
       items: [
         {
-          title: "About Us",
-          description: "Learn more about our mission and values",
-          icon: <HelpCircle className="size-5 shrink-0" />,
-          url: "/about-us",
-        },
-        {
-          title: "Expertise",
-          description: "Discover our technical capabilities and experience",
-          icon: <Zap className="size-5 shrink-0" />,
-          url: "/expertise",
+          title: "Testimonials",
+          description:
+            "Discover what industry professionals and clients think of us",
+          icon: <Quote className="size-5 shrink-0" />,
+          url: "#testimonials",
         },
         {
           title: "Careers",

@@ -60,7 +60,7 @@ export default function BlogsPage() {
       </div>
 
       {/* Category selection using Combobox */}
-      <div className="flex max-w-7xl px-4 m-auto justify-center lg:mb-16 mb-8">
+      <div className="flex max-w-xl px-4 m-auto justify-center lg:mb-16 mb-8">
         <ComboboxDemo
           categories={categories}
           selectedCategory={selectedCategory}

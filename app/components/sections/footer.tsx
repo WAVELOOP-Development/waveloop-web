@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Github } from "lucide-react";
 import Image from "next/image";
 
 import logoImage from "@/public/logo-primary-T-white.png";
@@ -19,7 +19,7 @@ export default function Footer() {
                 className="h-20 w-auto mb-8 mx-auto lg:mx-0"
               />
               <p className="text-gray-400 text-sm sm:text-base text-center lg:text-left max-w-md mb-4 mx-auto lg:mx-0">
-                Empowering businesses with innovative solutions and cutting-edge
+                Empowering businesses with innovative solutions and cutting edge
                 technology.
               </p>
             </div>
@@ -30,34 +30,28 @@ export default function Footer() {
               </h3>
               <div className="flex space-x-4 justify-center lg:justify-start">
                 <Link
-                  href="#"
+                  href="https://www.instagram.com/waveloop.dev/"
                   className="text-gray-400 hover:text-white transition-colors p-1"
                 >
                   <Instagram size={20} />
                 </Link>
                 <Link
-                  href="#"
+                  href="https://www.linkedin.com/company/waveloop-dev/"
                   className="text-gray-400 hover:text-white transition-colors p-1"
                 >
                   <Linkedin size={20} />
                 </Link>
                 <Link
-                  href="#"
+                  href="https://github.com/WAVELOOP-Development"
                   className="text-gray-400 hover:text-white transition-colors p-1"
                 >
                   <Github size={20} />
                 </Link>
                 <Link
-                  href="#"
+                  href="https://facebook.com/waveloop_dev"
                   className="text-gray-400 hover:text-white transition-colors p-1"
                 >
                   <Facebook size={20} />
-                </Link>
-                <Link
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors p-1"
-                >
-                  <Twitter size={20} />
                 </Link>
               </div>
             </div>
@@ -71,7 +65,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="#"
+                    href="/"
                     className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base block py-1"
                   >
                     Home
@@ -79,7 +73,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="#about-section"
                     className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base block py-1"
                   >
                     About Us
@@ -87,7 +81,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/contact"
+                    href="/contact-us"
                     className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base block py-1"
                   >
                     Contact
@@ -95,7 +89,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/blogs"
                     className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base block py-1"
                   >
                     Blog
@@ -103,7 +97,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/privacy"
                     className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base block py-1"
                   >
                     Privacy Policy
@@ -169,7 +163,7 @@ export default function Footer() {
             © {new Date().getFullYear()} WaveLoop. All rights reserved.
           </p>
           <Link
-            href="#"
+            href="/privacy"
             className="text-gray-400 text-xs sm:text-sm hover:text-white transition-colors text-center sm:text-right"
           >
             Terms & Privacy Policy

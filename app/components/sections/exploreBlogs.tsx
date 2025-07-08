@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CardSwap, { Card } from "@/components/react-bits/CardSwap/CardSwap";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
-
+import { CalendarDays, Globe, LayoutDashboard } from "lucide-react";
 import blogBanner from "@/public/blog.jpg";
 import blog1 from "@/public/kota.jpg";
 import blog2 from "@/public/kota2.jpg";
@@ -11,7 +11,10 @@ import blog3 from "@/public/navindu.jpg";
 
 const ExploreBlogs = () => {
   return (
-    <section id="blogs" className="relative overflow-hidden bg-white py-8 lg:pb-32">
+    <section
+      id="blogs"
+      className="relative overflow-hidden bg-white py-8 lg:pb-32"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[70vh] lg:min-h-[80vh]">
           <div className="order-1 lg:order-1 space-y-6 md:space-y-8 flex flex-col justify-center h-full">
@@ -68,12 +71,10 @@ const ExploreBlogs = () => {
                 >
                   <Card>
                     <h3 className="relative text-lg font-semibold text-white px-5 py-3 rounded-t-lg">
-                      <div className="absolute left-3 top-1/2 transform -translate-y-1/2 flex space-x-2">
-                        <div className="w-2.5 h-2.5 rounded-full bg-red-500 transition-colors"></div>
-                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500 transition-colors"></div>
-                        <div className="w-2.5 h-2.5 rounded-full bg-green-500 transition-colors"></div>
+                      <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
+                        <CalendarDays className="w-6 h-6 text-white" />
                       </div>
-                      <span className="ml-12">Blog 1</span>
+                      <span className="ml-6">Events</span>
                     </h3>
                     <div className="relative w-full h-120 rounded-b-lg overflow-hidden">
                       <Image
@@ -93,12 +94,10 @@ const ExploreBlogs = () => {
                   </Card>
                   <Card>
                     <h3 className="relative text-lg font-semibold text-white px-5 py-3 rounded-t-lg">
-                      <div className="absolute left-3 top-1/2 transform -translate-y-1/2 flex space-x-2">
-                        <div className="w-2.5 h-2.5 rounded-full bg-red-500 transition-colors"></div>
-                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500 transition-colors"></div>
-                        <div className="w-2.5 h-2.5 rounded-full bg-green-500 transition-colors"></div>
+                      <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
+                        <Globe className="w-6 h-6 text-white" />
                       </div>
-                      <span className="ml-12">Blog 2</span>
+                      <span className="ml-6">Technology</span>
                     </h3>
                     <div className="relative w-full h-120 rounded-b-lg overflow-hidden">
                       <Image
@@ -118,12 +117,10 @@ const ExploreBlogs = () => {
                   </Card>
                   <Card>
                     <h3 className="relative text-lg font-semibold text-white px-5 py-3 rounded-t-lg">
-                      <div className="absolute left-3 top-1/2 transform -translate-y-1/2 flex space-x-2">
-                        <div className="w-2.5 h-2.5 rounded-full bg-red-500 transition-colors"></div>
-                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500 transition-colors"></div>
-                        <div className="w-2.5 h-2.5 rounded-full bg-green-500 transition-colors"></div>
+                      <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
+                        <LayoutDashboard className="w-6 h-6 text-white" />
                       </div>
-                      <span className="ml-12">Blog 3</span>
+                      <span className="ml-6">Design</span>
                     </h3>
                     <div className="relative w-full h-120 rounded-b-lg overflow-hidden">
                       <Image

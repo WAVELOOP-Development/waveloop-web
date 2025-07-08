@@ -4,16 +4,16 @@ import Image from "next/image";
 
 const visionaries = [
   {
-    name: "Tech Corp",
-    username: "@techcorp",
+    name: "Hirushi Dilpriya",
+    username: "@hirushi-dilpriya",
     body: "WaveLoop delivered an exceptional web platform that transformed our digital presence. Outstanding quality and innovation.",
-    img: "https://avatar.vercel.sh/techcorp",
+    img: "/dilpriya.jpeg",
   },
   {
-    name: "Digital Innovations",
-    username: "@diginnovations",
+    name: "Diluka Wijesinghe",
+    username: "@diluka-w",
     body: "Their AI-powered solutions revolutionized our business processes. Truly cutting-edge technology implementation.",
-    img: "https://avatar.vercel.sh/digital",
+    img: "/diluka.jpeg",
   },
   {
     name: "Future Systems",
@@ -27,21 +27,9 @@ const visionaries = [
     body: "Their cloud infrastructure solutions provided us with unmatched scalability and security.",
     img: "https://avatar.vercel.sh/cloud",
   },
-  {
-    name: "AI Ventures",
-    username: "@aiventures",
-    body: "WaveLoop&apos;s cybersecurity expertise protected our critical data assets. Highly recommended for enterprise security.",
-    img: "https://avatar.vercel.sh/ai",
-  },
-  {
-    name: "Cyber Shield",
-    username: "@cybershield",
-    body: "Their UI/UX design transformed our user engagement metrics. Beautiful and intuitive interfaces.",
-    img: "https://avatar.vercel.sh/cyber",
-  },
 ];
 
-const firstRow = visionaries.slice(0, visionaries.length / 2);
+const firstRow = visionaries.slice(0, visionaries.length);
 
 const VisionaryCard = ({
   img,
@@ -57,44 +45,52 @@ const VisionaryCard = ({
   return (
     <figure
       className={cn(
-        "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+        "relative h-full w-80 cursor-pointer overflow-hidden rounded-xl border p-6 flex flex-col",
         // light styles
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles
         "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
       )}
     >
-      <div className="flex flex-row items-center gap-2">
+      <blockquote className="text-base leading-relaxed flex-grow">
+        {body}
+      </blockquote>
+      <div className="flex flex-row items-center gap-3 mt-6">
         <Image
           className="rounded-full"
-          width={32}
-          height={32}
+          width={48}
+          height={48}
           alt=""
           src={img}
         />
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-1">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
           </figcaption>
           <p className="text-xs font-medium dark:text-white/40">{username}</p>
         </div>
       </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
     </figure>
   );
 };
 
-export function TrustedVisionariesSection() {
+interface TrustedVisionariesSectionProps {
+  id?: string;
+}
+
+export function TrustedVisionariesSection({
+  id,
+}: TrustedVisionariesSectionProps) {
   return (
-    <section className="lg:py-16 p-8 bg-white h-fit">
+    <section id={id} className="lg:py-16 p-8 bg-white h-fit">
       <div className="max-w-6xl mx-auto">
         <div className="text-start mb-8">
           <h2 className="text-4xl font-bold text-gray-800">
-            Trusted by Visionaries
+            Endorsed by the Bold
           </h2>
           <p className="mt-2 text-sm lg:text-lg w-full text-gray-600 dark:text-gray-300">
-            We partner with industry-leading visionaries and innovators who
-            trust us to deliver exceptional digital solutions.
+            Visionaries and industry leaders trust us to bring their digital
+            ideas to life.
           </p>
         </div>
 

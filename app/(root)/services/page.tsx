@@ -27,8 +27,13 @@ export default function ServicesSection() {
           {services.map((service) => (
             <BentoCard
               key={service.name}
-              {...service}
-              className={`${service.className} cursor-pointer transition-transform`}
+              name={service.name}
+              className={service.className}
+              background={service.background}
+              Icon={service.Icon}
+              description={service.description}
+              href={service.href}
+              cta={service.cta}
               onClick={() => handleServiceClick(service.href)}
             />
           ))}
