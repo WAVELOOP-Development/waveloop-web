@@ -144,23 +144,22 @@ export default function PrivacyPage() {
 				initial={{ opacity: 0, y: -50 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.8 }}
-				className="relative py-20 px-4 bg-gradient-to-br from-[#00081C] via-gray-900 to-[#00081C]"
+				className="relative py-20 px-4 bg-white"
 			>
-				<div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
+				<div className="absolute inset-0 bg-white" />
 				<div className="relative z-10 max-w-4xl mx-auto text-center">
 					<motion.div
 						initial={{ scale: 0.8, opacity: 0 }}
 						animate={{ scale: 1, opacity: 1 }}
 						transition={{ delay: 0.2, duration: 0.6 }}
-						className="inline-flex items-center justify-center w-20 h-20 bg-white/10 backdrop-blur-sm rounded-full mb-6"
+						className="inline-flex items-center justify-center w-20 h-20 bg-white backdrop-blur-sm rounded-full mb-6"
 					>
-						<Shield className="w-10 h-10 text-white" />
 					</motion.div>
 					<motion.h1
 						initial={{ scale: 0.8, opacity: 0 }}
 						animate={{ scale: 1, opacity: 1 }}
 						transition={{ delay: 0.3, duration: 0.6 }}
-						className="text-5xl md:text-6xl font-bold text-white mb-6"
+						className="text-5xl md:text-6xl font-bold text-black mb-6"
 					>
 						Privacy Policy
 					</motion.h1>
@@ -168,7 +167,7 @@ export default function PrivacyPage() {
 						initial={{ y: 20, opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ delay: 0.4, duration: 0.6 }}
-						className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
+						className="text-xl text-gray mb-8 max-w-2xl mx-auto"
 					>
 						Your privacy is important to us. This policy explains how we collect, use, and protect your information.
 					</motion.p>
@@ -176,7 +175,7 @@ export default function PrivacyPage() {
 						initial={{ y: 20, opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ delay: 0.5, duration: 0.6 }}
-						className="flex items-center justify-center gap-2 text-gray-300"
+						className="flex items-center justify-center gap-2 text-gray"
 					>
 						<Clock className="w-5 h-5" />
 						<span>Last updated: January 15, 2024</span>
