@@ -30,7 +30,7 @@ const ImpactNumbersPage = () => {
             startValue={50}
             className="text-8xl font-bold"
           />
-          <span className="text-8xl font-bold">%</span>
+          <span className="text-8xl text-black font-bold">%</span>
         </div>
         <p className="mt-2 text-lg font-semibold">
           Client Satisfaction Rate

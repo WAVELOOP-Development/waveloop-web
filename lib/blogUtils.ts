@@ -3,6 +3,7 @@ import path from 'path';
 
 export interface BlogPost {
   id: string;
+  slug: string;
   title: string;
   metaDescription: string;
   content: string;
@@ -56,6 +57,14 @@ function parseFrontMatter(content: string): { frontMatter: FrontMatter; content:
   }
   
   return { frontMatter, content: contentWithoutFrontMatter };
+}
+
+function generateSlug(filename: string): string {
+  return filename
+    .replace('.md', '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 }
 
 export async function getBlogPosts(): Promise<BlogPost[]> {
@@ -138,6 +147,7 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
         
         return {
           id: fileName.replace('.md', ''),
+          slug: generateSlug(fileName),
           title,
           metaDescription,
           content: fileContents,
@@ -162,7 +172,7 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
   }
 }
 
-export async function getBlogPost(id: string): Promise<BlogPost | null> {
+export async function getBlogPost(slug: string): Promise<BlogPost | null> {
   const posts = await getBlogPosts();
-  return posts.find(post => post.id === id) || null;
+  return posts.find(post => post.slug === slug) || null;
 }

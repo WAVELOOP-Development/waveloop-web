@@ -1,12 +1,12 @@
 ---
 title: Cross‑Platform Showdown Flutter vs React Native vs Kotlin Multiplatform
 metaDescription: Explore the ultimate comparison between Flutter, React Native, and Kotlin Multiplatform. Understand their architecture, performance, developer experience, and choose the best framework for your next mobile app project.
-dateCreated: 2024-12-15T10:30:00Z
+dateCreated: 2025-7-8
 author: Navindu Ashen
-authorDesignation: Full-stack Developer & Mobile Architecture Specialist
+authorDesignation: Software Engineer
 authorImage: https://media.licdn.com/dms/image/v2/D5603AQG9-LRo2lvcJg/profile-displayphoto-shrink_200_200/B56ZdVD2TaGoAk-/0/1749478762960?e=1757548800&v=beta&t=TthSCw4ESmyDVHhtqzJxgd1Z-ib8BKiHq60VePSb8AU
 authorDetails: Navindu Ashen is a passionate Full-Stack Developer and Mobile Application Developer with over a year of hands-on experience in building scalable web and mobile solutions. With a solid foundation in both frontend and backend technologies, I am specializes in creating responsive web applications and high-performance mobile apps using frameworks like React, Flutter, and Node.js. He has contributed to several real-world projects, demonstrating a strong understanding of modern development practices, UI/UX design, and API integrations. Committed to continuous learning and innovation, I'm focused on delivering clean, efficient, and user-centered digital solutions.
-category: Mobile Development
+category: Mobile Applications
 image: https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg
 ---
 

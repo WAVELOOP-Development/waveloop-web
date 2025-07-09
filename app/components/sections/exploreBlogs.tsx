@@ -13,33 +13,43 @@ const ExploreBlogs = () => {
   return (
     <section
       id="blogs"
-      className="relative overflow-hidden bg-white py-8 lg:pb-32"
+      className="relative overflow-hidden bg-white lg:pb-52 pt-16"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[70vh] lg:min-h-[80vh]">
+        <div className="text-start mb-8">
+          <h2 className="text-4xl font-bold text-black mb-2 text-start">
+            Explor Our Blogs
+          </h2>
+          <p className="text-sm lg:text-lg text-gray-600">
+            Stay informed with helpful blog posts on modern technology.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="order-1 lg:order-1 space-y-6 md:space-y-8 flex flex-col justify-center h-full">
             <div className="text-center lg:text-left">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#021443] leading-tight">
+              {/* <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#021443] leading-tight">
                 Explore Our
                 <br className="hidden sm:block" />
                 <span className="sm:hidden"> </span>
                 Blogs
-              </h2>
+              </h2> */}
             </div>
-            <div className="bg-[#021443] text-white rounded-2xl lg:rounded-3xl p-6 sm:p-8 lg:p-10 max-w-md lg:max-w-lg mx-auto lg:mx-0 shadow-xl lg:shadow-2xl">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 leading-tight">
-                Explore Ideas
-                <br />
-                That Inspire Innovation
-              </h3>
-              <p className="text-sm sm:text-base text-gray-200 mb-6 sm:mb-8 leading-relaxed">
-                Get insights, trends, and expert takes on tech, AI, security &
-                everything shaping the digital future.
-                <br />
-                <span className="font-medium">
-                  Straight from the minds at WAVELOOP.
-                </span>
-              </p>
+            <div className="bg-[#021443] flex flex-col gap-8 justify-between text-white h-fit rounded-2xl lg:rounded-3xl p-6 sm:p-8 lg:p-10 max-w-md lg:max-w-lg mx-auto lg:mx-0 shadow-xl lg:shadow-2xl">
+              <div>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 leading-tight">
+                  Explore Ideas
+                  <br />
+                  That Inspire Innovation
+                </h3>
+                <p className="text-sm sm:text-base text-gray-200 mb-6 sm:mb-8 leading-relaxed">
+                  Get insights, trends, and expert takes on tech, AI, security &
+                  everything shaping the digital future.
+                  <br />
+                  <span className="font-medium">
+                    Straight from the minds at WAVELOOP.
+                  </span>
+                </p>
+              </div>
               <Link href="/sampleBlog" className="cursor-pointer text-black">
                 <InteractiveHoverButton className="pointer">
                   Explore
@@ -61,7 +71,7 @@ const ExploreBlogs = () => {
                 <div className="absolute inset-0 bg-gradient-to-l from-transparent to-gray-50/20 rounded-2xl" />
               </div>
             </div>
-            <div className="absolute right-0 bottom-15">
+            <div className="absolute right-0 top-100">
               <div className="hidden lg:flex lg:items-start lg:justify-start w-full h-full">
                 <CardSwap
                   cardDistance={60}
