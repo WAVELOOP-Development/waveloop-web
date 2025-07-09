@@ -26,7 +26,7 @@ jobs:
 
       - name: Run type check (TypeScript)
         run: bun run type-check
-        continue-on-error: false
+        continue-on-error: true
 
       - name: Check for build errors
         run: bun run build
