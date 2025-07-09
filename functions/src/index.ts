@@ -118,7 +118,7 @@ export const contact = onRequest(
         hour: "2-digit",
         minute: "2-digit",
         hour12: true,
-        timeZone: "UTC+05:30",
+        timeZone: "UTC",
       });
 
       const emailTemplate = `

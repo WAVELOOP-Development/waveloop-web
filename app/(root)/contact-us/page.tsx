@@ -155,7 +155,7 @@ export default function ContactPage() {
       console.log("Submission Data:", submissionData);
 
       // Send to cloud function
-      const response = await fetch('https://us-central1-waveloop-development.cloudfunctions.net/contact', {
+      const response = await fetch('https://contact-gmtyo3zr6a-uc.a.run.app', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
