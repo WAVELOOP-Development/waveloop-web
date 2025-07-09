@@ -10,9 +10,9 @@ import { Linkedin, Github } from "lucide-react";
 import Link from "next/link";
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
