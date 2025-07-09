@@ -230,25 +230,29 @@ bun run dev
 
 **Key Strategies:**
 
-1. **Progressive Web Apps (PWAs)**
-   - Offline functionality
-   - App-like experience
-   - Push notifications
+**1. Progressive Web Apps (PWAs)**
 
-2. **Web Assembly (WASM)**
-   - Near-native performance
-   - Language flexibility
-   - CPU-intensive tasks
+- Offline functionality
+- App-like experience
+- Push notifications
 
-3. **Micro-Frontends**
-   - Independent deployments
-   - Technology diversity
-   - Team scalability
+**2. Web Assembly (WASM)**
 
-4. **JAMstack Evolution**
-   - Static site generation
-   - API-first architecture
-   - Global CDN distribution
+- Near-native performance
+- Language flexibility
+- CPU-intensive tasks
+
+**3. Micro-Frontends**
+
+- Independent deployments
+- Technology diversity
+- Team scalability
+
+**4. JAMstack Evolution**
+
+- Static site generation
+- API-first architecture
+- Global CDN distribution
 
 ---
 

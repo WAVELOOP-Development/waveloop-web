@@ -8,7 +8,7 @@ authorImage: /tmp.png
 authorDetails: Tharusha Perera is a dedicated Full-Stack Developer and Mobile Application Developer with practical experience in crafting scalable digital solutions for both web and mobile platforms. With a strong grasp of frontend and backend technologies, he specializes in developing responsive web interfaces and high-performance apps using modern frameworks like Flutter, React, and Node.js. Tharusha has contributed to several impactful real-world projects, showcasing expertise in UI/UX implementation, backend architecture, and third-party integrations. Driven by a passion for innovation and continuous improvement, he is committed to delivering user-focused, efficient, and future-ready software products.
 
 category: Education & Innovation
-image: /blog/event1.jpg
+image: /mathsmaster_cover.jpg
 ---
 
 # **Empowering Young Minds: WAVELOOP’s Role as Knowledge Partner at NSBM Math Master 2025**

@@ -17,17 +17,6 @@ const HeroSectionNew = () => {
 
   return (
     <div className="relative">
-      {/* <video
-        preload="none"
-        loop
-        autoPlay
-        controlsList="false"
-        muted
-        className="w-full h-screen object-cover"
-      >
-        <source src="./intro_3.m4v" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video> */}
       <video
         preload="auto"
         loop
