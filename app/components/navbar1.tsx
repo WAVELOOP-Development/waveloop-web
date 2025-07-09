@@ -47,8 +47,8 @@ const smoothScrollTo = (elementId: string) => {
   const element = document.getElementById(elementId);
   if (element) {
     element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
+      behavior: "smooth",
+      block: "start",
     });
   }
 };
@@ -287,25 +287,25 @@ const Navbar1 = ({
                   </h3>
                   <div className="flex space-x-4 justify-center lg:justify-start">
                     <Link
-                      href="#"
+                      href="https://www.instagram.com/waveloop.dev/"
                       className="text-gray-400 hover:text-black transition-colors p-1"
                     >
                       <Instagram size={20} />
                     </Link>
                     <Link
-                      href="#"
+                      href="https://www.linkedin.com/company/waveloop-dev/"
                       className="text-gray-400 hover:text-black transition-colors p-1"
                     >
                       <Linkedin size={20} />
                     </Link>
                     <Link
-                      href="#"
+                      href="https://github.com/WAVELOOP-Development"
                       className="text-gray-400 hover:text-black transition-colors p-1"
                     >
                       <Github size={20} />
                     </Link>
                     <Link
-                      href="#"
+                      href="https://facebook.com/waveloop_dev"
                       className="text-gray-400 hover:text-black transition-colors p-1"
                     >
                       <Facebook size={20} />
@@ -363,7 +363,7 @@ const renderMenuItem = (item: MenuItem) => {
 
 const renderMobileMenuItem = (item: MenuItem) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (item.isSmooth && item.url.startsWith('#')) {
+    if (item.isSmooth && item.url.startsWith("#")) {
       e.preventDefault();
       const elementId = item.url.substring(1); // Remove the '#' prefix
       smoothScrollTo(elementId);
@@ -386,9 +386,9 @@ const renderMobileMenuItem = (item: MenuItem) => {
   }
 
   return (
-    <a 
-      key={item.title} 
-      href={item.url} 
+    <a
+      key={item.title}
+      href={item.url}
       className="text-md font-semibold"
       onClick={handleClick}
     >
@@ -399,7 +399,7 @@ const renderMobileMenuItem = (item: MenuItem) => {
 
 const SubMenuLink = ({ item }: { item: MenuItem }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (item.isSmooth && item.url.startsWith('#')) {
+    if (item.isSmooth && item.url.startsWith("#")) {
       e.preventDefault();
       const elementId = item.url.substring(1); // Remove the '#' prefix
       smoothScrollTo(elementId);
