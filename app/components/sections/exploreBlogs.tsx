@@ -40,7 +40,7 @@ const ExploreBlogs = () => {
                   Straight from the minds at WAVELOOP.
                 </span>
               </p>
-              <Link href="/blogs" className="cursor-pointer text-black">
+              <Link href="/sampleBlog" className="cursor-pointer text-black">
                 <InteractiveHoverButton className="pointer">
                   Explore
                 </InteractiveHoverButton>

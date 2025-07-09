@@ -8,8 +8,8 @@ export default async function SampleBlogPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      <div className="container mx-auto pb-12">
-        <div className="max-w-4xl lg:pt-30 pt-16 mb-16 mx-auto">
+      <div className="container px-4 mx-auto pb-12">
+        <div className="max-w-4xl lg:pt-30 pt-20 lg:mb-16 mb-8 mx-auto">
           <TextAnimate
             animation="slideLeft"
             by="word"
