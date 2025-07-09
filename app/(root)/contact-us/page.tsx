@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { Paperclip, Upload, X } from "lucide-react";
 import { TextAnimate } from "@/components/magicui/text-animate";
-import Image from "next/image";
 
 const projectTags = [
   "Software Development",
@@ -60,7 +59,7 @@ export default function ContactPage() {
         "application/zip",
         "application/x-rar-compressed",
       ];
-      const maxSize = 10 * 1024 * 1024; // 10MB
+      const maxSize = 10 * 1024 * 1024; // 10MB per file
 
       if (!allowedTypes.includes(file.type)) {
         alert(`File type ${file.type} is not allowed`);
@@ -68,12 +67,23 @@ export default function ContactPage() {
       }
 
       if (file.size > maxSize) {
-        alert(`File ${file.name} is too large. Maximum size is 10MB`);
+        alert(`File ${file.name} is too large. Maximum size is 10MB per file`);
         return false;
       }
 
       return true;
     });
+
+    // Check total size including existing files
+    const existingSize = attachedFiles.reduce((total, file) => total + file.size, 0);
+    const newFilesSize = validFiles.reduce((total, file) => total + file.size, 0);
+    const totalSize = existingSize + newFilesSize;
+    const maxTotalSize = 40 * 1024 * 1024; // 40MB total
+
+    if (totalSize > maxTotalSize) {
+      alert(`Total file size would exceed 40MB limit. Current: ${(existingSize / 1024 / 1024).toFixed(1)}MB, Adding: ${(newFilesSize / 1024 / 1024).toFixed(1)}MB`);
+      return;
+    }
 
     setAttachedFiles((prev) => [...prev, ...validFiles]);
   };
@@ -82,22 +92,111 @@ export default function ContactPage() {
     setAttachedFiles((prev) => prev.filter((_, i) => i !== index));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", {
-      ...formData,
-      selectedTags,
-      attachedFiles,
-    });
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      // Show processing message for files
+      if (attachedFiles.length > 0) {
+        setSubmitStatus({
+          type: null,
+          message: "Processing attachments..."
+        });
+      }
+
+      // Convert files to base64
+      const attachments = await Promise.all(
+        attachedFiles.map(async (file) => {
+          return new Promise<{
+            filename: string;
+            content: string;
+            type: string;
+            size: number;
+          }>((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = () => {
+              const base64 = reader.result as string;
+              // Remove the data:mime/type;base64, prefix
+              const base64Content = base64.split(',')[1];
+              resolve({
+                filename: file.name,
+                content: base64Content,
+                type: file.type,
+                size: file.size
+              });
+            };
+            reader.onerror = reject;
+            reader.readAsDataURL(file);
+          });
+        })
+      );
+
+      // Clear processing message
+      setSubmitStatus({ type: null, message: "" });
+
+      // Prepare form data
+      const submissionData = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        selectedTags,
+        attachments
+      };
+
+      console.log("Submission Data:", submissionData);
+
+      // Send to cloud function
+      const response = await fetch('https://us-central1-waveloop-development.cloudfunctions.net/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(submissionData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message: "Thank you! Your message has been sent successfully. We'll get back to you soon."
+        });
+        
+        // Reset form
+        setFormData({ name: "", email: "", phone: "", message: "" });
+        setSelectedTags([]);
+        setAttachedFiles([]);
+      } else {
+        const errorData = await response.json();
+        setSubmitStatus({
+          type: "error",
+          message: errorData.error || "Failed to send message. Please try again."
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitStatus({
+        type: "error",
+        message: "An error occurred. Please try again later."
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   return (
     <>
       <main className="bg-white">
         <div className="min-h-screen bg-white">
           {/* Hero Section */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
-            <div className="z-10 max-w-4xl mx-auto lg:mb-12 mb-4 mt-16 py-4">
+          <div className="max-w-6xl mx-auto py-6 sm:py-12">
+            <div className="z-10 max-w-4xl lg:px-0 px-4 mx-auto lg:mb-12 mb-4 mt-16 py-4">
               <TextAnimate
                 animation="slideLeft"
                 by="word"
@@ -117,9 +216,9 @@ export default function ContactPage() {
             </div>
 
             {/* Main Content */}
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-20">
+            <div className="flex justify-center items-start w-full lg:px-0 px-4">
               {/* Left Side - Project Images with Text */}
-              <div className="lg:col-span-2 hidden lg:flex flex-col mt-2 gap-2.5 order-2 lg:order-1">
+              {/* <div className="lg:col-span-2 hidden lg:flex flex-col mt-2 gap-2.5 order-2 lg:order-1">
                 <div className="relative overflow-hidden mr-4 sm:mr-6 lg:mr-10 shadow-xl">
                   <Image
                     src="/contact.jpg"
@@ -180,10 +279,10 @@ export default function ContactPage() {
                     height={0}
                   />
                 </div>
-              </div>
+              </div> */}
 
               {/* Right Side - Contact Form */}
-              <div className="lg:col-span-3 bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg mb-8 relative order-1 lg:order-2">
+              <div className="lg:col-span-3 bg-white rounded-2xl p-4 sm:p-6 border lg:p-8 max-w-4xl shadow-lg mb-8 relative order-1 lg:order-2">
                 <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-4 lg:mb-6">
                   Start Your Project
                 </h2>
@@ -309,46 +408,74 @@ export default function ContactPage() {
                           Click to upload or drag and drop
                         </span>
                         <span className="text-xs text-gray-500 mt-1">
-                          Images, PDF, DOC, XLS, TXT, ZIP (Max 10MB)
+                          Images, PDF, DOC, XLS, TXT, ZIP (Max 10MB per file, 40MB total)
                         </span>
                       </label>
                     </div>
 
                     {/* Display attached files */}
                     {attachedFiles.length > 0 && (
-                      <div className="mt-3 space-y-2">
-                        {attachedFiles.map((file, index) => (
-                          <div
-                            key={index}
-                            className="flex items-center justify-between p-2 bg-gray-50 rounded-md"
-                          >
-                            <div className="flex items-center space-x-2 flex-1 min-w-0">
-                              <Paperclip className="w-4 h-4 text-gray-500 flex-shrink-0" />
-                              <span className="text-xs sm:text-sm text-gray-700 truncate">
-                                {file.name}
-                              </span>
-                              <span className="text-xs text-gray-500 flex-shrink-0">
-                                ({(file.size / 1024 / 1024).toFixed(1)} MB)
-                              </span>
-                            </div>
-                            <button
-                              type="button"
-                              onClick={() => removeFile(index)}
-                              className="text-red-500 hover:text-red-700 p-1 flex-shrink-0"
+                      <div className="mt-3">
+                        <div className="flex justify-between items-center mb-2">
+                          <span className="text-sm font-medium text-gray-700">
+                            Attached Files ({attachedFiles.length})
+                          </span>
+                          <span className="text-xs text-gray-500">
+                            Total: {(attachedFiles.reduce((total, file) => total + file.size, 0) / 1024 / 1024).toFixed(1)} MB / 40 MB
+                          </span>
+                        </div>
+                        <div className="space-y-2">
+                          {attachedFiles.map((file, index) => (
+                            <div
+                              key={index}
+                              className="flex items-center justify-between p-2 bg-gray-50 rounded-md"
                             >
-                              <X className="w-4 h-4" />
-                            </button>
-                          </div>
-                        ))}
+                              <div className="flex items-center space-x-2 flex-1 min-w-0">
+                                <Paperclip className="w-4 h-4 text-gray-500 flex-shrink-0" />
+                                <span className="text-xs sm:text-sm text-gray-700 truncate">
+                                  {file.name}
+                                </span>
+                                <span className="text-xs text-gray-500 flex-shrink-0">
+                                  ({(file.size / 1024 / 1024).toFixed(1)} MB)
+                                </span>
+                              </div>
+                              <button
+                                type="button"
+                                onClick={() => removeFile(index)}
+                                className="text-red-500 hover:text-red-700 p-1 flex-shrink-0"
+                              >
+                                <X className="w-4 h-4" />
+                              </button>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>
 
+                  {/* Status Messages */}
+                  {submitStatus.type && (
+                    <div
+                      className={`p-4 rounded-lg text-sm ${
+                        submitStatus.type === "success"
+                          ? "bg-green-50 text-green-800 border border-green-200"
+                          : "bg-red-50 text-red-800 border border-red-200"
+                      }`}
+                    >
+                      {submitStatus.message}
+                    </div>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full bg-[#021443] text-white mt-4 sm:mt-6 py-2.5 sm:py-3 px-6 rounded-lg font-semibold hover:bg-[#021443]/90 focus:ring-2 focus:ring-[#021443] focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl text-sm sm:text-base cursor-pointer"
+                    disabled={isSubmitting}
+                    className={`w-full mt-4 sm:mt-6 py-2.5 sm:py-3 px-6 rounded-lg font-semibold focus:ring-2 focus:ring-[#021443] focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl text-sm sm:text-base ${
+                      isSubmitting
+                        ? "bg-gray-400 text-gray-200 cursor-not-allowed"
+                        : "bg-[#021443] text-white hover:bg-[#021443]/90 cursor-pointer"
+                    }`}
                   >
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </button>
                 </form>
 

@@ -38,14 +38,15 @@ export const services: Service[] = [
     className: "col-span-3 lg:col-span-2",
     background: (
       <video
-        preload="none"
+        preload="auto"
         loop
-        autoPlay
-        controlsList="false"
-        muted
+        autoPlay={true}
+        muted={true}
+        playsInline
+        controls={false}
         className="w-full h-96 object-cover"
       >
-        <source src="./web-dev-2.m4v" type="video/mp4" />
+        <source src="/web-dev-2.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     ),
@@ -260,14 +261,15 @@ export const services: Service[] = [
     className: "col-span-3 lg:col-span-2",
     background: (
       <video
-        preload="none"
+        preload="auto"
         loop
-        autoPlay
-        controlsList="false"
-        muted
+        autoPlay={true}
+        muted={true}
+        playsInline
+        controls={false}
         className="w-full h-96 object-cover"
       >
-        <source src="./mobile-dev.m4v" type="video/mp4" />
+        <source src="/mobile-dev_1.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     ),
@@ -337,14 +339,15 @@ export const services: Service[] = [
     className: "col-span-3 lg:col-span-2",
     background: (
       <video
-        preload="none"
+        preload="auto"
         loop
-        autoPlay
-        controlsList="false"
-        muted
-        className="w-full h-96 object-cover bg-gradient-to-b from-black to-transparent"
+        autoPlay={true}
+        muted={true}
+        playsInline
+        controls={false}
+        className="w-full h-96 object-cover"
       >
-        <source src="./ai-2.m4v" type="video/mp4" />
+        <source src="/ai-2_1.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     ),

@@ -68,7 +68,7 @@ function generateSlug(filename: string): string {
 }
 
 export async function getBlogPosts(): Promise<BlogPost[]> {
-  const contentDirectory = path.join(process.cwd(), 'app/(root)/sampleBlog/content');
+  const contentDirectory = path.join(process.cwd(), 'app/(root)/blogs/content');
   
   try {
     const fileNames = fs.readdirSync(contentDirectory);

@@ -16,7 +16,7 @@ export default function SampleBlogCardGrid({
   index,
 }: SampleBlogCardGridProps) {
   return (
-    <Link href={`/sampleBlog/${blog.slug}`}>
+    <Link href={`/blogs/${blog.slug}`}>
       <motion.article
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}

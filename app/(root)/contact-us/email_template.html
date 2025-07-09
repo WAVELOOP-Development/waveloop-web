@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Email Template</title>
+</head>
+<body>
+    <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f8f9fa;">
+            <div style="background-color: white; padding: 30px; border-radius: 8px;">
+                <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 20px;">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/waveloop-development.firebasestorage.app/o/logo%2Flogo-secondary-T.png?alt=media&token=75188ea4-d7b1-4bae-8b26-61af30a2dff2" style="width: 100px;" alt="logo">
+                </div>
+                <div style="text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 3px solid #2563eb;">
+                    <h1 style="color: #2563eb; margin: 0; font-size: 24px; font-weight: 600;">Project Request from Official Web-site</h1>
+                    <p style="color: #6b7280; margin: 4px 0 0 0; font-size: 14px;">Received on ${currentDate}</p>
+                </div>
+                
+                <div style="margin-bottom: 25px;">
+                    <div style="margin-bottom: 15px; padding: 15px; background-color: #f8fafc; border-left: 4px solid #2563eb; border-radius: 4px;">
+                        <span style="font-weight: 600; color: #2563eb; display: block; margin-bottom: 5px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Client Name</span>
+                        <p style="color: #374151; font-size: 16px; margin: 0;">${sanitizedName}</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 15px; padding: 15px; background-color: #f8fafc; border-left: 4px solid #2563eb; border-radius: 4px;">
+                        <span style="font-weight: 600; color: #2563eb; display: block; margin-bottom: 5px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Email Address</span>
+                        <p style="color: #374151; font-size: 16px; margin: 0;">${sanitizedEmail}</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 15px; padding: 15px; background-color: #f8fafc; border-left: 4px solid #2563eb; border-radius: 4px;">
+                        <span style="font-weight: 600; color: #2563eb; display: block; margin-bottom: 5px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Phone Number</span>
+                        <p style="color: #374151; font-size: 16px; margin: 0;">${sanitizedPhone}</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 15px; padding: 15px; background-color: #f8fafc; border-left: 4px solid #2563eb; border-radius: 4px;">
+                        <span style="font-weight: 600; color: #2563eb; display: block; margin-bottom: 5px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Project Category</span>
+                        <p style="color: #374151; font-size: 16px; margin: 0;">${sanitizedTags}</p>
+                    </div>
+                    
+                    ${attachments && Array.isArray(attachments) && attachments.length > 0 ? `
+                    <div style="margin-bottom: 15px; padding: 15px; background-color: #f8fafc; border-left: 4px solid #2563eb; border-radius: 4px;">
+                        <span style="font-weight: 600; color: #2563eb; display: block; margin-bottom: 5px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Attached Files</span>
+                        <div style="color: #374151; font-size: 16px; margin: 0;">
+                            ${attachments.map((file: any) => `
+                                <div style="margin: 5px 0; padding: 8px; background-color: #e5e7eb; border-radius: 4px;">
+                                    <strong>${file.filename}</strong> (${(file.size / 1024 / 1024).toFixed(2)} MB)
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    ` : ''}
+                </div>
+                
+                <div style="height: 2px; background: linear-gradient(to right, #2563eb, #60a5fa); margin: 20px 0; border-radius: 1px;"></div>
+                
+                <div style="background-color: #eff6ff; padding: 20px; border-radius: 6px; border: 1px solid #bfdbfe;">
+                    <span style="font-weight: 600; color: #1e40af; display: block; margin-bottom: 5px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Project Details</span>
+                    <p style="color: #374151; font-size: 16px; margin: 0; white-space: pre-wrap;">${sanitizedMessage}</p>
+                </div>
+                
+                <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 14px;">
+                    <p>Waveloop official website contact section</p>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

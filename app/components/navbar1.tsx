@@ -97,42 +97,42 @@ const Navbar1 = ({
           title: "Web Development",
           description: "Custom web applications and responsive websites",
           icon: <Code className="size-5 shrink-0" />,
-          url: "#services",
+          url: "/#services",
           isSmooth: true,
         },
         {
           title: "Mobile Development",
           description: "iOS and Android mobile applications",
           icon: <Smartphone className="size-5 shrink-0" />,
-          url: "#services",
+          url: "/#services",
           isSmooth: true,
         },
         {
           title: "AI & Machine Learning",
           description: "Intelligent solutions and data analytics",
           icon: <Brain className="size-5 shrink-0" />,
-          url: "#services",
+          url: "/#services",
           isSmooth: true,
         },
         {
           title: "Cloud Solutions",
           description: "Scalable cloud infrastructure and deployment",
           icon: <Cloud className="size-5 shrink-0" />,
-          url: "#services",
+          url: "/#services",
           isSmooth: true,
         },
         {
           title: "UI/UX Design",
           description: "User-centered design and prototyping",
           icon: <LayoutDashboard className="size-5 shrink-0" />,
-          url: "#services",
+          url: "/#services",
           isSmooth: true,
         },
         {
           title: "Cybersecurity",
           description: "Protect your digital assets and infrastructure",
           icon: <ShieldCheck className="size-5 shrink-0" />,
-          url: "#services",
+          url: "/#services",
           isSmooth: true,
         },
       ],
@@ -158,13 +158,14 @@ const Navbar1 = ({
     },
     {
       title: "Blog",
-      url: "/sampleBlog",
+      url: "/blogs",
     },
   ],
 }: Navbar1Props) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -242,7 +243,7 @@ const Navbar1 = ({
             <Link href={logo.url} className="flex items-center">
               <Image src={logoImage} alt="Logo" width={120} height={30} />
             </Link>
-            <Sheet>
+            <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetTrigger asChild>
                 <Button variant="outline" size="icon">
                   <Menu className="size-4" />
@@ -269,13 +270,14 @@ const Navbar1 = ({
                       collapsible
                       className="flex w-full flex-col gap-4"
                     >
-                      {menu.map((item) => renderMobileMenuItem(item))}
+                      {menu.map((item) => renderMobileMenuItem(item, () => setIsSheetOpen(false)))}
                     </Accordion>
                   </div>
                   <div className="flex items-center px-4 py-8">
                     <Button
                       asChild
                       className="bg-blue-600 hover:bg-blue-700 text-white font-semibold w-full"
+                      onClick={() => setIsSheetOpen(false)}
                     >
                       <Link href="/contact-us">Contact Us</Link>
                     </Button>
@@ -289,24 +291,28 @@ const Navbar1 = ({
                     <Link
                       href="https://www.instagram.com/waveloop.dev/"
                       className="text-gray-400 hover:text-black transition-colors p-1"
+                      onClick={() => setIsSheetOpen(false)}
                     >
                       <Instagram size={20} />
                     </Link>
                     <Link
                       href="https://www.linkedin.com/company/waveloop-dev/"
                       className="text-gray-400 hover:text-black transition-colors p-1"
+                      onClick={() => setIsSheetOpen(false)}
                     >
                       <Linkedin size={20} />
                     </Link>
                     <Link
                       href="https://github.com/WAVELOOP-Development"
                       className="text-gray-400 hover:text-black transition-colors p-1"
+                      onClick={() => setIsSheetOpen(false)}
                     >
                       <Github size={20} />
                     </Link>
                     <Link
                       href="https://facebook.com/waveloop_dev"
                       className="text-gray-400 hover:text-black transition-colors p-1"
+                      onClick={() => setIsSheetOpen(false)}
                     >
                       <Facebook size={20} />
                     </Link>
@@ -361,12 +367,16 @@ const renderMenuItem = (item: MenuItem) => {
   );
 };
 
-const renderMobileMenuItem = (item: MenuItem) => {
+const renderMobileMenuItem = (item: MenuItem, closeSheet?: () => void) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (item.isSmooth && item.url.startsWith("#")) {
       e.preventDefault();
       const elementId = item.url.substring(1); // Remove the '#' prefix
       smoothScrollTo(elementId);
+    }
+    // Close the sheet when any link is clicked
+    if (closeSheet) {
+      closeSheet();
     }
   };
 
@@ -378,7 +388,7 @@ const renderMobileMenuItem = (item: MenuItem) => {
         </AccordionTrigger>
         <AccordionContent className="mt-2">
           {item.items.map((subItem) => (
-            <SubMenuLink key={subItem.title} item={subItem} />
+            <SubMenuLink key={subItem.title} item={subItem} closeSheet={closeSheet} />
           ))}
         </AccordionContent>
       </AccordionItem>
@@ -397,12 +407,16 @@ const renderMobileMenuItem = (item: MenuItem) => {
   );
 };
 
-const SubMenuLink = ({ item }: { item: MenuItem }) => {
+const SubMenuLink = ({ item, closeSheet }: { item: MenuItem; closeSheet?: () => void }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (item.isSmooth && item.url.startsWith("#")) {
       e.preventDefault();
       const elementId = item.url.substring(1); // Remove the '#' prefix
       smoothScrollTo(elementId);
+    }
+    // Close the sheet when any link is clicked
+    if (closeSheet) {
+      closeSheet();
     }
   };
 
