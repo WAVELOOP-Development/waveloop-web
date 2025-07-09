@@ -121,18 +121,74 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
               className="text-gray-700 leading-relaxed"
               dangerouslySetInnerHTML={{
                 __html: blog.content
+                  // Headers (h1-h6)
+                  .replace(
+                    /### (.*)/g,
+                    '<h3 class="text-xl font-semibold text-gray-900 mt-6 mb-3">$1</h3>'
+                  )
                   .replace(
                     /## (.*)/g,
                     '<h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4 pb-2">$1</h2>'
                   )
                   .replace(
+                    /# (.*)/g,
+                    '<h1 class="text-3xl font-bold text-gray-900 mt-8 mb-6">$1</h1>'
+                  )
+                  // Images
+                  .replace(
                     /!\[(.*?)\]\((.*?)\)/g,
                     '<div class="my-4"><img src="$2" alt="$1" class="w-3/4 mx-auto h-auto shadow-lg" /></div>'
                   )
+                  // Links
+                  .replace(
+                    /\[([^\]]+)\]\(([^)]+)\)/g,
+                    '<a href="$2" class="text-blue-600 hover:text-blue-800 underline">$1</a>'
+                  )
+                  // Bold text
                   .replace(
                     /\*\*(.*?)\*\*/g,
                     '<strong class="font-semibold text-gray-900">$1</strong>'
                   )
+                  // Italic text
+                  .replace(
+                    /\*(.*?)\*/g,
+                    '<em class="italic text-gray-700">$1</em>'
+                  )
+                  // Inline code
+                  .replace(
+                    /`([^`]+)`/g,
+                    '<code class="bg-gray-100 text-gray-800 px-1 py-0.5 rounded text-sm font-mono">$1</code>'
+                  )
+                  // Code blocks
+                  .replace(
+                    /```([\s\S]*?)```/g,
+                    '<pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto my-4"><code class="text-sm font-mono text-gray-800">$1</code></pre>'
+                  )
+                  // Blockquotes
+                  .replace(
+                    /^> (.*$)/gim,
+                    '<blockquote class="border-l-4 border-gray-300 pl-4 italic text-gray-600 my-4">$1</blockquote>'
+                  )
+                  // Horizontal rules
+                  .replace(/^---$/gm, '<hr class="border-gray-300 my-8">')
+                  // Unordered lists
+                  .replace(/^\* (.*)$/gm, '<li class="ml-4 mb-2">$1</li>')
+                  .replace(
+                    /(<li class="ml-4 mb-2">.*<\/li>)/g,
+                    '<ul class="list-disc ml-6 my-4">$1</ul>'
+                  )
+                  // Ordered lists
+                  .replace(/^\d+\. (.*)$/gm, '<li class="ml-4 mb-2">$1</li>')
+                  .replace(
+                    /(<li class="ml-4 mb-2">.*<\/li>)/g,
+                    '<ol class="list-decimal ml-6 my-4">$1</ol>'
+                  )
+                  // Strikethrough
+                  .replace(
+                    /~~(.*?)~~/g,
+                    '<del class="line-through text-gray-500">$1</del>'
+                  )
+                  // Line breaks and paragraphs
                   .replace(/\n\n/g, '</p><p class="mb-4">')
                   .replace(/^\s*/, '<p class="mb-4">')
                   .replace(/\s*$/, "</p>"),
@@ -140,8 +196,6 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
             />
           </div>
         </div>
-
-        
       </div>
     </div>
   );

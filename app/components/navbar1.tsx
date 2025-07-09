@@ -158,7 +158,7 @@ const Navbar1 = ({
     },
     {
       title: "Blog",
-      url: "/blogs",
+      url: "/sampleBlog",
     },
   ],
 }: Navbar1Props) => {
