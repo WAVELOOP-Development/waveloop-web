@@ -6,11 +6,11 @@ import React from "react";
 
 const HeroSectionNew = () => {
   const scrollToAbout = () => {
-    const aboutSection = document.getElementById('about-section');
+    const aboutSection = document.getElementById("about-section");
     if (aboutSection) {
-      aboutSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
+      aboutSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
       });
     }
   };
@@ -18,16 +18,18 @@ const HeroSectionNew = () => {
   return (
     <div className="relative">
       <video
-        preload="none"
+        preload="auto"
         loop
-        autoPlay
-        controlsList="false"
-        muted
+        autoPlay={true}
+        muted={true}
+        playsInline
+        controls={false}
         className="w-full h-screen object-cover"
       >
-        <source src="./intro_3.m4v" type="video/mp4" />
+        <source src="/intro_3_E.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+
       <div className="absolute flex justify-start items-end inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black to-transparent">
         <div className="container mx-auto py-16">
           <div className="flex flex-col justify-between items-center text-left gap-12">
@@ -47,8 +49,8 @@ const HeroSectionNew = () => {
               </span> */}
             </div>
             <div className="cursor-default">
-              <InteractiveHoverButton 
-                className="pointer" 
+              <InteractiveHoverButton
+                className="pointer"
                 onClick={scrollToAbout}
               >
                 Wanna Know Us?

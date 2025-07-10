@@ -16,7 +16,7 @@ export default function SampleBlogCardGrid({
   index,
 }: SampleBlogCardGridProps) {
   return (
-    <Link href={`/sampleBlog/${blog.id}`}>
+    <Link href={`/blogs/${blog.slug}`}>
       <motion.article
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -27,7 +27,7 @@ export default function SampleBlogCardGrid({
         {/* Header Section */}
         <div className="px-8 flex flex-col justify-between py-6 h-100">
           <div>
-            <div className="flex justify-between text-sm text-gray-500 mb-4">
+            <div className="flex flex-col md:flex-row justify-between text-sm text-gray-500 mb-6">
               <span>{formatDate(blog.dateCreated)}</span>
               <span>{blog.category}</span>
             </div>
@@ -41,7 +41,7 @@ export default function SampleBlogCardGrid({
           {/* Author Section */}
           <div className="flex h-full items-start mb-6">
             <div>
-              <div className="text-base font-medium text-gray-900 line-clamp-6">
+              <div className="text-base font-medium text-gray-900 line-clamp-5">
                 {blog.metaDescription}
               </div>
             </div>
