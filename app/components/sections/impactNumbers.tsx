@@ -13,12 +13,11 @@ const ImpactNumbersPage = () => {
   return (
     <section className="bg-white flex flex-col gap-8 justify-start items-center lg:py-16 py-8 px-6 text-center md:px-20">
       <div className="text-[#021443] max-w-6xl">
-        <p className='text-sm lg:text-lg w-full'>Our,</p>
         <h2 className="text-4xl font-bold tracking-widest">
           Impact In Numbers
         </h2>
-        <div className="mt-4 text-sm lg:text-lg">
-          Behind every number is a story of innovation,<br />
+        <div className="mt-2 mb-4 text-sm lg:text-lg">
+          Behind every number is a story of innovation,
           growth, and meaningful digital transformation.
         </div>
       </div>

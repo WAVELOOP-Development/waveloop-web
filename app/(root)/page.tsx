@@ -7,7 +7,7 @@ import ImpactNumbersPage from "../components/sections/impactNumbers";
 import TextButton from "../components/sections/text-button";
 import ServicesSection from "./services/page";
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <HeroSectionNew />

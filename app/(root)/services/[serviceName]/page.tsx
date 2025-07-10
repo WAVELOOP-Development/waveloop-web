@@ -40,7 +40,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           <h1 className="text-4xl md:text-6xl font-semibold text-black mb-8 max-w-4xl">
             {service.name}
           </h1>
-          <p className="text-lg text-gray-600 max-w-6xl text-justify">
+          <p className="text-md lg:text-lg text-gray-600 max-w-6xl text-left">
             {service.detailedDescription}
           </p>
         </div>

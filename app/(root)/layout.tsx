@@ -7,6 +7,7 @@ export default function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <main className="bg-[#000511]">
       <Navbar1 />
