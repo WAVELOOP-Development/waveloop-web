@@ -5,9 +5,9 @@ import CardSwap, { Card } from "@/components/react-bits/CardSwap/CardSwap";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { CalendarDays, Globe, LayoutDashboard } from "lucide-react";
 import blogBanner from "@/public/blog.jpg";
-import blog1 from "@/public/kota.jpg";
-import blog2 from "@/public/kota2.jpg";
-import blog3 from "@/public/navindu.jpg";
+import blog1 from "@/public/mathsmaster_cover.jpg";
+import blog2 from "@/public/mobile_blog_1.jpeg";
+import blog3 from "@/public/uiux.jpg";
 
 const ExploreBlogs = () => {
   return (
@@ -50,7 +50,7 @@ const ExploreBlogs = () => {
                   </span>
                 </p>
               </div>
-              <Link href="/sampleBlog" className="cursor-pointer text-black">
+              <Link href="/blogs" className="cursor-pointer text-black">
                 <InteractiveHoverButton className="pointer">
                   Explore
                 </InteractiveHoverButton>
@@ -94,10 +94,10 @@ const ExploreBlogs = () => {
                       />
                       <div className="absolute inset-0 flex flex-col justify-start bg-gradient-to-b from-black/80 to-transparent p-5">
                         <h4 className="text-3xl font-semibold text-white mb-1">
-                          10 Tips for Giving Zero Fucks!
+                          WAVELOOP’s Role as Knowledge Partner at the NSBM Math Master 2025
                         </h4>
                         <p className="text-gray-200 text-start">
-                          March 15, 2024 • 5 min read
+                          July 09, 2025 • 5 min read
                         </p>
                       </div>
                     </div>
@@ -117,10 +117,10 @@ const ExploreBlogs = () => {
                       />
                       <div className="absolute inset-0 flex flex-col justify-start bg-gradient-to-b from-black/80 to-transparent p-5">
                         <h4 className="text-3xl font-semibold text-white mb-1">
-                          5 Tips Measure Your Penis
+                          Cross‑Platform Showdown Flutter vs React Native vs Kotlin Multiplatform
                         </h4>
                         <p className="text-gray-200 text-start">
-                          March 15, 2024 • 5 min read
+                          July 09, 2025 • 5 min read
                         </p>
                       </div>
                     </div>
@@ -140,10 +140,10 @@ const ExploreBlogs = () => {
                       />
                       <div className="absolute inset-0 flex flex-col justify-start bg-gradient-to-b from-black/80 to-transparent p-5">
                         <h4 className="text-3xl font-semibold text-white mb-1">
-                          20 Tips for Better Life Without a Girlfriend
+                          How to Start Your Journey in UI/UX Design: A Beginner’s Guide
                         </h4>
                         <p className="text-gray-200 text-start">
-                          March 15, 2024 • 5 min read
+                          July 10, 2025 • 5 min read
                         </p>
                       </div>
                     </div>

@@ -63,7 +63,9 @@ function generateSlug(filename: string): string {
   return filename
     .replace('.md', '')
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
+    // Make sure both hyphens and underscores are treated consistently
+    .replace(/[_-]+/g, '-')
+    .replace(/[^a-z0-9-]+/g, '-')
     .replace(/^-+|-+$/g, '');
 }
 
@@ -162,10 +164,13 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
           image: frontMatter.image || '/blog.jpg'
         };
       })
-    );
+    );        // Sort by creation date (newest first)
+    const sortedPosts = posts.sort((a, b) => b.dateCreated.getTime() - a.dateCreated.getTime());
     
-    // Sort by creation date (newest first)
-    return posts.sort((a, b) => b.dateCreated.getTime() - a.dateCreated.getTime());
+    // Log all generated slugs for debugging
+    console.log("Generated blog post slugs:", sortedPosts.map(post => post.slug));
+    
+    return sortedPosts;
   } catch (error) {
     console.error('Error reading blog posts:', error);
     return [];
@@ -174,5 +179,17 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
 
 export async function getBlogPost(slug: string): Promise<BlogPost | null> {
   const posts = await getBlogPosts();
-  return posts.find(post => post.slug === slug) || null;
+  
+  // Log for debugging
+  console.log(`Looking for blog post with slug: ${slug}`);
+  console.log(`Available slugs: ${posts.map(p => p.slug).join(', ')}`);
+  
+  // Find post with matching slug
+  const post = posts.find(post => post.slug === slug);
+  
+  if (!post) {
+    console.error(`Post with slug '${slug}' not found`);
+  }
+  
+  return post || null;
 }
