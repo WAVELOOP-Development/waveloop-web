@@ -5,65 +5,47 @@ import image1 from "@/public/rescuemed.png";
 import image2 from "@/public/resumed-web.png";
 import image3 from "@/public/focusfitness.png";
 import image4 from "@/public/grocify.png";
-import image5 from "@/public/petplus.png";
 import image6 from "@/public/ceylon-events.png";
-import image7 from "@/public/cey-web.png";
 
 const projects = [
   { 
     src: image1, 
     alt: "Rescue Med",
     title: "RescueMed",
-    description: "Emergency medical assistance platform connecting patients with healthcare providers",
-    technologies: ["React", "Node.js", "MongoDB"],
+    description: "RescueMed is a real-time emergency response platform that connects ambulance teams with hospitals to streamline communication during patient transport. It enables secure sharing of vital patient data and estimated arrival times, allowing hospitals to prepare in advance and deliver faster, more effective care.",
+    technologies: ["React", "Node.js", "Flutter", "Firebase"],
     category: "Healthcare"
   },
   { 
     src: image2, 
-    alt: "Resumed Web",
-    title: "ResumedWeb",
-    description: "Professional resume builder with modern templates and AI-powered suggestions",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    category: "Productivity"
+    alt: "Resumed Dashboards",
+    title: "Resumed Dashboards",
+    description: "The RescueMed hospital web dashboard provides medical staff with real-time updates from incoming ambulances, including patient details, vitals, and estimated arrival times. This allows hospitals to prepare ahead, allocate resources efficiently, and ensure timely and effective emergency care.",
+    technologies: ["React", "Node.js", "Flutter", "Firebase"],
+    category: "Healthcare"
   },
   { 
     src: image3, 
     alt: "Focus Fitness",
     title: "FocusFitness",
-    description: "Comprehensive fitness tracking app with personalized workout plans",
-    technologies: ["React Native", "Firebase", "Redux"],
+    description: "smart fitness management application that offers user and schedule management, AI-powered personal training, and comprehensive tools for fitness center administration—including class scheduling, member tracking, and secure payment handling.",
+    technologies: ["Flutter", "Firebase", "React", "Node.js", "Google Cloud", "Stripe"],
     category: "Health & Fitness"
   },
   { 
     src: image4, 
     alt: "Grocify",
     title: "Grocify",
-    description: "Smart grocery shopping app with AI-powered meal planning and budget tracking",
-    technologies: ["Flutter", "Python", "PostgreSQL"],
+    description: "Comprehensive e-commerce grocery shopping platform that enables users to browse and purchase products seamlessly while allowing vendors to efficiently manage their inventories, product listings, and orders through a user-friendly dashboard.",
+    technologies: ["Flutter", "Python flask", "Firebase", "Google Cloud"],
     category: "E-commerce"
-  },
-  { 
-    src: image5, 
-    alt: "PetPlus",
-    title: "PetPlus",
-    description: "Complete pet care management system with vet appointments and health tracking",
-    technologies: ["Vue.js", "Express.js", "MySQL"],
-    category: "Pet Care"
   },
   { 
     src: image6, 
     alt: "CeylonEvents",
     title: "Ceylon Events",
-    description: "Event management platform for organizing and discovering local events",
-    technologies: ["React", "GraphQL", "AWS"],
-    category: "Events"
-  },
-  { 
-    src: image7, 
-    alt: "CeylonEvents Web",
-    title: "Ceylon Events Web",
-    description: "Web portal for Ceylon Events with advanced event discovery features",
-    technologies: ["Next.js", "Prisma", "Vercel"],
+    description: "Versatile event management application that streamlines event creation, user management, and ticket booking. The platform allows organizers to manage events efficiently, while users can easily browse, book, and manage their tickets through a seamless interface.",
+    technologies: ["Flutter", "React", "Firebase", "Node.js", "Google Cloud"],
     category: "Events"
   },
 ];

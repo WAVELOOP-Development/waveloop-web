@@ -16,7 +16,7 @@
     }
   ],
   "hosting": {
-    "site": "waveloop-live",
+    "site": "waveloop-development",
     "public": "out",
     "ignore": [
       "firebase.json",

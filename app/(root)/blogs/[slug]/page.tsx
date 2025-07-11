@@ -8,11 +8,43 @@ import { getBlogPost, getBlogPosts } from "@/lib/blogUtils";
 import { formatDate } from "@/lib/clientUtils";
 import { Linkedin, Github } from "lucide-react";
 import Link from "next/link";
+import { Metadata } from "next";
 
 interface BlogPostPageProps {
   params: Promise<{
     slug: string;
   }>;
+}
+
+export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getBlogPost(slug);
+
+  if (!post) {
+    return {
+      title: 'Blog Post Not Found',
+      description: 'The requested blog post could not be found.',
+    };
+  }
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      images: [post.image],
+      type: 'article',
+      publishedTime: post.dateCreated.toISOString(),
+      authors: [post.author],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [post.image],
+    },
+  };
 }
 
 export async function generateStaticParams() {
@@ -25,6 +57,8 @@ export async function generateStaticParams() {
     slug: post.slug,
   }));
 }
+
+
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
@@ -244,15 +278,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
             </div>
             <div className="flex space-x-4 lg:w-fit w-full justify-center mt-4">
-              <Link
-                href="#"
+                <Link
+                href={post.linkedin}
                 className="text-gray-400 hover:text-black transition-colors p-1"
-              >
+                target="_blank"
+                rel="noopener noreferrer"
+                >
                 <Linkedin size={20} />
-              </Link>
+                </Link>
               <Link
-                href="#"
+                href={post.github}
                 className="text-gray-400 hover:text-black transition-colors p-1"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Github size={20} />
               </Link>

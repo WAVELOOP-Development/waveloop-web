@@ -32,24 +32,32 @@ export default function Footer() {
                 <Link
                   href="https://www.instagram.com/waveloop.dev/"
                   className="text-gray-400 hover:text-white transition-colors p-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Instagram size={20} />
                 </Link>
                 <Link
                   href="https://www.linkedin.com/company/waveloop-dev/"
                   className="text-gray-400 hover:text-white transition-colors p-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Linkedin size={20} />
                 </Link>
                 <Link
                   href="https://github.com/WAVELOOP-Development"
                   className="text-gray-400 hover:text-white transition-colors p-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Github size={20} />
                 </Link>
                 <Link
-                  href="https://facebook.com/waveloop_dev"
+                  href="https://www.facebook.com/people/Wave-Loop/61575550298347/"
                   className="text-gray-400 hover:text-white transition-colors p-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Facebook size={20} />
                 </Link>
