@@ -111,8 +111,8 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
         // Extract author info from frontmatter or content
         let author = frontMatter.author || 'Waveloop Team';
         let authorDesignation = frontMatter.authorDesignation || 'Developer';
-        let linkedin = frontMatter.linkedin || 'https://www.linkedin.com/company/waveloop-dev';
-        let github = frontMatter.github || 'https://github.com/WAVELOOP-Development';
+        const linkedin = frontMatter.linkedin || 'https://www.linkedin.com/company/waveloop-dev';
+        const github = frontMatter.github || 'https://github.com/WAVELOOP-Development';
 
         if (!frontMatter.author || !frontMatter.authorDesignation) {
           const authorBioMatch = content.match(/\*\*Author Bio:\*\*\s*[\r\n]+(.+?)(?=\n\n|\n$|$)/);
