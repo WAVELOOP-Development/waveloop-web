@@ -244,15 +244,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
             </div>
             <div className="flex space-x-4 lg:w-fit w-full justify-center mt-4">
-              <Link
-                href="#"
+                <Link
+                href={post.linkedin}
                 className="text-gray-400 hover:text-black transition-colors p-1"
-              >
+                target="_blank"
+                rel="noopener noreferrer"
+                >
                 <Linkedin size={20} />
-              </Link>
+                </Link>
               <Link
-                href="#"
+                href={post.github}
                 className="text-gray-400 hover:text-black transition-colors p-1"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Github size={20} />
               </Link>

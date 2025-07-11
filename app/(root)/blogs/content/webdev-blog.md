@@ -8,6 +8,8 @@ authorImage: /lim.jpg
 authorDetails: Limasha Sathsara is a dedicated Web Developer with expertise in modern frontend and backend technologies. With a passion for creating seamless user experiences and robust web applications, Limasha specializes in React, Next.js, Node.js, and cloud technologies. Known for writing clean, maintainable code and staying up-to-date with the latest web development trends, Limasha has successfully delivered numerous projects ranging from e-commerce platforms to enterprise web applications. Committed to continuous learning and sharing knowledge with the developer community.
 category: Web Development
 image: https://www.simplilearn.com/ice9/free_resources_article_thumb/is_web_development_good_career.jpg
+github: https://github.com/jayasingha27146
+linkedin: https://www.linkedin.com/in/limasha-sathsara/
 ---
 
 # **Modern Web Development Trends: Building Scalable Applications in 2025**

@@ -8,6 +8,8 @@ authorImage: /kevin.JPG
 authorDetails: Kevin, a third-year Data Science and Analytics honors student at NSBM Green University and a Machine Learning Engineer Intern at I O N Groups Pvt Ltd, brings emerging expertise in data-driven innovation. He specializes in transforming complex data challenges into actionable machine learning solutions. With a unique background managing production operations in the fashion industry, Kevin combines creativity with analytical precision to solve real-world problems and build impactful systems. 
 category: Machine Learning & AI
 image: https://aitechnologyreviews.com/wp-content/uploads/2023/07/wepik-export-20230702075806rGMj.png
+github: https://github.com/ykarathnasiri
+linkedin: https://www.linkedin.com/in/kevin-anjalo-1759a2202
 ---
 
 # Transforming Industries Through Machine Learning & AI

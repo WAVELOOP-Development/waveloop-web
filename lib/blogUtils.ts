@@ -16,6 +16,8 @@ export interface BlogPost {
   authorImage: string;
   category: string;
   image: string;
+  github: string;
+  linkedin: string;
 }
 
 interface FrontMatter {
@@ -28,6 +30,8 @@ interface FrontMatter {
   authorImage?: string;
   category?: string;
   image?: string;
+  github?: string;
+  linkedin?: string;
 }
 
 function parseFrontMatter(content: string): { frontMatter: FrontMatter; content: string } {
@@ -107,7 +111,9 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
         // Extract author info from frontmatter or content
         let author = frontMatter.author || 'Waveloop Team';
         let authorDesignation = frontMatter.authorDesignation || 'Developer';
-        
+        let linkedin = frontMatter.linkedin || 'https://www.linkedin.com/company/waveloop-dev';
+        let github = frontMatter.github || 'https://github.com/WAVELOOP-Development';
+
         if (!frontMatter.author || !frontMatter.authorDesignation) {
           const authorBioMatch = content.match(/\*\*Author Bio:\*\*\s*[\r\n]+(.+?)(?=\n\n|\n$|$)/);
           if (authorBioMatch) {
@@ -161,7 +167,9 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
           authorDetails: frontMatter.authorDetails || 'Hello I am from team WAVELOOP',
           authorImage: frontMatter.authorImage || '/kota.jpg',
           category,
-          image: frontMatter.image || '/blog.jpg'
+          image: frontMatter.image || '/blog.jpg',
+          linkedin,
+          github,
         };
       })
     );        // Sort by creation date (newest first)

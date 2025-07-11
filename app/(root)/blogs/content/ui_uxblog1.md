@@ -8,6 +8,8 @@ authorImage: /sithumini.jpg
 authorDetails: Sithumini Jagoda is a dedicated UI/UX Engineer with hands-on experience in designing user-centered web and mobile interfaces. She specializes in both the visual (UI) and strategic (UX) aspects of design, including wireframing, prototyping, usability testing, and responsive design. In addition to her design skills, Sithumini is actively involved in business analysis, helping teams align product features with real user needs and business objectives. I believe great design happens through empathy, clear communication, and a deep understanding of both users and business goals.
 category: UI/UX
 image: https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg
+github: https://github.com/sithujagoda
+linkedin: https://www.linkedin.com/in/sithuminijagoda/
 ---
 
 # Getting Started with UI/UX Design

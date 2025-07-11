@@ -8,6 +8,8 @@ authorImage: https://media.licdn.com/dms/image/v2/D5603AQG9-LRo2lvcJg/profile-di
 authorDetails: Navindu Ashen is a passionate Full-Stack Developer and Mobile Application Developer with over a year of hands-on experience in building scalable web and mobile solutions. With a solid foundation in both frontend and backend technologies, I am specializes in creating responsive web applications and high-performance mobile apps using frameworks like React, Flutter, and Node.js. He has contributed to several real-world projects, demonstrating a strong understanding of modern development practices, UI/UX design, and API integrations. Committed to continuous learning and innovation, I'm focused on delivering clean, efficient, and user-centered digital solutions.
 category: Mobile Applications
 image: https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg
+github: https://github.com/Navindu-Ashen 
+linkedin: http://linkedin.com/in/navindu-ashen-115407252
 ---
 
 # **Cross‑Platform Showdown: Flutter vs. React Native vs. Kotlin Multiplatform**
