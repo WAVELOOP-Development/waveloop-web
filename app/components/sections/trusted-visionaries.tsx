@@ -6,28 +6,28 @@ import Link from "next/link";
 const visionaries = [
   {
     name: "Hirushi Dilpriya",
-    username: "@hirushi-dilpriya",
+    username: "Lecturer, University of Plymouth",
     url: "https://www.linkedin.com/in/hirushi-dilpriya-a5498a215/",
     body: "Thank you so much for adding some value for our event, NSBM Math Master 2025. Anyone who is interested in working on projects, highly recommend the waveloop WAVELOOP",
     img: "/dilpriya.jpeg",
   },
   {
     name: "Diluka Wijesinghe",
-    username: "@diluka-w",
+    username: "Lecturer, University of Plymouth",
     url: "https://www.linkedin.com/in/diluka-w-682502223/",
     body: "Collaborating with Waveloop has always been a positive experience. Their team is professional, dedicated, and approaches every project with a proactive mindset. They communicate effectively, respond quickly, and consistently go the extra mile to ensure high-quality outcomes. Waveloop is a dependable partner you can trust to deliver results.",
     img: "/diluka.jpeg",
   },
   {
     name: "Athula weerasinghe",
-    username: "@athula-weerasinghe",
+    username: "VP-digital infrastructure at Nations Trust Bank PLC",
     url: "https://www.linkedin.com/in/athula-weerasinghe-bsc-eng-msc-infosec-mba-3205807/",
     body: "Waveloop really simplified our work! Their platform is easy to use, and we've seen a big improvement in how our team operates. Plus, their support is excellent. It's been a worthwhile investment for our business.",
     img: "/athula.jpeg",
   },
   {
     name: "Induwara Wickramasinghe",
-    username: "@induwarawickramasinghe",
+    username: "CEO, ION Group (Pvt) Ltd",
     url: "https://www.linkedin.com/in/induwarawickramasinghe/",
     body: "Working with Waveloop was a real pleasure. As a fellow IT provider, I appreciate their technical expertise and commitment to delivering solid solutions. They're not just a vendor; they're a reliable partner. I've seen firsthand their dedication to quality and their ability to adapt, which is essential in today's fast-paced environment. Highly recommend!",
     img: "/induwara.jpg",

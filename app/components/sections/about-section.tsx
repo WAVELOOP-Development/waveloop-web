@@ -3,7 +3,7 @@
 import { BorderBeam } from "@/components/magicui/border-beam";
 import Image from "next/image";
 
-import bannerImage from "@/public/boat2.png";
+import bannerImage from "@/public/boat.png";
 import cardImage1 from "@/public/Innovat.png";
 import cardImage2 from "@/public/secure.png";
 import cardImage3 from "@/public/intel.png";
