@@ -75,13 +75,21 @@ export default function ContactPage() {
     });
 
     // Check total size including existing files
-    const existingSize = attachedFiles.reduce((total, file) => total + file.size, 0);
-    const newFilesSize = validFiles.reduce((total, file) => total + file.size, 0);
+    const existingSize = attachedFiles.reduce(
+      (total, file) => total + file.size,
+      0
+    );
+    const newFilesSize = validFiles.reduce(
+      (total, file) => total + file.size,
+      0
+    );
     const totalSize = existingSize + newFilesSize;
     const maxTotalSize = 40 * 1024 * 1024; // 40MB total
 
     if (totalSize > maxTotalSize) {
-      alert(`Total file size would exceed 40MB limit. Current: ${(existingSize / 1024 / 1024).toFixed(1)}MB, Adding: ${(newFilesSize / 1024 / 1024).toFixed(1)}MB`);
+      alert(
+        `Total file size would exceed 40MB limit. Current: ${(existingSize / 1024 / 1024).toFixed(1)}MB, Adding: ${(newFilesSize / 1024 / 1024).toFixed(1)}MB`
+      );
       return;
     }
 
@@ -108,7 +116,7 @@ export default function ContactPage() {
       if (attachedFiles.length > 0) {
         setSubmitStatus({
           type: null,
-          message: "Processing attachments..."
+          message: "Processing attachments...",
         });
       }
 
@@ -125,12 +133,12 @@ export default function ContactPage() {
             reader.onload = () => {
               const base64 = reader.result as string;
               // Remove the data:mime/type;base64, prefix
-              const base64Content = base64.split(',')[1];
+              const base64Content = base64.split(",")[1];
               resolve({
                 filename: file.name,
                 content: base64Content,
                 type: file.type,
-                size: file.size
+                size: file.size,
               });
             };
             reader.onerror = reject;
@@ -149,16 +157,16 @@ export default function ContactPage() {
         phone: formData.phone,
         message: formData.message,
         selectedTags,
-        attachments
+        attachments,
       };
 
       console.log("Submission Data:", submissionData);
 
       // Send to cloud function
-      const response = await fetch('https://contact-gmtyo3zr6a-uc.a.run.app', {
-        method: 'POST',
+      const response = await fetch("https://contact-gmtyo3zr6a-uc.a.run.app", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(submissionData),
       });
@@ -166,9 +174,10 @@ export default function ContactPage() {
       if (response.ok) {
         setSubmitStatus({
           type: "success",
-          message: "Thank you! Your message has been sent successfully. We'll get back to you soon."
+          message:
+            "Thank you! Your message has been sent successfully. We'll get back to you soon.",
         });
-        
+
         // Reset form
         setFormData({ name: "", email: "", phone: "", message: "" });
         setSelectedTags([]);
@@ -177,14 +186,15 @@ export default function ContactPage() {
         const errorData = await response.json();
         setSubmitStatus({
           type: "error",
-          message: errorData.error || "Failed to send message. Please try again."
+          message:
+            errorData.error || "Failed to send message. Please try again.",
         });
       }
     } catch (error) {
       console.error("Error submitting form:", error);
       setSubmitStatus({
         type: "error",
-        message: "An error occurred. Please try again later."
+        message: "An error occurred. Please try again later.",
       });
     } finally {
       setIsSubmitting(false);
@@ -408,7 +418,8 @@ export default function ContactPage() {
                           Click to upload or drag and drop
                         </span>
                         <span className="text-xs text-gray-500 mt-1">
-                          Images, PDF, DOC, XLS, TXT, ZIP (Max 10MB per file, 40MB total)
+                          Images, PDF, DOC, XLS, TXT, ZIP (Max 10MB per file,
+                          40MB total)
                         </span>
                       </label>
                     </div>
@@ -421,7 +432,16 @@ export default function ContactPage() {
                             Attached Files ({attachedFiles.length})
                           </span>
                           <span className="text-xs text-gray-500">
-                            Total: {(attachedFiles.reduce((total, file) => total + file.size, 0) / 1024 / 1024).toFixed(1)} MB / 40 MB
+                            Total:{" "}
+                            {(
+                              attachedFiles.reduce(
+                                (total, file) => total + file.size,
+                                0
+                              ) /
+                              1024 /
+                              1024
+                            ).toFixed(1)}{" "}
+                            MB / 40 MB
                           </span>
                         </div>
                         <div className="space-y-2">
@@ -478,11 +498,69 @@ export default function ContactPage() {
                     {isSubmitting ? "Sending..." : "Send Message"}
                   </button>
                 </form>
+              </div>
+            </div>
 
-                <p className="text-xs text-gray-500 mt-3 sm:mt-4 text-center">
-                  We&apos;ll get back to you within 24 hours. For urgent
-                  matters, please call us directly.
-                </p>
+            {/* Contact Information Section */}
+            <div className="max-w-4xl mx-auto px-4 lg:px-0 mt-8">
+              <div className="bg-gray-50 rounded-xl p-6 lg:p-8 border">
+                <div className="text-center space-y-4">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">
+                    Get in Touch
+                  </h3>
+
+                  <div className="mb-8">
+                    {/* <p className="text-lg text-gray-700 mb-3">
+                      Have questions? Need a consultation? We're here to help you every step of the way.
+                    </p> */}
+                    <p className="text- mb-6 text-gray-600">
+                      Our team of experts is ready to discuss your project and
+                      provide tailored solutions that bring your vision to life.
+                    </p>
+                  </div>
+
+                  <div className="grid md:grid-cols-3 gap-6">
+                    {/* Response Time */}
+                    <div className="text-center">
+                      <p className="text-sm text-gray-700 mb-2">
+                        Response Time
+                      </p>
+                      <p className="text-sm  font-bold text-gray-900">
+                        Within 24 hours
+                      </p>
+                    </div>
+
+                    {/* Phone Numbers */}
+                    <div className="text-center">
+                      <p className="text-sm text-gray-700 mb-2">Call Us</p>
+                      <div className="space-y-1">
+                        <a
+                          href="tel:0719967276"
+                          className="block text-blue-600 hover:underline font-medium"
+                        >
+                          071 996 7276
+                        </a>
+                        <a
+                          href="tel:0702289704"
+                          className="block text-blue-600 hover:underline font-medium"
+                        >
+                          070 228 9704
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* Email */}
+                    <div className="text-center">
+                      <p className="text-sm text-gray-700 mb-2">Email Us</p>
+                      <a
+                        href="mailto:info@waveloop.dev"
+                        className="text-blue-600 hover:underline font-medium"
+                      >
+                        info@waveloop.dev
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
