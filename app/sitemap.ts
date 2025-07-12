@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://waveloop.com' // Replace with your actual domain
+  const baseUrl = 'https://waveloop.dev' // Replace with your actual domain
   
   // Static pages
   const staticPages = [
