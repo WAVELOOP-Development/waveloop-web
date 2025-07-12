@@ -6,16 +6,22 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: 'swap',
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: 'swap',
+  preload: false, // Only preload primary font
 });
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "600", "700", "800", "900"],
+  display: 'swap',
+  preload: false,
 });
 
 export const metadata: Metadata = {

@@ -3,7 +3,7 @@
 import { TextAnimate } from "@/components/magicui/text-animate";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import Link from "next/link";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 export default function CareersPage() {
   return (

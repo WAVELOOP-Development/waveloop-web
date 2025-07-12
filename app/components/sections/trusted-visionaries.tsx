@@ -5,6 +5,7 @@ import Link from "next/link";
 
 const visionaries = [
   {
+    id: "1",
     name: "Hirushi Dilpriya",
     username: "Lecturer, University of Plymouth",
     url: "https://www.linkedin.com/in/hirushi-dilpriya-a5498a215/",
@@ -12,6 +13,7 @@ const visionaries = [
     img: "/dilpriya.jpeg",
   },
   {
+    id: "2",
     name: "Diluka Wijesinghe",
     username: "Lecturer, University of Plymouth",
     url: "https://www.linkedin.com/in/diluka-w-682502223/",
@@ -19,6 +21,7 @@ const visionaries = [
     img: "/diluka.jpeg",
   },
   {
+    id: "3",
     name: "Athula weerasinghe",
     username: "VP-digital infrastructure at Nations Trust Bank PLC",
     url: "https://www.linkedin.com/in/athula-weerasinghe-bsc-eng-msc-infosec-mba-3205807/",
@@ -26,6 +29,7 @@ const visionaries = [
     img: "/athula.jpeg",
   },
   {
+    id: "4",
     name: "Induwara Wickramasinghe",
     username: "CEO, ION Group (Pvt) Ltd",
     url: "https://www.linkedin.com/in/induwarawickramasinghe/",
@@ -43,6 +47,7 @@ const VisionaryCard = ({
   url,
   body,
 }: {
+  id: string;
   img: string;
   name: string;
   username: string;
@@ -106,14 +111,9 @@ export function TrustedVisionariesSection({
         <div className="relative flex w-full lg:px-8 flex-col items-center justify-center overflow-hidden">
           <Marquee pauseOnHover className="[--duration:20s]">
             {firstRow.map((visionary) => (
-              <VisionaryCard key={visionary.username} {...visionary} />
+              <VisionaryCard key={visionary.id} {...visionary} />
             ))}
           </Marquee>
-          {/* <Marquee reverse pauseOnHover className="[--duration:20s]">
-            {secondRow.map((visionary) => (
-              <VisionaryCard key={visionary.username} {...visionary} />
-            ))}
-          </Marquee> */}
           <div className="pointer-events-none absolute inset-y-0 left-0 lg:w-1/8 w-1/16 bg-gradient-to-r from-background"></div>
           <div className="pointer-events-none absolute inset-y-0 right-0 lg:w-1/8 w-1/16 bg-gradient-to-l from-background"></div>
         </div>
