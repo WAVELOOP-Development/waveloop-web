@@ -2,10 +2,9 @@
 
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { TextAnimate } from "@/components/magicui/text-animate";
-import React, { useState } from "react";
+import React from "react";
 
 const HeroSectionNew = () => {
-  const [videoLoaded, setVideoLoaded] = useState(false);
   const scrollToAbout = () => {
     const aboutSection = document.getElementById("about-section");
     if (aboutSection) {
@@ -18,26 +17,15 @@ const HeroSectionNew = () => {
 
   return (
     <div className="relative">
-      {/* Image placeholder */}
-      {!videoLoaded && (
-        <div 
-          className="absolute inset-0 w-full h-screen bg-cover bg-center bg-no-repeat z-10"
-          style={{
-            backgroundImage: "url('/placeholder.png')",
-          }}
-        />
-      )}
-      
       <video
-        preload="auto"
+        preload="metadata"
         loop
         autoPlay={true}
         muted={true}
         playsInline
         controls={false}
         className="w-full h-screen object-cover"
-        onLoadedData={() => setVideoLoaded(true)}
-        onCanPlay={() => setVideoLoaded(true)}
+        poster="/placeholder.png"
       >
         <source src="/intro_3_E.mp4" type="video/mp4" />
         Your browser does not support the video tag.

@@ -68,6 +68,8 @@ export default function SampleBlogCardGrid({
                 fill
                 style={{ objectFit: "cover" }}
                 priority={index < 3}
+                loading={index < 3 ? "eager" : "lazy"}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
           </div>
