@@ -215,7 +215,7 @@ const Navbar1 = ({
         <nav className="hidden justify-between lg:flex">
           <div className="flex items-center gap-8">
             {/* Logo */}
-            <Link href={logo.url} className="flex items-center gap-2">
+            <Link href={logo.url} className="flex items-center w-32 gap-2">
               <Image src={logoImage} alt="Logo" width={120} height={30} />
             </Link>
             <div className="flex items-center">

@@ -1,7 +1,7 @@
 ---
 title: WAVELOOP’s Role as Knowledge Partner at the NSBM Math Master 2025
 metaDescription: Discover how WAVELOOP empowered students through expert mentorship, curated resources, and inspirational keynotes at the NSBM Math Master 2025, as the event's official Knowledge Partner.
-dateCreated: 2025-05-20T09:00:00Z
+dateCreated: 2025-7-8
 author: Tharusha Perera
 authorDesignation: Full-stack Developer & Mobile App Developer
 authorImage: /tmp.png

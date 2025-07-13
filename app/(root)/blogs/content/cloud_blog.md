@@ -1,7 +1,7 @@
 ---
 title: Cloud Computing Giants Face-Off AWS vs Azure vs Google Cloud Platform
 metaDescription: Dive deep into the ultimate cloud computing comparison between AWS, Microsoft Azure, and Google Cloud Platform. Explore their services, pricing, performance, and discover which cloud provider suits your business needs best.
-dateCreated: 2025-1-15
+dateCreated: 2025-7-15
 author: Kasun Karunanayaka
 authorDesignation: Cloud Solutions Architect
 authorImage: /kgk1.jpg
