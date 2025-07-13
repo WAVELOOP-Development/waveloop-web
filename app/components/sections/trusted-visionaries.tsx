@@ -23,7 +23,7 @@ const visionaries = [
   {
     id: "3",
     name: "Athula weerasinghe",
-    username: "VP-digital infrastructure at Nations Trust Bank PLC",
+    username: "VP-digital infrastructure, Nations Trust Bank PLC",
     url: "https://www.linkedin.com/in/athula-weerasinghe-bsc-eng-msc-infosec-mba-3205807/",
     body: "Waveloop really simplified our work! Their platform is easy to use, and we've seen a big improvement in how our team operates. Plus, their support is excellent. It's been a worthwhile investment for our business.",
     img: "/athula.jpeg",
