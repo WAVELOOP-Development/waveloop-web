@@ -31,7 +31,7 @@ const visionaries = [
   {
     id: "4",
     name: "Induwara Wickramasinghe",
-    username: "CEO, ION Group (Pvt) Ltd",
+    username: "CEO, I O N Groups Pvt Ltd",
     url: "https://www.linkedin.com/in/induwarawickramasinghe/",
     body: "Working with Waveloop was a real pleasure. As a fellow IT provider, I appreciate their technical expertise and commitment to delivering solid solutions. They're not just a vendor; they're a reliable partner. I've seen firsthand their dedication to quality and their ability to adapt, which is essential in today's fast-paced environment. Highly recommend!",
     img: "/induwara.jpg",
