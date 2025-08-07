@@ -1,6 +1,6 @@
 import { AboutSection } from "../components/sections/about-section";
 import ExploreBlogs from "../components/sections/exploreBlogs";
-import { FeaturedWorkSection } from "../components/sections/featured-work-section";
+import { FeaturedWorkSection } from "../(root)/featured-work/page";
 import HeroSectionNew from "../components/sections/hero-section-new";
 import { TrustedVisionariesSection } from "../components/sections/trusted-visionaries";
 import ImpactNumbersPage from "../components/sections/impactNumbers";
@@ -16,6 +16,7 @@ export default async function Home() {
       <FeaturedWorkSection />
       <TrustedVisionariesSection id="testimonials" />
       <ImpactNumbersPage />
+      <FeaturedWorkSection />
       <ExploreBlogs />
       <TextButton />
     </>
