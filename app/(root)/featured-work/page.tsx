@@ -30,7 +30,9 @@ function BlurFadeDemo() {
   );
 }
 
-export function FeaturedWorkSection() {
+
+
+export default function FeaturedWorkSection() {
   return (
     <div className="bg-white py-8 lg:py-16 h-fit">
       <div className="max-w-6xl px-8 lg:px-0 mx-auto">
