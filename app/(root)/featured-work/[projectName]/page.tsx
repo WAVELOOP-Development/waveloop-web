@@ -1,4 +1,3 @@
-
 import { notFound } from "next/navigation";
 import { projects } from "@/app/data/projectsData";
 import Image from "next/image";

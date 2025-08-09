@@ -1,13 +1,12 @@
-
+/* eslint-disable */
 import image1 from "@/public/rescuemed.png";
 import image2 from "@/public/resumed-web.png";
 import image3 from "@/public/focusfitness.png";
 import image4 from "@/public/grocify.png";
 import image6 from "@/public/ceylon-events.png";
-import { StaticImageData } from "next/image";
 
 export interface Project {
-  src: StaticImageData;
+  src: any;
   alt: string;
   title: string;
   description: string;
