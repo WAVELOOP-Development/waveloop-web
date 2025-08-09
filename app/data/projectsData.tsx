@@ -1,12 +1,18 @@
 /* eslint-disable */
-import image1 from "@/public/rescuemed.png";
-import image2 from "@/public/resumed-web.png";
-import image3 from "@/public/focusfitness.png";
-import image4 from "@/public/grocify.png";
-import image6 from "@/public/ceylon-events.png";
+import image1 from "@/public/IMG-20250809-WA0069.jpg";
+import image2 from "@/public/IMG-20250809-WA0068.jpg";
+import image3 from "@/public/IMG-20250809-WA0067.jpg";
+import image4 from "@/public/IMG-20250809-WA0066.jpg";
+import image5 from "@/public/IMG-20250809-WA0065.jpg";
+import image6 from "@/public/IMG-20250809-WA0064.jpg";
+import image7 from "@/public/IMG-20250809-WA0063.jpg";
+import image8 from "@/public/ceylon-events.png";
 
 export interface Project {
   src: any;
+  src1: any;
+  src2: any;
+  src3: any;
   alt: string;
   title: string;
   description: string;
@@ -22,7 +28,10 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    src: image1,
+    src: image2,
+    src1: image4,
+    src2: image1,
+    src3: image4,
     alt: "Rescue Med",
     title: "RescueMed",
     description:
@@ -55,7 +64,7 @@ export const projects: Project[] = [
       "Testing and deployment",
       "User training and support",
     ],
-    industries: ["Healthcare", "Emergency Services"],
+    industries: ["Emergency Services"],
     whyChooseUs: [
       "Healthcare domain expertise",
       "Proven real-time system experience",
@@ -64,46 +73,52 @@ export const projects: Project[] = [
     ],
   },
   {
-    src: image2,
-    alt: "Resumed Dashboards",
-    title: "Resumed Dashboards",
+    src: image8,
+    src1: image6,
+    src2: image5,
+    src3: image7,
+    alt: "CeylonEvents",
+    title: "Ceylon Events",
     description:
-      "The RescueMed hospital web dashboard provides medical staff with real-time updates from incoming ambulances, including patient details, vitals, and estimated arrival times.",
-    technologies: ["React", "Node.js", "Flutter", "Firebase"],
-    category: "Healthcare",
+      "Versatile event management application that streamlines event creation, user management, and ticket booking.",
+    technologies: ["Flutter", "React", "Firebase", "Node.js", "Google Cloud"],
+    category: "Events",
     detailedDescription:
-      "Resumed Dashboards allow hospitals to prepare ahead, allocate resources efficiently, and ensure timely and effective emergency care. The dashboard features live data feeds, customizable alerts, and analytics for hospital administrators.",
+      "Ceylon Events allows organizers to manage events efficiently, while users can easily browse, book, and manage their tickets through a seamless interface. The platform supports real-time updates, digital ticketing, and analytics for event organizers.",
     keyFeatures: [
-      "Live ambulance and patient tracking",
-      "Customizable alert system",
-      "Resource and bed management",
-      "Data analytics and reporting",
-      "Role-based dashboards",
-      "Integration with RescueMed platform",
+      "Event creation and management",
+      "User registration and profiles",
+      "Online ticket booking",
+      "Digital ticketing and QR codes",
+      "Event analytics dashboard",
+      "Notifications and reminders",
     ],
     benefits: [
-      "Efficient hospital resource allocation",
-      "Improved emergency preparedness",
-      "Data-driven decision making",
-      "Enhanced patient care",
+      "Simplified event organization",
+      "Easy ticket booking for users",
+      "Real-time event updates",
+      "Data-driven event insights",
     ],
     process: [
-      "Stakeholder interviews",
-      "Dashboard UI/UX design",
-      "Backend and API development",
-      "Integration and testing",
-      "Deployment and training",
+      "Event requirements analysis",
+      "Platform and UI design",
+      "Backend and ticketing integration",
+      "Testing and deployment",
+      "Organizer and user onboarding",
     ],
-    industries: ["Healthcare", "Hospital Management"],
+    industries: ["Entertainment"],
     whyChooseUs: [
-      "Custom dashboard expertise",
-      "Healthcare workflow understanding",
-      "Focus on usability",
-      "Ongoing support",
+      "Event tech experience",
+      "User-friendly design",
+      "Comprehensive analytics",
+      "Reliable support",
     ],
   },
   {
     src: image3,
+    src1: image6,
+    src2: image5,
+    src3: image7,
     alt: "Focus Fitness",
     title: "FocusFitness",
     description:
@@ -140,90 +155,12 @@ export const projects: Project[] = [
       "Payment integration",
       "Testing and launch",
     ],
-    industries: ["Fitness Centers", "Health & Wellness"],
+    industries: ["Fitness Centers"],
     whyChooseUs: [
       "Experience in fitness tech",
       "AI integration capability",
       "User-focused design",
       "Secure payment expertise",
-    ],
-  },
-  {
-    src: image4,
-    alt: "Grocify",
-    title: "Grocify",
-    description:
-      "Comprehensive e-commerce grocery shopping platform for users and vendors.",
-    technologies: ["Flutter", "Python flask", "Firebase", "Google Cloud"],
-    category: "E-commerce",
-    detailedDescription:
-      "Grocify enables users to browse and purchase products seamlessly, while vendors can efficiently manage inventories, product listings, and orders through a user-friendly dashboard. The platform supports real-time order tracking and secure payment processing.",
-    keyFeatures: [
-      "Product catalog and search",
-      "Vendor dashboard",
-      "Order and inventory management",
-      "Real-time order tracking",
-      "Secure payment gateway",
-      "Promotions and discounts",
-    ],
-    benefits: [
-      "Convenient online shopping",
-      "Efficient vendor management",
-      "Secure transactions",
-      "Scalable for multiple vendors",
-    ],
-    process: [
-      "Requirement gathering",
-      "Platform design",
-      "Backend and frontend development",
-      "Payment and order integration",
-      "Testing and go-live",
-    ],
-    industries: ["E-commerce", "Retail"],
-    whyChooseUs: [
-      "E-commerce expertise",
-      "Robust platform architecture",
-      "Focus on user experience",
-      "Vendor support",
-    ],
-  },
-  {
-    src: image6,
-    alt: "CeylonEvents",
-    title: "Ceylon Events",
-    description:
-      "Versatile event management application that streamlines event creation, user management, and ticket booking.",
-    technologies: ["Flutter", "React", "Firebase", "Node.js", "Google Cloud"],
-    category: "Events",
-    detailedDescription:
-      "Ceylon Events allows organizers to manage events efficiently, while users can easily browse, book, and manage their tickets through a seamless interface. The platform supports real-time updates, digital ticketing, and analytics for event organizers.",
-    keyFeatures: [
-      "Event creation and management",
-      "User registration and profiles",
-      "Online ticket booking",
-      "Digital ticketing and QR codes",
-      "Event analytics dashboard",
-      "Notifications and reminders",
-    ],
-    benefits: [
-      "Simplified event organization",
-      "Easy ticket booking for users",
-      "Real-time event updates",
-      "Data-driven event insights",
-    ],
-    process: [
-      "Event requirements analysis",
-      "Platform and UI design",
-      "Backend and ticketing integration",
-      "Testing and deployment",
-      "Organizer and user onboarding",
-    ],
-    industries: ["Events", "Entertainment"],
-    whyChooseUs: [
-      "Event tech experience",
-      "User-friendly design",
-      "Comprehensive analytics",
-      "Reliable support",
     ],
   },
 ];
