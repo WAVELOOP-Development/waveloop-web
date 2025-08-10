@@ -81,7 +81,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#about-section"
+                    href="/about-us"
                     className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base block py-1"
                   >
                     About Us
