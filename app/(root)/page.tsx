@@ -4,8 +4,8 @@ import FeaturedWorkSection from "../(root)/featured-work/page";
 import HeroSectionNew from "../components/sections/hero-section-new";
 import { TrustedVisionariesSection } from "../components/sections/trusted-visionaries";
 import ImpactNumbersPage from "../components/sections/impactNumbers";
-import TextButton from "../components/sections/text-button";
 import ServicesSection from "./services/page";
+import ContactSection from "../components/sections/contact-section";
 
 export default async function Home() {
   return (
@@ -17,7 +17,7 @@ export default async function Home() {
       <TrustedVisionariesSection id="testimonials" />
       <ImpactNumbersPage />
       <ExploreBlogs />
-      <TextButton />
+      <ContactSection />
     </>
   );
 }

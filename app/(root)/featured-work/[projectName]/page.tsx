@@ -10,6 +10,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
+import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
+import ContactUsCard from "@/app/components/contactus-card";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
@@ -251,19 +253,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </div>
           </div>
           <div className="mt-16">
-            <div className="max-w-6xl mx-auto text-center">
-              <Link href="/contact-us">
-                <div className="group flex items-center justify-center gap-6 text-left transition-all duration-300 hover:underline focus:outline-none focus:underline mx-auto">
-                  <div className="text-2xl md:text-3xl lg:text-4xl font-medium leading-relaxed flex flex-col">
-                    <span className=" text-black">Let's Take Your</span>
-                    <span className=" text-black">
-                      Digital Strategy, to the Next Level
-                    </span>
-                  </div>
-                  <ArrowRight className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-black transition-transform duration-300 group-hover:translate-x-1 flex-shrink-0" />
-                </div>
-              </Link>
-            </div>
+            <ContactUsCard />
           </div>
         </div>
       </section>
