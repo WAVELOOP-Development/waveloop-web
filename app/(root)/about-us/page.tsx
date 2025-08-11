@@ -124,9 +124,15 @@ export default function AboutUsPage() {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative  pt-40 px-4 bg-white overflow-hidden"
+        className="relative pt-40 px-4 overflow-hidden"
+        style={{
+          backgroundImage: "url('/aboutbg.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
       >
-        <div className="absolute inset-0 bg-white" />
+        <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
@@ -136,7 +142,7 @@ export default function AboutUsPage() {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-5xl md:text-7xl font-bold text-[#00081C] mb-6"
+            className="text-5xl md:text-7xl font-bold text-white mb-6"
           >
             About WaveLoop
           </motion.h1>
@@ -144,7 +150,7 @@ export default function AboutUsPage() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
             We&apos;re a passionate team of developers and innovators dedicated to transforming businesses through cutting-edge technology solutions.
           </motion.p>
@@ -154,19 +160,19 @@ export default function AboutUsPage() {
             transition={{ delay: 0.6, duration: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Link
+            {/* <Link
               href="/contact-us"
-              className="inline-flex items-center gap-2 bg-[#00081C] text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-2 bg-white text-[#00081C] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105"
             >
               Get in Touch
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               href="#our-story"
-              className="inline-flex items-center gap-2 border border-gray-300 text-[#00081C] px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-300"
+              className="inline-flex items-center gap-2 border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
             >
               Our Story
-            </Link>
+            </Link> */}
           </motion.div>
         </div>
       </motion.section>
@@ -346,21 +352,33 @@ export default function AboutUsPage() {
                           whileInView="visible"
                           viewport={{ once: true }}
                           transition={{ delay: idx * 0.1 }}
-                          className={`bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 text-center group hover:scale-105 ${
+                          className={`relative rounded-2xl overflow-hidden shadow-lg transition-all duration-300 ${
                             itemsPerPage === 1 ? 'max-w-sm w-full' : ''
                           }`}
                         >
-                          <div className="relative w-full h-64">
+                          {/* Background Image */}
+                          <div className="relative w-full h-80 md:h-96">
                             <Image
                               src={member.image}
                               alt={member.name}
                               fill
                               className="object-cover"
                             />
-                          </div>
-                          <div className="p-6">
-                            <h3 className="text-xl font-bold text-[#00081C] mb-2">{member.name}</h3>
-                            <p className="text-blue-600 font-medium mb-4">{member.role}</p>
+                            {/* Gradient Overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                            
+                            {/* Content Overlay */}
+                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                              <h3 className="text-2xl font-bold mb-2 text-white">
+                                {member.name}
+                              </h3>
+                              <p className="text-lg font-medium text-gray-200 mb-3">
+                                {member.role}
+                              </p>
+                              
+                              {/* Optional: Add a subtle border or accent */}
+                              <div className="w-12 h-1 bg-white/60 rounded-full"></div>
+                            </div>
                           </div>
                         </motion.div>
                       ))}
