@@ -134,7 +134,7 @@ export default function FeaturedWorkSection() {
           <div className="text-start mb-8 w-full sm:w-auto">
             <div className="text-start mb-8">
               <h2 className="text-4xl sm:text-3xl md:text-4xl font-bold text-gray-800">
-                Our Services
+                Our Featured Work
               </h2>
               <p className="mt-2 text-sm lg:text-lg w-full text-gray-600 dark:text-gray-300">
                 In today's crowded digital world, it's not about being

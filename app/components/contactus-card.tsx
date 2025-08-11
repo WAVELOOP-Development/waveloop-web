@@ -5,8 +5,8 @@ import React from "react";
 
 function ContactUsCard() {
   return (
-    <div className="flex flex-col lg:flex-row justify-between items-center min-h-[24rem] lg:h-96 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl shadow-lg overflow-hidden">
-      <div className="flex-1 p-8 sm:p-12 lg:p-16 text-center lg:text-left">
+    <div className="flex flex-col lg:flex-row justify-between items-center min-h-[24rem] lg:h-96 bg-gradient-to-br from-gray-50 to-gray-100 lg:rounded-xl shadow-lg overflow-hidden lg:pt-0 pt-8">
+      <div className="flex-1 p-8 sm:p-12 lg:p-16 text-center lg:text-left pb-16">
         <h2 className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-6 leading-tight">
           Let&apos;s Take Your Digital{" "}
           <span className="text-blue-600 ">Strategy,</span> to the{" "}
@@ -29,7 +29,7 @@ function ContactUsCard() {
           src="/pexels-camcasey-1157255.jpg"
           alt="Professional team collaboration and digital strategy consultation"
           fill
-          className="object-cover rounded-b-xl lg:rounded-b-none lg:rounded-r-xl"
+          className="object-cover rounded-none"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent lg:bg-gradient-to-l lg:from-transparent lg:to-black/5" />

@@ -4,7 +4,6 @@ import Link from "next/link";
 import CardSwap, { Card } from "@/components/react-bits/CardSwap/CardSwap";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { CalendarDays, Globe, LayoutDashboard } from "lucide-react";
-import blogBanner from "@/public/blog.jpg";
 import blog1 from "@/public/mathsmaster_cover.jpg";
 import blog2 from "@/public/mobile_blog_1.jpeg";
 import blog3 from "@/public/uiux.jpg";
@@ -13,10 +12,10 @@ const ExploreBlogs = () => {
   return (
     <section
       id="blogs"
-      className="relative overflow-hidden bg-white lg:pb-52 pt-16"
+      className="relative overflow-hidden bg-white lg:pb-52 pt-8 lg:pt-16"
     >
       <div className="container mx-auto max-w-6xl">
-        <div className="text-start mb-8">
+        <div className="text-start px-8">
           <h2 className="text-4xl font-bold text-black mb-2 text-start">
             Explor Our Blogs
           </h2>
@@ -24,7 +23,7 @@ const ExploreBlogs = () => {
             Stay informed with helpful blog posts on modern technology.
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-12 items-center">
           <div className="order-1 lg:order-1 space-y-6 md:space-y-8 flex flex-col justify-center h-full">
             <div className="text-center lg:text-left">
               {/* <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#021443] leading-tight">
@@ -34,7 +33,7 @@ const ExploreBlogs = () => {
                 Blogs
               </h2> */}
             </div>
-            <div className="bg-[#021443] flex flex-col gap-8 justify-between text-white h-fit rounded-2xl lg:rounded-3xl p-6 sm:p-8 lg:p-10 max-w-md lg:max-w-lg mx-auto lg:mx-0 shadow-xl lg:shadow-2xl">
+            <div className="bg-[#021443] flex flex-col gap-8 justify-between text-white h-fit lg:rounded-3xl p-8 lg:p-10 w-full lg:max-w-lg mx-auto lg:mx-0 lg:shadow-2xl">
               <div>
                 <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 leading-tight">
                   Explore Ideas
@@ -58,19 +57,6 @@ const ExploreBlogs = () => {
             </div>
           </div>
           <div className="order-2 lg:order-2 relative flex items-center justify-center h-full">
-            <div className="lg:hidden relative h-[300px] sm:h-[400px] md:h-[500px] w-full">
-              <div className="relative h-full w-full">
-                <Image
-                  src={blogBanner}
-                  alt="Modern workspace with laptop and creative setup"
-                  fill
-                  className="object-cover rounded-2xl"
-                  priority
-                  quality={95}
-                />
-                <div className="absolute inset-0 bg-gradient-to-l from-transparent to-gray-50/20 rounded-2xl" />
-              </div>
-            </div>
             <div className="absolute right-0 top-100">
               <div className="hidden lg:flex lg:items-start lg:justify-start w-full h-full">
                 <CardSwap
