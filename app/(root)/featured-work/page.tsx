@@ -102,7 +102,7 @@ export default function FeaturedWorkSection() {
                   thinking, and designs that scale with your business.
                 </p>
               </div>
-              <div className="mt-8 md:mt-20 bg-[#021443] p-6 rounded-xl  shadow-sm max-w-lg">
+              <div className="mt-8 md:mt-19 bg-[#021443] p-8 rounded-xl  shadow-sm max-w-lg">
                 <p className="text-white font-semibold text-xl md:text-2xl mb-3">
                   Don't Miss the Digital Leap!
                 </p>
@@ -121,7 +121,7 @@ export default function FeaturedWorkSection() {
             </div>
             <div className="sm:w-1/2 w-full flex justify-center">
               <Image
-                src="/"
+                src="/billboard.png"
                 alt="Work that drives growth"
                 width={600}
                 height={525}
@@ -137,7 +137,8 @@ export default function FeaturedWorkSection() {
                 Our Services
               </h2>
               <p className="mt-2 text-sm lg:text-lg w-full text-gray-600 dark:text-gray-300">
-                In today's crowded digital world, it's not about being louder—it's about being{" "}
+                In today's crowded digital world, it's not about being
+                louder—it's about being{" "}
                 <span className="text-blue-600 font-semibold">sharper</span>.
               </p>
             </div>

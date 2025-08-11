@@ -2,15 +2,7 @@
 import { notFound } from "next/navigation";
 import { projects } from "@/app/data/projectsData";
 import Image from "next/image";
-import {
-  AlertCircle,
-  Target,
-  Lightbulb,
-  CheckCircle,
-  ArrowRight,
-} from "lucide-react";
-import Link from "next/link";
-import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
+import { AlertCircle, Target, Lightbulb, CheckCircle } from "lucide-react";
 import ContactUsCard from "@/app/components/contactus-card";
 
 export async function generateStaticParams() {
@@ -79,7 +71,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   Duration
                 </div>
                 <div className="text-blue-600 font-semibold text-xs md:text-base">
-                  5 months
+                  {project.duration}
                 </div>
               </div>
               <div className="flex flex-col items-center gap-1 sm:gap-2 ">
@@ -87,7 +79,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   Year
                 </div>
                 <div className="text-blue-600 font-semibold text-xs md:text-base">
-                  2024
+                  {project.year}
                 </div>
               </div>
               <div className="flex flex-col items-center gap-1 sm:gap-2">
@@ -95,7 +87,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   Region
                 </div>
                 <div className="text-blue-600 font-semibold text-xs md:text-base">
-                  Sri Lanka
+                  {project.region}
                 </div>
               </div>
             </div>
@@ -113,7 +105,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             className="object-cover rounded-lg"
             placeholder="blur"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
         </div>
       </div>
 
@@ -135,7 +126,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     Problem
                   </span>
                   <p className="text-gray-600 text-xs sm:text-sm mt-2">
-                    {project.description}
+                    {project.problem}
                   </p>
                 </div>
                 <div className="bg-gray-100 rounded-lg h-auto flex items-start p-3 sm:p-4 md:p-6 flex-col">
@@ -144,7 +135,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     Goal
                   </span>
                   <p className="text-gray-600 text-xs sm:text-sm mt-2">
-                    {project.description}
+                    {project.goal}
                   </p>
                 </div>
                 <div className="bg-gray-100 rounded-lg h-auto flex items-start p-3 sm:p-4 md:p-6 flex-col">
@@ -153,7 +144,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     Solution
                   </span>
                   <p className="text-gray-600 text-xs sm:text-sm mt-2">
-                    {project.description}
+                    {project.solution}
                   </p>
                 </div>
                 <div className="bg-gray-100 rounded-lg h-auto flex items-start p-3 sm:p-4 md:p-6 flex-col">
@@ -162,7 +153,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     Outcome
                   </span>
                   <p className="text-gray-600 text-xs sm:text-sm mt-2">
-                    {project.description}
+                    {project.outcome}
                   </p>
                 </div>
               </div>
@@ -185,10 +176,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   01
                 </span>
                 <span className="text-lg sm:text-xl font-semibold text-blue-600 mb-2 sm:mb-4">
-                  Discovery and Vision Alignment
+                  {project.process1}
                 </span>
                 <p className="text-gray-600 text-start text-xs sm:text-sm">
-                  {project.description}
+                  {project.process1description}
                 </p>
               </div>
               <div className="bg-gray-100 rounded-lg shadow-md p-4 sm:p-6 flex flex-col items-start w-full">
@@ -196,10 +187,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   02
                 </span>
                 <span className="text-lg sm:text-xl font-semibold text-blue-600 mb-2 sm:mb-4">
-                  Discovery and Vision Alignment
+                  {project.process2}
                 </span>
                 <p className="text-gray-600 text-start text-xs sm:text-sm">
-                  {project.description}
+                  {project.process2description}
                 </p>
               </div>
               <div className="bg-gray-100 rounded-lg shadow-md p-4 sm:p-6 flex flex-col items-start w-full">
@@ -207,10 +198,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   03
                 </span>
                 <span className="text-lg sm:text-xl font-semibold text-blue-600 mb-2 sm:mb-4">
-                  Discovery and Vision Alignment
+                  {project.process3}
                 </span>
                 <p className="text-gray-600 text-start text-xs sm:text-sm">
-                  {project.description}
+                  {project.process3description}
                 </p>
               </div>
             </div>
@@ -220,7 +211,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               Strategic Design & Digital Thinking <br /> for Brands That Scale
             </h2>
             <div className="max-w-6xl mx-auto mt-4 sm:mt-8">
-              <div className="relative w-full aspect-[16/10] sm:aspect-[16/7] overflow-hidden shadow-xl rounded-lg mb-6">
+              <div className="relative w-full aspect-[16/10] sm:aspect-[16/7] overflow-hidden rounded-lg mb-6">
                 <Image
                   src={project.src1}
                   alt={project.alt}
@@ -228,7 +219,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   className="object-cover rounded-lg"
                   placeholder="blur"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="relative w-full aspect-[16/10] overflow-hidden rounded-lg">
