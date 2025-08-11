@@ -142,6 +142,13 @@ const Navbar1 = ({
       url: "#",
       items: [
         {
+          title: "About Us",
+          description:
+            "Learn about our story, values, and the team behind WaveLoop",
+          icon: <FileText className="size-5 shrink-0" />,
+          url: "/about-us",
+        },
+        {
           title: "Testimonials",
           description:
             "Discover what industry professionals and clients think of us",
