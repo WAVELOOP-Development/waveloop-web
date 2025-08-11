@@ -132,25 +132,15 @@ export default function FeaturedWorkSection() {
         </div>
         <div className="flex flex-row items-start">
           <div className="text-start mb-8 w-full sm:w-auto">
-            <h2 className="text-4xl font-bold text-black mb-2 lg:mb-8 text-start">
-              Our Featured Work
-            </h2>
-            {/* Mobile: show under the heading */}
-            <div className="mt-2 flex sm:hidden">
-              <p className="text-sm text-gray-600">
-                In today's crowded digital world, it's not about
-                <br /> being louder—it's about being{" "}
+            <div className="text-start mb-8">
+              <h2 className="text-4xl sm:text-3xl md:text-4xl font-bold text-gray-800">
+                Our Services
+              </h2>
+              <p className="mt-2 text-sm lg:text-lg w-full text-gray-600 dark:text-gray-300">
+                In today's crowded digital world, it's not about being louder—it's about being{" "}
                 <span className="text-blue-600 font-semibold">sharper</span>.
               </p>
             </div>
-          </div>
-          {/* Desktop: show on the right */}
-          <div className="ml-auto  items-center mt-2 hidden sm:flex">
-            <p className="text-sm lg:text-lg text-gray-600">
-              In today's crowded digital world, it's not about
-              <br /> being louder—it's about being{" "}
-              <span className="text-blue-600 font-semibold">sharper</span>.
-            </p>
           </div>
         </div>
         <BlurFadeDemo />
