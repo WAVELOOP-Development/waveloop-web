@@ -3,22 +3,56 @@
 import {
   Lightbulb,
   Shield,
-  Heart,
-  Zap,
+  BookOpen,
   ChevronLeft,
   ChevronRight,
+  Handshake,
 } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const teamMembers = [
-  { name: "Navindu Ashen", role: "CEO & Founder", image: "/navindu.jpg" },
-  { name: "Limasha Sathsara", role: "Co-Founder", image: "/lim.jpg" },
-  { name: "Tharusha Perera", role: "Co-Founder", image: "/tmp.png" },
-  { name: "Kasun Karunanayaka", role: "Co-Founder", image: "/kgk1.jpg" },
-  { name: "Kavya Samaraweera", role: "Co-Founder", image: "/kavya.jpg" },
-  { name: "Kevin Anjelo", role: "Co-Founder", image: "/kevin.jpg" },
-  { name: "Sithumini Jagoda", role: "Co-Founder", image: "/sithumini.jpg" },
+  {
+    name: "Navindu Ashen",
+    role: "CEO & Founder",
+    image:
+      "https://media.licdn.com/dms/image/v2/D5603AQG3vM7eoQSdbg/profile-displayphoto-crop_800_800/B56ZiFBVEcHcAI-/0/1754578377683?e=1758153600&v=beta&t=9qQDktwprlCyfip81h39XRgXUfz5xURduJ_hMIKn0xc",
+  },
+  {
+    name: "Tharusha Perera",
+    role: "Co-Founder",
+    image:
+      "https://media.licdn.com/dms/image/v2/D5603AQE0V95P3EYcJg/profile-displayphoto-crop_800_800/B56ZiAAOiZHQAI-/0/1754494200839?e=1758153600&v=beta&t=uW7qvINV5UynOn0QdhpN__dqkWLf8iOcxncHI5ErWkI",
+  },
+  {
+    name: "Limasha Sathsara",
+    role: "Co-Founder",
+    image:
+      "https://media.licdn.com/dms/image/v2/D5603AQEwJI6Qrpeeyg/profile-displayphoto-crop_800_800/B56Ze7u71pHEAI-/0/1751201334723?e=1758153600&v=beta&t=AQ7ZFsZXs_j1Pe_ibqJRjCEItMDN6nu-FVH5bQdcHVU",
+  },
+  {
+    name: "Kasun Karunanayaka",
+    role: "Co-Founder",
+    image: "/kgk1.jpg",
+  },
+  {
+    name: "Kavya Samaraweera",
+    role: "Co-Founder",
+    image:
+      "https://media.licdn.com/dms/image/v2/D5603AQGiCeWDz5Z1fg/profile-displayphoto-crop_800_800/B56Zhm45rmH0AQ-/0/1754072851050?e=1758153600&v=beta&t=0wQCBvWZsLaSr7q4ZROgwpV0upEs68zuVSkkLj4lJuI",
+  },
+  {
+    name: "Kevin Anjelo",
+    role: "Co-Founder",
+    image:
+      "https://media.licdn.com/dms/image/v2/D5603AQGfCPjjOaz7SA/profile-displayphoto-shrink_800_800/B56ZTscuUvGUAg-/0/1739133741966?e=1758153600&v=beta&t=qgC4UGsIsXo6XBqftFNPfGbZmUVr6J-nM1xLH7Ra7Fs",
+  },
+  {
+    name: "Sithumini Jagoda",
+    role: "Co-Founder",
+    image:
+      "https://media.licdn.com/dms/image/v2/D5603AQHcJWKOn82Ipg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720097285348?e=1758153600&v=beta&t=tXo00H_HSqCsGOkSsZA0ixRSmxvuoGfPYV8MVi_HZM8",
+  },
 ];
 
 const values = [
@@ -26,25 +60,25 @@ const values = [
     icon: <Lightbulb className="w-8 h-8" />,
     title: "Innovation",
     description:
-      "We constantly push boundaries and embrace cutting-edge technologies to deliver solutions that drive real business value.",
+      "We constantly push boundaries and embrace cutting edge technologies to deliver solutions that drive real business value.",
   },
   {
-    icon: <Shield className="w-8 h-8" />,
-    title: "Quality",
+    icon: <BookOpen className="w-8 h-8" />,
+    title: "Transparency",
     description:
-      "We maintain the highest standards in everything we do, from code quality to customer service, ensuring excellence in every project.",
+      "We believe in open and honest communication, keeping our clients informed and involved throughout the project lifecycle.",
   },
   {
-    icon: <Heart className="w-8 h-8" />,
+    icon: <Handshake className="w-8 h-8" />,
     title: "Collaboration",
     description:
       "We believe in the power of teamwork and open communication, working closely with our clients as true partners.",
   },
   {
-    icon: <Zap className="w-8 h-8" />,
-    title: "Agility",
+    icon: <Shield className="w-8 h-8" />,
+    title: "Secure",
     description:
-      "We adapt quickly to changing requirements and market conditions, delivering solutions that evolve with your business needs.",
+      "We prioritize security and data protection, implementing robust measures to safeguard your information and ensure peace of mind.",
   },
 ];
 
@@ -76,7 +110,7 @@ export default function AboutUsPage() {
       } else if (window.innerWidth < 1024) {
         setItemsPerPage(2); // Tablet: 2 items
       } else {
-        setItemsPerPage(3); // Desktop: 3 items
+        setItemsPerPage(4); // Desktop/Large: 4 items
       }
     };
 
@@ -144,7 +178,7 @@ export default function AboutUsPage() {
           <p className="text-base md:text-lg text-white/90 mb-16 max-w-6xl mx-0 leading-relaxed text-left">
             At Waveloop, we blend creativity, technology, and strategy to craft
             impactful digital solutions that drive real results. From innovative
-            software development to cutting-edge design and marketing, we equip
+            software development to cutting edge design and marketing, we equip
             brands with the tools they need to lead, adapt, and thrive in the
             ever evolving digital world.
           </p>
@@ -175,14 +209,14 @@ export default function AboutUsPage() {
               </p>
               <div className="mt-12 flex flex-col md:flex-row gap-8 justify-between items-center">
                 <Image
-                  src="/"
+                  src="/abt1.jpg"
                   alt="Our team collaborating"
                   width={550}
                   height={550}
                   className="shadow-lg bg-blue-600"
                 />
                 <Image
-                  src="/"
+                  src="/abt2.jpg"
                   alt="Our team collaborating"
                   width={550}
                   height={550}
@@ -248,11 +282,11 @@ export default function AboutUsPage() {
       {/* Values Section */}
       <section className="py-20 px-4 bg-">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#00081C] mb-6">
+          <div className="text-left mb-16">
+            <h2 className="text-4xl md:text-5xl font-semibold text-black mb-6 text-left">
               Our Values
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl text-left">
               Here's how we work with our clients and each other.
             </p>
           </div>
@@ -260,15 +294,14 @@ export default function AboutUsPage() {
             {values.map((value, idx) => (
               <div
                 key={idx}
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center group hover:scale-105"
+                className="bg-white p-8 border-2 border-gray-200 text-center"
               >
-                <div className="w-16 h-16 bg-[#00081C] rounded-full flex items-center justify-center mx-auto mb-6 text-white group-hover:bg-blue-600 transition-colors duration-300">
+                <div className="w-16 h-16 bg-[#00081C] rounded-full flex items-center justify-center mx-auto mb-6 text-white">
                   {value.icon}
                 </div>
                 <h3 className="text-xl font-bold text-[#00081C] mb-4">
                   {value.title}
                 </h3>
-                gray-50
                 <p className="text-gray-600 leading-relaxed">
                   {value.description}
                 </p>
@@ -280,15 +313,11 @@ export default function AboutUsPage() {
 
       {/* Team Section with Carousel */}
       <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#00081C] mb-6">
+            <h2 className="text-4xl md:text-5xl font-semibold text-black mb-6">
               Meet Our Team
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The passionate individuals behind WaveLoop who bring your ideas to
-              life.
-            </p>
           </div>
 
           <div className="relative overflow-hidden">
@@ -299,13 +328,19 @@ export default function AboutUsPage() {
               {Array.from({ length: totalPages }).map((_, pageIndex) => (
                 <div key={pageIndex} className="w-full flex-shrink-0">
                   <div
-                    className={`grid gap-8 px-4 ${
-                      itemsPerPage === 1
-                        ? "grid-cols-1 justify-items-center"
-                        : itemsPerPage === 2
-                          ? "grid-cols-2"
-                          : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-                    }`}
+                    className={`
+                      grid gap-6 px-4
+                      ${
+                        itemsPerPage === 1
+                          ? "grid-cols-1 justify-items-center"
+                          : itemsPerPage === 2
+                            ? "grid-cols-2"
+                            : itemsPerPage === 3
+                              ? "grid-cols-3"
+                              : "grid-cols-4"
+                      }
+                      lg:grid-cols-4
+                    `}
                   >
                     {teamMembers
                       .slice(
@@ -315,7 +350,7 @@ export default function AboutUsPage() {
                       .map((member, idx) => (
                         <div
                           key={`${pageIndex}-${idx}`}
-                          className={`relative rounded-2xl overflow-hidden shadow-lg transition-all duration-300 ${
+                          className={`relative overflow-hidden transition-all duration-300 ${
                             itemsPerPage === 1 ? "max-w-sm w-full" : ""
                           }`}
                         >
@@ -329,18 +364,22 @@ export default function AboutUsPage() {
                             />
                             {/* Gradient Overlay */}
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
+                            <div className="absolute top-4 left-4 right-0">
+                              <Image
+                                src="/icon-default-white-T.png"
+                                alt="company-logo"
+                                width={48}
+                                height={48}
+                              />
+                            </div>
                             {/* Content Overlay */}
                             <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                              <h3 className="text-2xl font-bold mb-2 text-white">
+                              <h3 className="text-2xl font-semibold mb-2 text-white">
                                 {member.name}
                               </h3>
-                              <p className="text-lg font-medium text-gray-200 mb-3">
+                              <p className="text-lg font-medium text-gray-200 mb-4">
                                 {member.role}
                               </p>
-
-                              {/* Optional: Add a subtle border or accent */}
-                              <div className="w-12 h-1 bg-white/60 rounded-full"></div>
                             </div>
                           </div>
                         </div>
@@ -354,7 +393,7 @@ export default function AboutUsPage() {
             <button
               onClick={prevTeamSlide}
               aria-label="Previous team members"
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group disabled:opacity-50 disabled:cursor-not-allowed z-10"
+              className="absolute left-5 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group disabled:opacity-0 disabled:cursor-not-allowed z-10"
               disabled={currentTeamIndex === 0}
             >
               <ChevronLeft className="w-6 h-6 text-[#00081C] group-hover:text-blue-600" />
@@ -363,22 +402,22 @@ export default function AboutUsPage() {
             <button
               onClick={nextTeamSlide}
               aria-label="Next team members"
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group disabled:opacity-50 disabled:cursor-not-allowed z-10"
+              className="absolute right-5 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group disabled:opacity-0 disabled:cursor-not-allowed z-10"
               disabled={currentTeamIndex === totalPages - 1}
             >
               <ChevronRight className="w-6 h-6 text-[#00081C] group-hover:text-blue-600" />
             </button>
 
             {/* Pagination Dots */}
-            <div className="flex justify-center mt-8 space-x-2">
+            <div className="flex justify-center mt-8 space-x-2 mb-1">
               {Array.from({ length: totalPages }).map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setCurrentTeamIndex(idx)}
                   aria-label={`Go to team page ${idx + 1}`}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     idx === currentTeamIndex
-                      ? "bg-[#00081C] scale-125"
+                      ? "bg-blue-600 scale-125"
                       : "bg-gray-300 hover:bg-gray-400"
                   }`}
                 />
